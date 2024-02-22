@@ -289,35 +289,6 @@
   ]
   },
   {
-    "wid": "WKSP0006",
-    "image": "https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/Workshop6",
-    "alteredFee": 599,
-    "actualFee": 599,
-    "assnName": "Fashion Technology",
-    "workName": "Fashion Communication",
-    "date": "24",
-    "hall": "FT CAD Lab (K Block 3rd Floor)",
-    "time": "9.30 AM - 12.30 PM",
-    "c1Name": "Sibin V",
-    "c1Num": "8189926657",
-    "c2Name": "Vibin Kumar S V",
-    "c2Num": "9025636682",
-    "maxCount": "80",
-    "desc": "In the initial segment of this exclusive event, participants will be expertly guided through the intricacies of fashion styling, creative direction, shoot curation, and conceptualization. Our sessions will provide valuable insights into editing and photography, fostering a comprehensive understanding of the multifaceted world of fashion communication. The latter half of the event introduces an engaging challenge, where teams of four will apply their newfound knowledge by styling a person from head to toe. This hands-on experience encompasses styling, photography, editing, makeup, and hairdressing, enabling each team to showcase their creativity. Teams are required to submit their work in a designated folder, demonstrating the practical application of the workshop principles.",
-    "agenda": [
-      [
-      {
-        "time": "9:30 AM - 11:00 AM",
-        "description": ["Fashion communication-lecture about styling, photography and editing."]
-      },
-      {
-        "time": "11:00 AM - 12:30 PM",
-        "description": ["Practical implementation - Participants will be practically implementing the things learned during the lecture session using the material provided by us."]
-      }
-    ]
-  ]
-  },  
-  {
     "wid": "WKSP0008",
     "image": "https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/Workshop8",
     "alteredFee": 349,
