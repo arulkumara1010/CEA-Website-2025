@@ -466,6 +466,14 @@ function Section1v2({ scrollByVH }) {
               <ul className="flex flex-row justify-end text-sm ml-28">
                 <li
                   onClick={() => {
+                    navigate("/portal/accommodation")
+                  }}
+                  className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
+                >
+                  Accommodation
+                </li>
+                <li
+                  onClick={() => {
                     const element = document.getElementById("section8");
                     element.scrollIntoView({ behavior: "smooth" });
                   }}
