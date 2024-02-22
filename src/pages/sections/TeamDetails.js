@@ -220,6 +220,12 @@ const TeamDetails = [
     image_url: "/assets/Team/Web/navanee.jpeg",
   },
   {
+    name: "Team ORCY",
+    vertical: "App and Web Development",
+    position: "Campus Tour",
+    image_url: "/assets/Team/Web/orcy.png",
+  },
+  {
     name: "Thiyagarajan",
     vertical: "Design & Photography",
     position: "",
