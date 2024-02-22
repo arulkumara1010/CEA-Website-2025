@@ -490,10 +490,10 @@ function Section1v2({ scrollByVH }) {
                 >
                   Contact Us
                 </li> */}
-
+                
                 <li
                   onClick={() => {
-                    Window.open("https://campustour.psgtech.ac.in/")
+                   window.open("https://campustour.psgtech.ac.in/")
                   }}
                   className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
                 >
