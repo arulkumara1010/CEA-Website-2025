@@ -37,6 +37,7 @@ const Accomodation = () => {
     dinner2: false,
     days: 0,
     amount: 0,
+    amenities : "No"
   });
   const [paid, setPaid] = useState(false);
   const fromDates = [
