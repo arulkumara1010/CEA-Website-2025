@@ -464,7 +464,7 @@ function Section1v2({ scrollByVH }) {
           <div className="flex flex-col mt-10 items-start justify-start ">
             <div>
               <ul className="flex flex-row justify-end text-sm ml-28">
-                <li
+                {/* <li
                   onClick={() => {
                     navigate("/portal/accommodation")
                   }}
@@ -489,6 +489,24 @@ function Section1v2({ scrollByVH }) {
                   className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide hover:text-black mx-4"
                 >
                   Contact Us
+                </li> */}
+
+                <li
+                  onClick={() => {
+                    Window.open("https://campustour.psgtech.ac.in/")
+                  }}
+                  className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
+                >
+                  Campus Tour
+                </li>
+
+                <li
+                  onClick={() => {
+                    navigate("/portal/accommodation")
+                  }}
+                  className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
+                >
+                  Accommodation
                 </li>
                
                 <div className="flex ml-10 items-end justify-start h-full">
@@ -506,7 +524,7 @@ function Section1v2({ scrollByVH }) {
               </ul>
             </div>
 
-            <div className="flex flex-col justify-end h-full items-start  right-10 mt-28">
+            <div className="flex flex-col justify-end h-full items-start relative left-[6.2rem] mt-28">
               <div className="flex justify-start items-start">
                 <div className="w-full font-poppins text-2xl font-semibold tracking-wider text-gray-600 ">
                   <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">

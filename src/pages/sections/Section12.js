@@ -34,7 +34,7 @@ const Section12 = ({ scrollYByVH }) => {
       : "/assets/Design/PC.jpg"
   }`;
 
-  const mobBgUrl = "/assets/Design/135.png";
+  const mobBgUrl = "/assets/Design/135.jpg";
 
   const condition = `${
     parseFloat(consolee) < 0.25 ? "text-[#181818]" : "text-white"

@@ -620,6 +620,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 75%;
 }
 
+.right-20 {
+  right: 5rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.left-\[6\.2rem\] {
+  left: 6.2rem;
+}
+
 .z-10 {
   z-index: 10;
 }
