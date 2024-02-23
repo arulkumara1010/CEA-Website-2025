@@ -68,7 +68,7 @@
     "teamSize": "2-4",
     "date": "24",
     "timing": "9.30 AM - 4.30 PM",
-    "closed": false
+    "closed": close
   },
   {
     "eventName": "Chromaquest ",
