@@ -13,7 +13,7 @@
     "c1Num": "7200083054",
     "c2Name": "Somesh S",
     "c2Num": "9445230494",
-    "maxCount": "70",
+    "maxCount": "62",
     "desc": "We offer aspiring engineers the opportunity to explore the future work environment through our workshop. This program serves as an introduction to the realm of sensorics and sensor integration using Virtual Instrumentation (VI) software. Participants will engage in hands-on training sessions, gaining practical experience in acquiring data and implementing control actions with VI software (LabVIEW) and Data Acquisition cards. Additionally, the workshop provides training on the development of robots using LEGO kits and sensors. This comprehensive learning experience aims to equip participants with valuable skills for their future endeavors.",
     "agenda": [
       [
@@ -91,7 +91,7 @@
     "c1Num": "8056595086",
     "c2Name": "S Sakthisree",
     "c2Num": "7200696604",
-    "maxCount": "80",
+    "maxCount": "30",
     "desc":"The workshop's theme is to enlighten participants with knowledge of perception stacks and devices, specifically in the context of autonomous navigation, with a special emphasis on Atman series robots. Atman series robots offer seamless material handling and transportation with fully automated intelligence systems that ensure high efficiency in productivity. These robots are compact, durable and safe, featuring various payload capacities and security features. They are optimized in various ways, making them highly affordable. The platform easily integrates with various open-source robots and modules available globally. It can function as both an industrial robot and an educational research platform, providing an exceptional learning experience and knowledge in platforms such as ROS, OpenCV, Nvidia Jetson Nano and Arduino, including 2D and 3D AI-based stereo vision systems.During the workshop, participants will be educated on the aforementioned topics through a real-time demonstration using a mobile robot brought by the speaker. They will have the opportunity to work with the mobile robot hands-on. At the workshop's conclusion, participants will grasp autonomous navigation concepts, with a focus on the features of Atman series robots. Knowledge on fully automated intelligence systems and optimization strategies will be acquired. Participants will learn to integrate the platform with open-source robots, gaining versatility for both industrial and educational applications.",
     "prerequisites": "Laptops have to be brought by the participants",
     "agenda": [
@@ -171,7 +171,7 @@
     "c1Num": "8122020985",
     "c2Name": "S Shakthi",
     "c2Num": "9677843335",
-    "maxCount": "60",
+    "maxCount": "20",
     "desc": "This workshop seamlessly integrates theoretical insights with hands-on exploration, delivering participants a comprehensive understanding of crucial artificial intelligence (AI) concepts and tools. The agenda commences with an introduction to AI, followed by a detailed discussion on OneAPI. Participants will gain practical insights into utilizing the Intel Developer Cloud through a live demonstration. The workshop further explores GenAI and prompt engineering, providing practical examples in image-to-image and text-to-image processing. Additionally, it delves into machine learning (ML) with OneAPI, ensuring participants acquire both theoretical knowledge and practical skills applicable across a spectrum of AI applications.",
     "agenda": [
       [
@@ -302,7 +302,7 @@
     "c1Num": "8778630200",
     "c2Name": "Sreevana T P",
     "c2Num": "6380588041",
-    "maxCount": "100",
+    "maxCount": "30",
     "desc": "Embark on a celestial exploration with our workshop,'Orionize'. Immerse yourself in the intricacies of the Diffusion Cloud Chamber experiment and delve into the art of simulating exoplanet physics. Engage in astronomical data analysis utilizing SAOImage DS9 and be enlightened by a captivating lecture from Obuli Chandran, CEO of Mango Foundation. Adventure beneath the night sky with a Skywatch experience, seamlessly blending experiments, cutting-edge technology, and the timeless wisdom of astronomical discovery. Join us for a cosmic journey that transcends boundaries, expanding the horizons of celestial understanding.",
     "prerequisites": "Laptops have to be brought by the participants",
     "agenda": 
@@ -333,7 +333,7 @@
     "c1Num": "6379532308",
     "c2Name": "Kavin Kumar ",
     "c2Num": "8838269364",
-    "maxCount": "52",
+    "maxCount": "22",
     "desc": "The Gleeble 3500 represents a fully integrated digital closed-loop control thermal and mechanical testing system. The user-friendly interface, facilitated by Windows-based computer software and a suite of powerful processors, allows for seamless creation, execution, and analysis of data. This workshop endeavors to offer a comprehensive introduction to material testing and thermo-mechanical simulation. It precisely replicates the thermal and mechanical processes that materials undergo during the manufacturing process within a laboratory setting.",
     "agenda": 
     [
