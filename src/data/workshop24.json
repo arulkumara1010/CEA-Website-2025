@@ -392,7 +392,7 @@
     "c1Num": "7200052823",
     "c2Name": "Mahizha N S",
     "c2Num": "9629666039",
-    "maxCount": "75",
+    "maxCount": "85",
     "desc": "Join us for an insightful Kickstarter session on Reality Technologies, encompassing Augmented, Virtual, and Mixed Reality. This session will explore the seamless integration of reality technologies into multi-disciplinary fields, including Robotics and IoT. Participants will have the unique opportunity for hands-on experience with Virtual Reality headsets. Moreover, attendees will actively engage in the development of an Augmented Reality (AR) app during the workshop. Do not miss this exclusive chance to delve into and contribute to the evolving landscape of Reality Technologies.",
     "prerequisites": "Hardware requisites: Laptop with NVIDIA GTX 1060 / AMD Radeon RX 480 or greater with 8GB+ RAM. (Integrated webcam will be appreciated. \n\nAndroid Mobile phone with respective charging cable (recommended) \n\nSoftware Prerequisties: Unity 2022.3.16f1 Vuforia SDK",
     "agenda": [
