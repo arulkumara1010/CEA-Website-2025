@@ -120,33 +120,7 @@ const Section6 = () => {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row justify-center items-center">
-              <div className=" p-4 px-6 space-y-4 flex lg:w-[30%] flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100">
-                <p className="text-2xl font-semibold tracking-wider text-center lg:text-left">
-                  <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
-                    {"ASSOCIATE "}
-                  </span>
-                  Sponsor
-                </p>
-
-                <div className="flex flex-col gap-y-2 w-48 lg:w-80">
-                  <div className="bg-opacity-50 bg-gray-200 flex justify-center items-center p-4 lg:p-6 h-28 lg:w-80 lg:h-48 rounded-2xl">
-                  <div
-                  style={{
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "contain",
-                  }}
-                  className={`flex justify-center items-center w-full h-full bg-white`}
-                ><img src="https://skyx.co.in/wp-content/uploads/2022/04/SkyX_Color.png"/></div>
-                  </div>
-                  <p className="uppercase text-base font-bold lg:text-lg text-[#181818] tracking-wider text-center">
-                  {"SKYX AEROSPACE"}
-                  </p>
-                </div>
-              </div>
-            </div>
-
+           
             
 
             {/* <div className="p-0 lg:p-4 flex justify-center space-y-4 sponsors-text opacity-0 delay-100">

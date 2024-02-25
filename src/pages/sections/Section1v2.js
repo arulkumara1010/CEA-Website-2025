@@ -91,6 +91,16 @@ function Section1v2({ scrollByVH }) {
             <button
               onClick={() => {
                 setIsOpen(!isOpen);
+                window.open("https://campustour.psgtech.ac.in")
+              }}
+              id="nav-button"
+              className={`w-full text-gray-600 text-left text-base py-2`}
+            >
+             Campus Tour
+            </button>
+            <button
+              onClick={() => {
+                setIsOpen(!isOpen);
                 const element = document.getElementById("section3");
                 element.scrollIntoView({ behavior: "smooth" });
               }}
@@ -99,6 +109,7 @@ function Section1v2({ scrollByVH }) {
             >
               Events
             </button>
+            
             <button
               onClick={() => {
                 setIsOpen(!isOpen);
@@ -165,6 +176,8 @@ function Section1v2({ scrollByVH }) {
             >
               Contact Us
             </button>
+            
+            
             
             <div className="flex flex-row space-x-8 pb-8">
               <button
@@ -356,6 +369,7 @@ function Section1v2({ scrollByVH }) {
         <div className="hidden lg:flex absolute top-0 left-0 transition-all w-1/2  max-h-max bg-white z-20 items-center">
           <div className="lg:flex flex-col w-[25vw] h-full pl-[calc(100vw/24)] py-[calc(100vw/24)] justify-between">
             <div className="lg:space-y-4 flex flex-col m-20 w-[80%]">
+
               <button
                 onClick={() => {
                   const element = document.getElementById("section3");
@@ -490,10 +504,10 @@ function Section1v2({ scrollByVH }) {
                 >
                   Contact Us
                 </li> */}
-
+                
                 <li
                   onClick={() => {
-                    Window.open("https://campustour.psgtech.ac.in/")
+                   window.open("https://campustour.psgtech.ac.in/")
                   }}
                   className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
                 >

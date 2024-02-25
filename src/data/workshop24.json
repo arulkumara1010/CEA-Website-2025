@@ -13,7 +13,7 @@
     "c1Num": "7200083054",
     "c2Name": "Somesh S",
     "c2Num": "9445230494",
-    "maxCount": "70",
+    "maxCount": "62",
     "desc": "We offer aspiring engineers the opportunity to explore the future work environment through our workshop. This program serves as an introduction to the realm of sensorics and sensor integration using Virtual Instrumentation (VI) software. Participants will engage in hands-on training sessions, gaining practical experience in acquiring data and implementing control actions with VI software (LabVIEW) and Data Acquisition cards. Additionally, the workshop provides training on the development of robots using LEGO kits and sensors. This comprehensive learning experience aims to equip participants with valuable skills for their future endeavors.",
     "agenda": [
       [
@@ -50,7 +50,7 @@
     "c1Num": "6379029343",
     "c2Name": "Abina Sree S J",
     "c2Num": "9514230992",
-    "maxCount": "50",
+    "maxCount": "56",
     "desc": "Dive into the future with our 'IMMERSIVE REALITY - AR' workshop! Explore cutting-edge augmented reality technologies, acquire hands-on development skills, and gain valuable insights into its diverse applications. Engage in this informative session and leave empowered to create captivating AR experiences. Unleash your creativity in this dynamic learning environment, and discover the limitless possibilities of augmented reality. Join us for an enlightening experience that will propel you into the forefront of this rapidly evolving technological landscape.",
     "agenda": [
       [
@@ -91,7 +91,7 @@
     "c1Num": "8056595086",
     "c2Name": "S Sakthisree",
     "c2Num": "7200696604",
-    "maxCount": "80",
+    "maxCount": "30",
     "desc":"The workshop's theme is to enlighten participants with knowledge of perception stacks and devices, specifically in the context of autonomous navigation, with a special emphasis on Atman series robots. Atman series robots offer seamless material handling and transportation with fully automated intelligence systems that ensure high efficiency in productivity. These robots are compact, durable and safe, featuring various payload capacities and security features. They are optimized in various ways, making them highly affordable. The platform easily integrates with various open-source robots and modules available globally. It can function as both an industrial robot and an educational research platform, providing an exceptional learning experience and knowledge in platforms such as ROS, OpenCV, Nvidia Jetson Nano and Arduino, including 2D and 3D AI-based stereo vision systems.During the workshop, participants will be educated on the aforementioned topics through a real-time demonstration using a mobile robot brought by the speaker. They will have the opportunity to work with the mobile robot hands-on. At the workshop's conclusion, participants will grasp autonomous navigation concepts, with a focus on the features of Atman series robots. Knowledge on fully automated intelligence systems and optimization strategies will be acquired. Participants will learn to integrate the platform with open-source robots, gaining versatility for both industrial and educational applications.",
     "prerequisites": "Laptops have to be brought by the participants",
     "agenda": [
@@ -171,7 +171,7 @@
     "c1Num": "8122020985",
     "c2Name": "S Shakthi",
     "c2Num": "9677843335",
-    "maxCount": "60",
+    "maxCount": "20",
     "desc": "This workshop seamlessly integrates theoretical insights with hands-on exploration, delivering participants a comprehensive understanding of crucial artificial intelligence (AI) concepts and tools. The agenda commences with an introduction to AI, followed by a detailed discussion on OneAPI. Participants will gain practical insights into utilizing the Intel Developer Cloud through a live demonstration. The workshop further explores GenAI and prompt engineering, providing practical examples in image-to-image and text-to-image processing. Additionally, it delves into machine learning (ML) with OneAPI, ensuring participants acquire both theoretical knowledge and practical skills applicable across a spectrum of AI applications.",
     "agenda": [
       [
@@ -272,7 +272,7 @@
     "c1Num": "9597307683",
     "c2Name": "Hasmithraa V P",
     "c2Num": "8270110008",
-    "maxCount": "50",
+    "maxCount": "57",
     "desc": "Discover the transformative potential of 5G Wireless Technology by joining us for an enlightening exploration into its world. Delve into the myriad applications that are reshaping industries and revolutionizing the way we connect, communicate, and collaborate. Our cutting-edge event promises to showcase the unparalleled speed, reliability, and low latency that 5G brings to the forefront. Be part of this immersive experience, gaining insights into the future of connectivity and staying at the forefront of technological advancements. Elevate your understanding with us as we unravel the revolutionary impact of 5G across diverse sectors.",
     "prerequisites": "Basic knowledge of wireless systems",
     "agenda": [
@@ -302,7 +302,7 @@
     "c1Num": "8778630200",
     "c2Name": "Sreevana T P",
     "c2Num": "6380588041",
-    "maxCount": "100",
+    "maxCount": "30",
     "desc": "Embark on a celestial exploration with our workshop,'Orionize'. Immerse yourself in the intricacies of the Diffusion Cloud Chamber experiment and delve into the art of simulating exoplanet physics. Engage in astronomical data analysis utilizing SAOImage DS9 and be enlightened by a captivating lecture from Obuli Chandran, CEO of Mango Foundation. Adventure beneath the night sky with a Skywatch experience, seamlessly blending experiments, cutting-edge technology, and the timeless wisdom of astronomical discovery. Join us for a cosmic journey that transcends boundaries, expanding the horizons of celestial understanding.",
     "prerequisites": "Laptops have to be brought by the participants",
     "agenda": 
@@ -333,7 +333,7 @@
     "c1Num": "6379532308",
     "c2Name": "Kavin Kumar ",
     "c2Num": "8838269364",
-    "maxCount": "52",
+    "maxCount": "22",
     "desc": "The Gleeble 3500 represents a fully integrated digital closed-loop control thermal and mechanical testing system. The user-friendly interface, facilitated by Windows-based computer software and a suite of powerful processors, allows for seamless creation, execution, and analysis of data. This workshop endeavors to offer a comprehensive introduction to material testing and thermo-mechanical simulation. It precisely replicates the thermal and mechanical processes that materials undergo during the manufacturing process within a laboratory setting.",
     "agenda": 
     [
@@ -363,7 +363,7 @@
     "c1Num": "9003585358",
     "c2Name": "Shanmugam S",
     "c2Num": "6383261299",
-    "maxCount": "150",
+    "maxCount": "51",
     "desc": "The Society of Manufacturing Engineers (SME) hosts a dynamic workshop on Transformational Manufacturing 4.0, featuring experts from leading industries such as Larsen & Toubro (L&T) and Flipkart. This exclusive workshop is meticulously tailored for core engineering students, providing invaluable insights into cutting-edge topics, including  Digital Design from L&T, and Digital Operations Management from Flipkart.\n\n Attendees will have the unique opportunity to learn directly from industry leaders, gaining practical knowledge and a deeper understanding of the latest advancements in manufacturing technology. The workshop aims to elucidate the transformation of manufacturing and production areas into increasingly digital domains. Additionally, it strives to bridge the gap between academia and industry experts, fostering a collaborative environment that prepares students for the evolving landscape of digital manufacturing in the future era.\n\n Participants are encouraged to showcase their valuable ideas during the workshop. They are instructed to prepare their own insights on how the manufacturing field is transitioning from conventional to a digitalized area. This can be presented in the form of a flow chart or through compelling content related to the workshop. The ideas or content can be created in a poster format and printed on an A3 sheet, to be showcased in front of the industrial speakers.",
     "agenda": [
       [
