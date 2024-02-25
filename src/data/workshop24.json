@@ -50,7 +50,7 @@
     "c1Num": "6379029343",
     "c2Name": "Abina Sree S J",
     "c2Num": "9514230992",
-    "maxCount": "50",
+    "maxCount": "60",
     "desc": "Dive into the future with our 'IMMERSIVE REALITY - AR' workshop! Explore cutting-edge augmented reality technologies, acquire hands-on development skills, and gain valuable insights into its diverse applications. Engage in this informative session and leave empowered to create captivating AR experiences. Unleash your creativity in this dynamic learning environment, and discover the limitless possibilities of augmented reality. Join us for an enlightening experience that will propel you into the forefront of this rapidly evolving technological landscape.",
     "agenda": [
       [
@@ -392,7 +392,7 @@
     "c1Num": "7200052823",
     "c2Name": "Mahizha N S",
     "c2Num": "9629666039",
-    "maxCount": "85",
+    "maxCount": "75",
     "desc": "Join us for an insightful Kickstarter session on Reality Technologies, encompassing Augmented, Virtual, and Mixed Reality. This session will explore the seamless integration of reality technologies into multi-disciplinary fields, including Robotics and IoT. Participants will have the unique opportunity for hands-on experience with Virtual Reality headsets. Moreover, attendees will actively engage in the development of an Augmented Reality (AR) app during the workshop. Do not miss this exclusive chance to delve into and contribute to the evolving landscape of Reality Technologies.",
     "prerequisites": "Hardware requisites: Laptop with NVIDIA GTX 1060 / AMD Radeon RX 480 or greater with 8GB+ RAM. (Integrated webcam will be appreciated. \n\nAndroid Mobile phone with respective charging cable (recommended) \n\nSoftware Prerequisties: Unity 2022.3.16f1 Vuforia SDK",
     "agenda": [
