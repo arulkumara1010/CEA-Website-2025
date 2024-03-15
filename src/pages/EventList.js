@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import EventGrid from "../components/EventGrid";
 import { fetchEvents } from "../API/call";
 import "../styles/gradientAnimation.css";
-import Particles from "react-tsparticles";
+
 import { loadSlim } from "tsparticles-slim";
 import particleOptions from "../ParticleOptions";
 
@@ -61,7 +61,7 @@ const particlesLoaded = (container) => {
     
   
   <div className="w-full font-poppins py-12 pt-24 lg:pt-12 h-screen overflow-y-scroll">
- <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
+ 
     
 
     <section className="h-fit w-full relative overflow-x-hidden lg:overflow-hidden font-poppins px-6 lg:px-8 flex flex-col items-center lg:block p-8">

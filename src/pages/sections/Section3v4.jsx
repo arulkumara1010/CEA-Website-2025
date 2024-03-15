@@ -1,31 +1,35 @@
-import React from 'react'
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from 'react'
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { motion } from 'framer-motion';
+import { fetchEvents } from '../../API/call';
+import EventGrid from '../../components/EventGrid';
 
 
-const variant1 = {
-  initial: {
-    scale: 1
-  },
-  hover: {
-    scale: 1.05,
-    transition: {
-      duration: 0.2
-    }
-  }
-}
+
 
 const Section3v4 = () => {
-
+  const [events, setEvents] = useState(
+    fetchEvents()
+      .map((event) => ({
+        name: event.eventName,
+        id: event.eventId,
+        date: event.date,
+        desc: event.one_line_desc ? event.one_line_desc : event.description,
+        category: event.category,
+        time: event.timing.split("-")[0],
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name))
+  );
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
   return (
 
     <div id='section3' className='flex justify-center flex-col bg-black text-white items-center py-28 '>
 
-    <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-black mb-6">Exciting <span className='bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] text-transparent bg-clip-text'>Event Categories</span></h1>
-      <div className='grid grid-cols-1 lg:grid-cols-6 gap-4 px-[15%]'>
+    <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-white mb-6">Exciting <span className='bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] text-transparent bg-clip-text'>Event Categories</span></h1>
+      {/* <div className='grid grid-cols-1 lg:grid-cols-6 gap-4 px-[15%]'>
 
         <motion.div variants={variant1} initial='initial' whileHover='hover' className='hover:shadow-2xl flex flex-col space-y-4 lg:col-span-3 justify-between bg-1 bg-cover rounded-xl py-8 px-6 '>
           <h1 className='text-3xl sm:text-[2.25rem] font-poppins font-bold'>
@@ -209,9 +213,111 @@ const Section3v4 = () => {
 
 
 
-      </div>
+      </div> */}
+
+{/* we can use this for workshop  i.category === "Gold" to  i.category === "WorkShop once the events24.json  is edited is edited" */}
+        <div className='text-white'> Events</div>
+        <EventsGrid
+          imgurl={
+            "https://media.istockphoto.com/id/1181359760/vector/gold-glitter-and-shiny-golden-rain-on-black-background-vector-square-luxury-background.jpg?s=612x612&w=0&k=20&c=L8On7JUZdmNYNTMBeD03-45lsBvaD1E0c2z8h-MsVOs="
+          }
+          arrowCircleStart="from-[#8B5523]"
+          arrowCircleEnd="to-[#F2CC3E]"
+          obj={events.filter((i) => i.category === "Gold")}
+          topCurve="bg-[#010101]"
+          rightCurve="bg-[#010101]"
+          iconImg={"https://cdn-icons-png.flaticon.com/512/3309/3309977.png"}
+        />
+        <div className='text-white'> WKSP</div>
+        <EventsGrid
+          imgurl={
+            "https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/coding"
+          }
+          arrowCircleStart="from-[#c61b59]"
+          arrowCircleEnd="to-[#371243]"
+          obj={events.filter((i) => i.category === "Coding")}
+          topCurve="bg-[#b21a56]"
+          rightCurve="bg-[#891750]"
+          iconImg={
+            "/assets/CatLogo/coding.png"
+          }
+        />
+        <div className='text-white'> PPR</div>
+        <EventsGrid
+          imgurl={
+            "https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/management"
+          }
+          arrowCircleStart="from-[#2696d9]"
+          arrowCircleEnd="to-[#152e60]"
+          obj={events.filter((i) => i.category === "Management")}
+          topCurve="bg-[#28a5ea]"
+          rightCurve="bg-[#28a5ea]"
+          iconImg={
+            "/assets/CatLogo/manager.png"
+          }
+        />
+
+
+       
     </div>
   )
 }
 
 export default Section3v4
+
+const EventsGrid = ({
+  obj,
+  imgurl,
+  arrowCircleStart,
+  arrowCircleEnd,
+  topCurve,
+  rightCurve,
+  iconImg,
+}) => {
+  const toTitleCase = (phrase) => {
+    const wordsToIgnore = ["of", "in", "for", "and", "a", "an", "or"];
+    const wordsToCapitalize = ["it", "cad"];
+
+    return phrase
+      .toLowerCase()
+      .split(" ")
+      .map((word) => {
+        if (wordsToIgnore.includes(word)) {
+          return word;
+        }
+        if (wordsToCapitalize.includes(word)) {
+          return word.toUpperCase();
+        }
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      })
+      .join(" ");
+  };
+
+  return (
+    <div className="flex-wrap flex gap-8 py-12 justify-center">
+      {obj.map((i) => {
+  return (
+    i.eventId === 'EVNT0043' ? (
+      <React.Fragment key={i.id}></React.Fragment>
+    ) : (
+      <EventGrid
+        key={i.id}
+        title={toTitleCase(i.name)}
+        description={i.desc}
+        date={i.date}
+        time={i.time}
+        iconImg={iconImg}
+        imgurl={imgurl}
+        arrowCircleStart={arrowCircleStart}
+        arrowCircleEnd={arrowCircleEnd}
+        topCurve={topCurve}
+        rightCurve={rightCurve}
+        to={`/portal/event/${i.id}`}
+      />
+    )
+  );
+})}
+    </div>
+  );
+};
+

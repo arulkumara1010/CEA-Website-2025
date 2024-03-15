@@ -84,60 +84,7 @@ const Section7 = () => {
           <ImageGrid vertical="PR and Sponsorship" />
         </div>
 
-        <div
-          className={`hidden lg:block lg:w-fit h-screen overflow-y-hidden transition-all ${
-            fixedPosition === "fixed"
-              ? "fixed top-0 right-0"
-              : fixedPosition === "absolute"
-              ? "absolute bottom-0 right-0"
-              : "absolute top-0 right-0"
-          }`}
-          id="right-grid"
-        >
-          <div className="grid grid-cols-3 w-[75vh] h-full ">
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-tr-[6rem] bg-gradient-to-br from-[#c9478a] to-[#eb6dae]"></div>
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-br-[6rem] bg-gradient-to-tl from-[#6764b7] to-[#a7a5f9]"></div>
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-tl-[6rem] bg-black flex items-end justify-start p-2">
-              <p className="text-white font-poppins ">Kriya 2024</p>
-            </div>
-            {/* <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] bg-gray-800"></div> */}
-            <div
-              className="border row-span-1 col-span-2 w-[50vh] h-[25vh]  rounded-tl-[6rem] rounded-br-[6rem]"
-              style={{
-                background:
-                  "url(/assets/Team/Group/one.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-bl-[6rem] bg-gradient-to-tl from-[#c9478a] to-[#eb6dae]"></div>
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-tl-[6rem] bg-black"></div>
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-[6rem] bg-gradient-to-tl from-[#6764b7] to-[#a7a5f9]"></div>
-            <div
-              className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-tl-[6rem]"
-              style={{
-                background:
-                  "url(/assets/Team/Group/two.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
-            <div
-              className="border row-span-1 col-span-1 w-[25vh] h-[25vh] "
-              style={{
-                background:
-                  "url(/assets/Team/Group/three.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] bg-gradient-to-br from-[#c9478a] to-[#eb6dae]"></div>
-            <div className="border row-span-1 col-span-1 w-[25vh] h-[25vh] rounded-tr-[6rem] rounded-bl-[6rem] bg-gradient-to-tl from-[#6764b7] to-[#a7a5f9]"></div>
-          </div>
-        </div>
+      
       </section>
       <a id="anchor8" className="absolute top-[75%] w-full h-20 -z-10"></a>
     </div>
