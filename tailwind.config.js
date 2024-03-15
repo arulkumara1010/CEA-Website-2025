@@ -10,7 +10,6 @@ module.exports = {
     },
     extend:{
       backgroundImage:{
-        '1':"url('https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/1v2')",
         '2':"url('https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/2')",
         '3':"url('https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/3')",
         '4':"url('https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/4')",

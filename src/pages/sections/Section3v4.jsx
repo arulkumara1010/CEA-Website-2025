@@ -22,7 +22,7 @@ const Section3v4 = () => {
 
   return (
 
-    <div id='section3' className='flex justify-center flex-col bg-white text-white items-center py-28 '>
+    <div id='section3' className='flex justify-center flex-col bg-black text-white items-center py-28 '>
 
     <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-black mb-6">Exciting <span className='bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] text-transparent bg-clip-text'>Event Categories</span></h1>
       <div className='grid grid-cols-1 lg:grid-cols-6 gap-4 px-[15%]'>

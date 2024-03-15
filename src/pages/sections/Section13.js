@@ -36,21 +36,7 @@ const Section13 = ({ scrollYByVH }) => {
       </div>
 
 
-      <div className="lg:w-[40%] w-full lg:h-full space-y-8 flex flex-col justify-center items-center">
-
-      <h1 className="font-poppins text-xl lg:text-3xl font-semibold text-center">
-      Launch Your Dream IT Career with guidance from Vites Technologies
-      </h1>
-
-      <button
-              className="lg:text-lg font-semibold w-fit text-center flex justify-center items-center font-poppins text-white bg-[#C80067] border-2 border-[#C80067] shadow-lg hover:scale-110 transition-all px-6 py-2 rounded-lg whitespace-nowrap lg:whitespace-normal"
-              onClick={() => {
-                    navigate("/portal/event/EVNT0043")
-                  }}
-            >
-              Register Now!
-            </button>
-      </div>
+      
 
        
 

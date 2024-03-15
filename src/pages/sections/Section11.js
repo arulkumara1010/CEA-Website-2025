@@ -54,27 +54,8 @@ const Section11 = () => {
       <section
         id="section11"
         className="w-full relative lg:px-[calc(100vw/12)] lg:p-16 flex flex-col-reverse lg:flex-row items-center justify-center"
-        style={{
-        background: `linear-gradient(${condition_direction}, rgba(${condition_bg},0.8), rgba(${condition_bg},0.9)), url(/assets/Design/prizebg.png)`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        transition:'background 0.3s ease',
-        backgroundSize: "cover"
-      }}
-      >
-        <div className="w-full px-12 py-20 lg:py-40">
-          <h1
-            className={`text-4xl lg:text-5xl font-poppins font-semibold ${condition} transition-colors duration-300 ease-in-out events-text opacity-0 text-center`}
-          >
-            <p className="mb-8 drop-shadow-xl">
-              Register now to win from an exciting prize pool worth
-            </p>
-            <span className="text-5xl lg:text-[10rem] tracking-wide lg:tracking-wider bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] drop-shadow-xl font-poppins">
-              <span className="font-oswald">₹ {" "}</span>{<Number n={559999} />}
-            </span>
-          </h1>
-        </div>
-        <a
+       >
+       <a
         id="anchor11"
         className="hidden top-[40%] lg:top-[75%] w-full h-20 -z-10"
       ></a>

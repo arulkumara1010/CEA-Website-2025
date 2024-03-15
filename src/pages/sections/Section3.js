@@ -62,9 +62,7 @@ const Section3 = () => {
                     className="w-6 h-6 invert"
                   ></div>
                 </div>
-                <p className="bg-clip-text text-xl py-2 tracking-wide [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
-                  {" Kriyative "}
-                </p>
+               
               </Link>
               <p className={`${condition} text-xs pb-2 text-justify`}>
                 Let your imagination run wild with Kriyative! Whether you're an
@@ -280,28 +278,8 @@ const Section3 = () => {
           </div>
         </div>
 
-        <div className="w-full lg:w-[30vw] px-12 lg:pr-0 flex flex-col items-end">
-          <h1
-            className={`text-4xl lg:text-5xl font-poppins font-semibold ${condition} events-text opacity-0 text-center lg:text-right`}
-          >
-            Unleash your
-            <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#C80067] to-[#5451B6]">
-              {" potential"}
-            </span>
-            , participate in events.
-          </h1>
-          <img src="/assets/Design/stamp.png" alt="stamp" className="-mt-12 lg:-mt-16" />
-          <button
-            className="bg-blue-500 text-white w-fit px-4 py-3 rounded-xl font-poppins flex items-center group"
-            onClick={() => navigate("/auth/payment?type=GENERAL")}
-          >
-            <p className="">Pay general registration fee!</p>
-            <IoIosArrowForward
-              className="ml-2 transition-all group-hover:translate-x-2"
-              size={24}
-            />
-          </button>
-        </div>
+        
+      
       </section>
       <a
         id="anchor3"

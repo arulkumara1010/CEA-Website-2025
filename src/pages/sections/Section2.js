@@ -54,7 +54,7 @@ const Section2 = ({ scrollYByVH }) => {
   };
 
   const getDeadTime = () => {
-    let deadline = new Date("2024-02-23");
+    let deadline = new Date("2024-04-05");
     return deadline;
   };
 

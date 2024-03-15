@@ -42,7 +42,7 @@ const Section9 = () => {
               }
             >
               <BsLinkedin size={24} className="text-white" />
-              <p className="text-lg">Students Union</p>
+              <p className="text-lg">Civil Engineering Association</p>
             </button>
             <button
               className="flex items-center space-x-4"
@@ -54,20 +54,20 @@ const Section9 = () => {
               }
             >
               <BsInstagram size={24} className="text-white" />
-              <p className="text-lg">@kriya_psgtech</p>
+              <p className="text-lg"></p>
             </button>
             <button
               className="flex items-center space-x-4"
               onClick={() => window.open("mailto:events@psgkriya.in", "_blank")}
             >
               <SiGmail size={24} className="text-white" />
-              <p className="text-lg">events@psgkriya.in</p>
+              <p className="text-lg"></p>
             </button>
             <button
               className="flex items-center space-x-4"
               onClick={() =>
                 window.open(
-                  "https://linktr.ee/su.psgtech",
+                  "",
                   "_blank"
                 )
               }
@@ -101,35 +101,7 @@ const Section9 = () => {
               <h5 className="text-xs tracking-widest mt-8">Co-Chairperson</h5>
               <ContactItem name="Arun A R" phone="+91 97895 89682" />
             </div>
-            <div className="w-full lg:w-56">
-              <h5 className="text-xs tracking-widest">Event Support</h5>
-              <ContactItem name="Harish Kumar R" phone="+91 73586 48642" />
-              <ContactItem
-                name="Harivardhan S V"
-                phone="+91 96263 86882"
-                className="mt-4 lg:mt-14"
-              />
-            </div>
-            <div className="w-full lg:w-56">
-              <h5 className="text-xs tracking-widest">
-                PR & Sponsorship Support
-              </h5>
-              <ContactItem name="Nakulan A" phone="+91 94889 64540" />
-              <ContactItem
-                name="Raghan Harkesh R"
-                phone="+91 94882 72050"
-                className="mt-4 lg:mt-14"
-              />
-            </div>
-            <div className="w-full lg:w-56">
-              <h5 className="text-xs tracking-widest">Tech Support</h5>
-              <ContactItem name="Mithilesh E N" phone="+91 88839 12299" />
-              <ContactItem
-                name="Navaneetha Krishnan KS"
-                phone="+91 93445 00118"
-                className="mt-2 lg:mt-10 whitespace-nowrap"
-              />
-            </div>
+            
 
             {/* <div className="w-full lg:w-56">
               <h5 className="text-xs tracking-widest">Accommodation Support</h5>
