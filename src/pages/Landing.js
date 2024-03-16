@@ -6,7 +6,7 @@ import Section3 from "./sections/Section3";
 import Section4 from "./sections/Section4";
 import Section5 from "./sections/Section5";
 import Section6 from "./sections/Section6";
-import Section7 from "./sections/Section7";
+
 import Section8 from "./sections/Section8";
 import Section9 from "./sections/Section9";
 import Section10 from "./sections/Section10";
@@ -138,7 +138,7 @@ const Landing = () => {
        
         
         <Section6 scrollYByVH={consolee} />
-        <Section7 scrollYByVH={consolee} />
+       
         <Section8 />
         <Section9 />
       </main>
@@ -385,18 +385,7 @@ const NavBarForMobile = ({ consolee }) => {
           >
             Sponsors
           </button>
-          <button
-            onClick={() => {
-              setIsOpen(!isOpen);
-              const element = document.getElementById("section7");
-              element.scrollIntoView({ behavior: "smooth" });
-            }}
-            className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-              } text-left text-base py-2`}
-            id="landingNavElements"
-          >
-            Our Team
-          </button>
+         
           <button
             onClick={() => {
               setIsOpen(!isOpen);

@@ -143,17 +143,7 @@ function Section1v2({ scrollByVH }) {
             >
               Sponsors
             </button>
-            <button
-              onClick={() => {
-                setIsOpen(!isOpen);
-                const element = document.getElementById("section7");
-                element.scrollIntoView({ behavior: "smooth" });
-              }}
-              id="nav-button"
-              className={`w-full text-gray-600 text-left text-base py-2`}
-            >
-              Our Team
-            </button>
+            
             <button
               onClick={() => {
                 setIsOpen(!isOpen);

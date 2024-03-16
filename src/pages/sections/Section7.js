@@ -67,15 +67,9 @@ const Section7 = () => {
             className="text-4xl lg:text-5xl w-full font-semibold text-[#181818] lg:pt-24"
             id="our-team-text"
           >
-            Our
-            <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
-              {" Team "}
-            </span>
+           
           </h1>
-          <p className="w-full mt-8 text-xl">
-            We bring our creativity and attention to detail to every event we
-            plan, ensuring a seamless and unforgettable experience for you all.
-          </p>
+        
           <ImageGrid vertical="Overall Coordinators" />
           <ImageGrid vertical="Ambience and Creativity" />
           <ImageGrid vertical="App and Web Development" />

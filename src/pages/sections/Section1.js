@@ -160,15 +160,7 @@ const Section1 = ({ scrollByVH }) => {
           >
             Sponsors
           </button>
-          <button
-            onClick={() => {
-              const element = document.querySelector("#section7");
-              element.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
-          >
-            Our Team
-          </button>
+         
           <button
             onClick={() => {
               const element = document.querySelector("#section8");
@@ -339,17 +331,7 @@ const Section1 = ({ scrollByVH }) => {
               >
                 Sponsors
               </button>
-              <button
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                  const element = document.getElementById("section7");
-                  element.scrollIntoView({ behavior: "smooth" });
-                }}
-                id="nav-button"
-                className={`w-full text-gray-600 text-left text-base py-2`}
-              >
-                Our Team
-              </button>
+             
               <button
                 onClick={() => {
                   setIsOpen(!isOpen);
