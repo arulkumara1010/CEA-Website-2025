@@ -2,36 +2,36 @@
   {
     "wid": "WKSP0011",
     "image": "",
-    "alteredFee": 849,
-    "actualFee": 849,
-    "assnName": "American Society of Mechanical Engineers",
-    "workName": "3D Printing",
-    "date": "24",
-    "hall": "Sensorics Lab (1st Floor, G-Block)",
-    "time": "9.30 AM - 04.30 PM",
-    "c1Name": "Tarun Kumar P K",
-    "c1Num": "7200083054",
-    "c2Name": "Somesh S",
-    "c2Num": "9445230494",
-    "maxCount": "62",
-    "desc": "We offer aspiring engineers the opportunity to explore the future work environment through our workshop. This program serves as an introduction to the realm of sensorics and sensor integration using Virtual Instrumentation (VI) software. Participants will engage in hands-on training sessions, gaining practical experience in acquiring data and implementing control actions with VI software (LabVIEW) and Data Acquisition cards. Additionally, the workshop provides training on the development of robots using LEGO kits and sensors. This comprehensive learning experience aims to equip participants with valuable skills for their future endeavors.",
+    "alteredFee": 200,
+    "actualFee": 200,
+    "assnName": "",
+    "workName": "BIM Workshop",
+    "date": "05",
+    "hall": "D Block Conference Hall",
+    "time": "1.00 PM - 06.00 PM",
+    "c1Name": "Arunaa",
+    "c1Num": "+918825851781",
+    "c2Name": "Akshaya",
+    "c2Num": "+919360286296",
+    "maxCount": "100",
+    "desc": "The workshop on Building Information Modeling (BIM) Description provides participants with a comprehensive understanding of BIM principles, data formats, and techniques. From basics to advanced topics, attendees will learn how to create, manage, and utilize BIM descriptions effectively across various project stages. Gain insights into creating comprehensive 3D models enriched with crucial details, facilitating seamless collaboration, and minimizing costly errors. Join us to revolutionize your approach to construction.",
     "agenda": [
       [
         {
-          "time": "9:45 AM - 11:15 AM",
-          "description": ["Introduction to Sensorics and Virtual Instrumentation"]
+          "time": "1:00 PM - 3:00 PM",
+          "description": ["WORKSHOP - SESSION 1"]
         },
         {
-          "time": "11:30 AM TO 12:30 PM",
-          "description": ["Hands-on Training I"]
+          "time": "3:30 PM - 6:00 PM",
+          "description": ["WORKSHOP - SESSION 2"]
         },
         {
-          "time": "1:30 PM - 2:30 PM",
-          "description": ["Hands-on Training II"]
+          "time": "",
+          "description": [""]
         },
         {
-          "time": "3:00 PM - 4:30 PM",
-          "description": ["Hands-on Training III"]
+          "time": "",
+          "description": [""]
         }
       ]
     ]

@@ -12,7 +12,7 @@ const Section8 = () => {
         id="section8"
         className="h-fit w-screen relative overflow-x-hidden lg:overflow-hidden px-[calc(100vw/12)] font-poppins py-24"
       >
-        <h1 className="text-4xl lg:text-5xl font-bold text-center">
+        <h1 className="text-4xl lg:text-5xl font-bold text-center text-white">
           Frequently Asked{" "}
           <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
             Questions

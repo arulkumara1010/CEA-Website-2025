@@ -60,22 +60,12 @@ const Section7 = () => {
         className="w-full relative flex items-start team-text opacity-0 mt-12 lg:mt-24"
       >
         <div
-          className={`w-full lg:w-[calc(100vw-75vh)] font-poppins pt-8 lg:pt-16 pb-0 px-[calc(100vw/12)]`}
+          className={``}
           id="left-grid"
         >
-          <h1
-            className="text-4xl lg:text-5xl w-full font-semibold text-[#181818] lg:pt-24"
-            id="our-team-text"
-          >
-           
-          </h1>
-        
-          <ImageGrid vertical="Overall Coordinators" />
-          <ImageGrid vertical="Ambience and Creativity" />
-          <ImageGrid vertical="App and Web Development" />
-          <ImageGrid vertical="Design & Photography" />
-          <ImageGrid vertical="Events Resource Management" />
-          <ImageGrid vertical="PR and Sponsorship" />
+          
+          
+          
         </div>
 
       

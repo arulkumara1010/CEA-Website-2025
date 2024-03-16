@@ -6,7 +6,7 @@ import Section3 from "./sections/Section3";
 import Section4 from "./sections/Section4";
 import Section5 from "./sections/Section5";
 import Section6 from "./sections/Section6";
-
+import Section7 from "./sections/Section7";
 import Section8 from "./sections/Section8";
 import Section9 from "./sections/Section9";
 import Section10 from "./sections/Section10";
@@ -138,7 +138,7 @@ const Landing = () => {
        
         
         <Section6 scrollYByVH={consolee} />
-       
+        <Section7 scrollYByVH={consolee} />
         <Section8 />
         <Section9 />
       </main>
@@ -169,30 +169,10 @@ const NavBar = ({ consolee }) => {
           } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
           } transition-all`}
       >
-        Events
+        Itenary
       </button>
-      <button
-        onClick={(e) => {
-          const element = document.getElementById("section4");
-          element.scrollIntoView({ behavior: "smooth" });
-        }}
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
-          } transition-all`}
-      >
-        Paper Presentations
-      </button>
-      <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
-          } transition-all`}
-        onClick={(e) => {
-          const element = document.getElementById("section5");
-          element.scrollIntoView({ behavior: "smooth" });
-        }}
-      >
-        Workshops
-      </button>
+      
+      
       <button
         className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
           } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"

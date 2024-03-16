@@ -25,7 +25,7 @@ import OtherPayments from "./pages/AuthPortal/OtherPayments";
 import GoogleFailure from "./pages/MiddlePorts/GoogleFailure";
 import RegisterRedirectForReferral from "./pages/MiddlePorts/RegisterRedirectForReferral";
 import EnquiryWrapper from "./pages/Enquiry/EnquiryWrapper";
-import Accomodation from "./pages/Enquiry/Accomodation";
+
 import AccRegistered from "./pages/Enquiry/AccRegistered";
 
 const App = () => {
@@ -40,7 +40,7 @@ const App = () => {
               <Route path="event/:id" element={<Event />} />
               <Route path="paper/:id" element={<Paper />} />
               <Route path="workshop/:id" element={<Workshop />} />
-              <Route path="accommodation" element={<Accomodation />} />
+              
               <Route path="acc-registered" element={<AccRegistered />} />
               <Route index element={<Navigate to="/portal/event" />} />
               <Route path="profile" element={<ProtectedRoute />}>
@@ -48,7 +48,7 @@ const App = () => {
               </Route>
             </Route>
             <Route path="enquiry" element={<EnquiryWrapper />}>
-              <Route path="accommodation" element={<Accomodation />} />
+             
             </Route>
             <Route path="register" element={<Outlet />}>
               <Route

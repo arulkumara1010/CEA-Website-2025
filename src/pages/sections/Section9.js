@@ -95,11 +95,10 @@ const Section9 = () => {
           </div>
           <div className="flex-1 flex flex-col lg:flex-wrap gap-8 lg:gap-6 lg:gap-y-12 lg:flex-row items-center lg:justify-between">
             <div className="w-full lg:w-56">
-              <h5 className="text-xs tracking-widest">Chairperson</h5>
-              <ContactItem name="Kailesh Prabhu R" phone="+91 94426 99720" />
-
-              <h5 className="text-xs tracking-widest mt-8">Co-Chairperson</h5>
-              <ContactItem name="Arun A R" phone="+91 97895 89682" />
+              <h5 className="text-xs tracking-widest">Secretaries</h5>
+              <ContactItem name="Ellakiyaa A" phone="+91 7598436113
+" />
+              <ContactItem name="Kaveiya Priya S" phone="+91 9345773847" />
             </div>
             
 

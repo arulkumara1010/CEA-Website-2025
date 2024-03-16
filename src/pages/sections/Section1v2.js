@@ -255,30 +255,7 @@ function Section1v2({ scrollByVH }) {
       </h1>
       <div className="w-screen flex flex-col items-center">
         <div className="lg:hidden flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between">
-          <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-            <div className="text-5xl">
-              <Number n={40} />+
-            </div>
-            <h1 className="text-sm text-center tracking-wide uppercase">
-              Events
-            </h1>
-          </div>
-          <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-            <div className="text-5xl">
-              <Number n={10} />+
-            </div>
-            <h1 className="text-sm text-center tracking-wide uppercase">
-              Workshops
-            </h1>
-          </div>
-          <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-            <div className="text-5xl">
-              <Number n={4} />
-            </div>
-            <h1 className="text-xs text-center tracking-wide uppercase">
-              Paper Presentations
-            </h1>
-          </div>
+          
         </div>
         {localStorage.getItem("token") ? (
           <div className="flex flex-row space-x-6 lg:hidden mt-8 items-center justify-center lg:px-12 w-full px-16 z-10">
@@ -346,7 +323,7 @@ function Section1v2({ scrollByVH }) {
             Presented By
           </p>
           <p className="font-semibold font-poppins  mt-2 w-fit">
-            Students Union
+            Civil Engineering Association
           </p>
           <p className="font-poppins text-xs  w-fit">
             PSG College of Technology
@@ -532,9 +509,9 @@ function Section1v2({ scrollByVH }) {
               <div className="flex justify-start items-start">
                 <div className="w-full font-poppins text-2xl font-semibold tracking-wider text-gray-600 ">
                   <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
-                    February <br></br>
+                    April <br></br>
                   </span>{" "}
-                  23<sup>rd</sup>, 24<sup>th</sup> & 25<sup>th</sup> 2024
+                  5<sup>th</sup> & 6<sup>th</sup> 2024
                 </div>
               </div>
 
@@ -551,30 +528,7 @@ function Section1v2({ scrollByVH }) {
                 </div>
                 <div className="flex">
                   <div className="hidden lg:flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between mt-10 space-x-10">
-                    <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-                      <div className="text-5xl">
-                        <Number n={40} />+
-                      </div>
-                      <h1 className="text-sm text-center tracking-wide uppercase">
-                        Events
-                      </h1>
-                    </div>
-                    <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-                      <div className="text-5xl">
-                        <Number n={10} />+
-                      </div>
-                      <h1 className="text-sm text-center tracking-wide uppercase">
-                        Workshops
-                      </h1>
-                    </div>
-                    <div className="w-1/3 flex flex-col items-center justify-between space-y-5">
-                      <div className="text-5xl">
-                        <Number n={4} />
-                      </div>
-                      <h1 className="text-xs text-center tracking-wide uppercase">
-                        Paper Presentations
-                      </h1>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -714,7 +668,7 @@ function Section1v2({ scrollByVH }) {
                 ></div>
                 <div className="flex flex-col ml-3">
                   <p className="flex  font-semibold ">
-                    Presented By Student Union
+                    Presented By Civil Engineering Association
                   </p>
                   <p className="text-sm">PSG College of Technology</p>
                 </div>
