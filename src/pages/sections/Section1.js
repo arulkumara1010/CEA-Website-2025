@@ -183,17 +183,7 @@ const Section1 = ({ scrollByVH }) => {
         </div>
 
         <div className="flex flex-row space-x-8">
-          <button
-            className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/company/studentsunion-psgtech/",
-                "_blank"
-              )
-            }
-          >
-            <BsLinkedin size={24} className=" text-gray-500 hover:text-black" />
-          </button>
+         
           <button
             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
             onClick={() =>
@@ -207,33 +197,13 @@ const Section1 = ({ scrollByVH }) => {
           </button>
           <button
             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-            onClick={() => window.open("mailto:events@psgkriya.in", "_blank")}
+            onClick={() => window.open("mailto:cea.civil@psgtech.ac.in", "_blank")}
           >
             <SiGmail size={24} className=" text-gray-500 hover:text-black" />
           </button>
-          <button
-            className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-            onClick={() =>
-              window.open(
-                "https://youtube.com/c/StudentsUnionPSGTech",
-                "_blank"
-              )
-            }
-          >
-            <SiYoutube size={24} className=" text-gray-500 hover:text-black" />
-          </button>
-          <button
-            style={{
-              background: `url(https://d1fdloi71mui9q.cloudfront.net/sdQF8AHkQY6RCSGRVJY5_HjZ8Yx97jSnr03x4)`,
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
-            }}
-            className="w-6 h-6 invert hover:-translate-y-2 transition-all duration-500 ease-in-out opacity-60 hover:opacity-100"
-            onClick={() =>
-              window.open("https://linktr.ee/su.psgtech", "_blank")
-            }
-          ></button>
+         
+           
+         
         </div>
       </div>
 
@@ -357,20 +327,7 @@ const Section1 = ({ scrollByVH }) => {
               </button>
               <div className="flex-1"></div>
               <div className="flex flex-row space-x-8 pb-8">
-                <button
-                  className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/company/studentsunion-psgtech/",
-                      "_blank"
-                    )
-                  }
-                >
-                  <BsLinkedin
-                    size={24}
-                    className=" text-gray-500 hover:text-black"
-                  />
-                </button>
+                
                 <button
                   className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                   onClick={() =>
@@ -388,7 +345,7 @@ const Section1 = ({ scrollByVH }) => {
                 <button
                   className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                   onClick={() =>
-                    window.open("mailto:events@psgkriya.in", "_blank")
+                    window.open("mailto:cea.civil@psgtech.ac.in", "_blank")
                   }
                 >
                   <SiGmail
@@ -396,32 +353,6 @@ const Section1 = ({ scrollByVH }) => {
                     className=" text-gray-500 hover:text-black"
                   />
                 </button>
-                <button
-                  className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-                  onClick={() =>
-                    window.open(
-                      "https://youtube.com/c/StudentsUnionPSGTech",
-                      "_blank"
-                    )
-                  }
-                >
-                  <SiYoutube
-                    size={24}
-                    className=" text-gray-500 hover:text-black"
-                  />
-                </button>
-                <button
-                  style={{
-                    background: `url(https://d1fdloi71mui9q.cloudfront.net/sdQF8AHkQY6RCSGRVJY5_HjZ8Yx97jSnr03x4)`,
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "contain",
-                  }}
-                  className="w-6 h-6 invert hover:-translate-y-2 transition-all duration-500 ease-in-out opacity-60 hover:opacity-100"
-                  onClick={() =>
-                    window.open("https://linktr.ee/su.psgtech", "_blank")
-                  }
-                ></button>
               </div>
             </div>
           </div>
@@ -451,30 +382,9 @@ const Section1 = ({ scrollByVH }) => {
         </h1>
         <div className="w-full flex flex-col items-center">
           <div className="hidden lg:flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between">
-            <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-              <div className="text-5xl">
-                <Number n={35} />+
-              </div>
-              <h1 className="text-sm text-center tracking-wide uppercase">
-                Events
-              </h1>
-            </div>
-            <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-              <div className="text-5xl">
-                <Number n={12} />+
-              </div>
-              <h1 className="text-sm text-center tracking-wide uppercase">
-                Workshops
-              </h1>
-            </div>
-            <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-              <div className="text-5xl">
-                <Number n={6} />
-              </div>
-              <h1 className="text-xs text-center tracking-wide uppercase">
-                Paper Presentations
-              </h1>
-            </div>
+           
+          
+          
           </div>
           {localStorage.getItem("token") ? (
             <div className="flex flex-row space-x-6 lg:mt-8 items-center justify-center lg:px-12 w-full px-16 z-10">

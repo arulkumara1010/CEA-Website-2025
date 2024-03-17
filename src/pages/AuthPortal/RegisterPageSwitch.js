@@ -37,7 +37,7 @@ const RegisterPageSwitch = ({ switchPage }) => {
         <p className="group-hover:underline">Back</p>
       </button>
       <h1 className="text-2xl font-bold text-[#181818]">
-        Register for Kriya 2024
+        Register for Yutira 2024
       </h1>
       <p className="">Choose the method of Registration</p>
       <a

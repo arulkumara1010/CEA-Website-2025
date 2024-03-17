@@ -308,7 +308,7 @@ const NavBarForMobile = ({ consolee }) => {
           }}
           className={`w-[4.5rem] h-[3.25rem] ${condition && "hidden"}`}
           style={{
-            background: `url(/assets/Logo/Kriya_KLA_Logo_Final.png)`,
+            background: `url(/assets/Logo/Yutira_black.png)`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
@@ -452,17 +452,7 @@ const NavBarForMobile = ({ consolee }) => {
             </button>
           )}
           <div className="flex flex-row space-x-8 pt-14">
-            <button
-              className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/company/studentsunion-psgtech/",
-                  "_blank"
-                )
-              }
-            >
-              <BsLinkedin size={24} className={`${condition ? "text-gray-400" : "text-gray-500"} hover:text-black`} />
-            </button>
+           
             <button
               className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
               onClick={() =>
@@ -476,37 +466,12 @@ const NavBarForMobile = ({ consolee }) => {
             </button>
             <button
               className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-              onClick={() => window.open("mailto:events@psgkriya.in", "_blank")}
+              onClick={() => window.open("mailto:cea.civil@psgtech.ac.in", "_blank")}
             >
               <SiGmail size={24} className={`${condition ? "text-gray-400" : "text-gray-500"} hover:text-black`} />
             </button>
-            <button
-              className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-              onClick={() =>
-                window.open(
-                  "https://youtube.com/c/StudentsUnionPSGTech",
-                  "_blank"
-                )
-              }
-            >
-              <SiYoutube size={24} className={`${condition ? "text-gray-400" : "text-gray-500"} hover:text-black`} />
-            </button>
-            <button
-              style={{
-                background: `url(https://d1fdloi71mui9q.cloudfront.net/sdQF8AHkQY6RCSGRVJY5_HjZ8Yx97jSnr03x4)`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-              }}
-              className={`w-6 h-6 ${!condition && "invert"} hover:-translate-y-2 transition-all duration-500 ease-in-out opacity-60 hover:opacity-100`}
-              onClick={() =>
-                window.open(
-                  "https://linktr.ee/su.psgtech",
-                  "_blank"
-                )
-              }
-            >
-            </button>
+           
+            
           </div>
         </div>
       </div>

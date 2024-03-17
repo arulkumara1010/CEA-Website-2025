@@ -32,18 +32,7 @@ const Section9 = () => {
         <h1 className="text-5xl text-white font-bold pb-6">Contact Us</h1>
         <div className="flex flex-col lg:flex-row gap-8 flex-wrap text-white mt-8">
           <div className="space-y-6 lg:w-56 lg:mr-12">
-            <button
-              className="flex items-center space-x-4"
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/company/studentsunion-psgtech/",
-                  "_blank"
-                )
-              }
-            >
-              <BsLinkedin size={24} className="text-white" />
-              <p className="text-lg">Civil Engineering Association</p>
-            </button>
+           
             <button
               className="flex items-center space-x-4"
               onClick={() =>
@@ -58,23 +47,12 @@ const Section9 = () => {
             </button>
             <button
               className="flex items-center space-x-4"
-              onClick={() => window.open("mailto:events@psgkriya.in", "_blank")}
+              onClick={() => window.open("mailto:cea.civil@psgtech.ac.in", "_blank")}
             >
               <SiGmail size={24} className="text-white" />
               <p className="text-lg"></p>
             </button>
-            <button
-              className="flex items-center space-x-4"
-              onClick={() =>
-                window.open(
-                  "",
-                  "_blank"
-                )
-              }
-            >
-              <SiLinktree size={24} className="text-white" />
-              <p className="text-lg">Linktree</p>
-            </button>
+            
             {/* <button
               className="flex items-center space-x-4"
               onClick={() =>

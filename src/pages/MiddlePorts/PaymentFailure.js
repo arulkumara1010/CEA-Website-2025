@@ -124,9 +124,9 @@ const PaymentFailure = () => {
             <b className="font-semibold"> statement from your bank</b>{" "}
             confirming the debit (including the name of our service and your
             bank account identification). You can reach our service team at
-            <a href="mailto:events@psgkriya.in" className="font-semibold text-blue-600">
+            <a href="mailto:cea.civil@psgtech.ac.in" className="font-semibold text-blue-600">
               {" "}
-              events@psgkriya.in{" "}
+              cea.civil@psgtech.ac.in{" "}
             </a>
             .
           </p>
