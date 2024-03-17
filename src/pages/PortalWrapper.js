@@ -642,15 +642,8 @@ const WorkNav = ({
         onClick={() => setHideContent(!hideContent)}
         id="navElements"
       >
-        <div>
-          <IoMdArrowDropright
-            className={`text-lg text-gray-500 ${hideContent ? "rotate-90" : "rotate-0"
-              } transition-all`}
-          />
-        </div>
-        <p className={`w-full text-sm text-gray-500 py-2 pl-1`}>
-          {`${hideContent ? "Hide" : "Show More"}`}
-        </p>
+        
+        
       </button>
       <div
         className={`${!hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"

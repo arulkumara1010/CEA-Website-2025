@@ -22,7 +22,7 @@ import { IoMdClose } from "react-icons/io";
 import Section3v4 from "./sections/Section3v4";
 import Section1v2 from "./sections/Section1v2";
 import Section13 from "./sections/Section13";
-
+import Section52 from "./sections/Section5-2";
 const Landing = () => {
   const [consolee, setConsolee] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -138,7 +138,7 @@ const Landing = () => {
 
 
           <Section5 scrollYByVH={consolee} />
-
+          <Section52 scrollYByVH={consolee}/>
 
 
           <Section6 scrollYByVH={consolee} />
