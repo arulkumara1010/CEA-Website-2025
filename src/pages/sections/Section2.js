@@ -115,7 +115,7 @@ const Section2 = ({ scrollYByVH }) => {
         <div className="w-full lg:w-[50vw] lg:pl-[calc(100vw/12)] py-16 lg:pr-16 h-full flex flex-col items-center lg:items-start justify-center">
           <h1 className={`text-6xl lg:text-7xl opacity-0 px-8 lg:p-0  font-[600] ${condition} transition-color duration-300 ease-in-out calender-text font-poppins text-center lg:text-left`}>
             Mark your{" "}
-            <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
+            <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
               calendar
             </span>
           </h1>
@@ -185,11 +185,11 @@ const NumberAndTag = ({ number, tag, fadeInAnimate }) => {
       { passive: true }
     );
   }, [consolee]);
-  
+
   // const condition = `${parseFloat(consolee) < 0.50 || parseFloat(consolee)>2.50 ? "text-[#181818]" : "text-white"}`;
   // const gradientCondition = `${parseFloat(consolee) < 0.75 ? "from-[rgba(18,18,18,0.3)] to-[rgba(18,18,18,0.6)]" : "from-[rgba(255,255,255,0.3)] to-[rgba(255,255,255,0.6)]"}`;
   const condition = "text-white";
-  const gradientCondition = "from-[rgba(255,255,255,0.3)] to-[rgba(255,255,255,0.6)]"; 
+  const gradientCondition = "from-[rgba(255,255,255,0.3)] to-[rgba(255,255,255,0.6)]";
 
   return (
     <div className="relative w-[40ch] number-tag">
@@ -216,7 +216,7 @@ const NumberAndTagForMobile = ({ number, tag }) => {
       { passive: true }
     );
   }, [consolee]);
-  
+
   // const condition = `${parseFloat(consolee) < 0.50 || parseFloat(consolee)>2.50 ? "text-[#181818]" : "text-white"}`;
   const condition = "text-white";
 

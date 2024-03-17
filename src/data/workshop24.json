@@ -13,29 +13,35 @@
     "c1Num": "+918825851781",
     "c2Name": "Akshaya",
     "c2Num": "+919360286296",
-    "maxCount": "100",
+    "max Count": "100",
     "desc": "The workshop on Building Information Modeling (BIM) Description provides participants with a comprehensive understanding of BIM principles, data formats, and techniques. From basics to advanced topics, attendees will learn how to create, manage, and utilize BIM descriptions effectively across various project stages. Gain insights into creating comprehensive 3D models enriched with crucial details, facilitating seamless collaboration, and minimizing costly errors. Join us to revolutionize your approach to construction.",
     "agenda": [
       [
         {
           "time": "1:00 PM - 3:00 PM",
-          "description": ["WORKSHOP - SESSION 1"]
+          "description": [
+            "WORKSHOP - SESSION 1"
+          ]
         },
         {
           "time": "3:30 PM - 6:00 PM",
-          "description": ["WORKSHOP - SESSION 2"]
+          "description": [
+            "WORKSHOP - SESSION 2"
+          ]
         },
         {
           "time": "",
-          "description": [""]
+          "description": [
+            ""
+          ]
         },
         {
           "time": "",
-          "description": [""]
+          "description": [
+            ""
+          ]
         }
       ]
     ]
   }
- ]
-  
-
+]

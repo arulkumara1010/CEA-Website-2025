@@ -14,7 +14,7 @@ const Section8 = () => {
       >
         <h1 className="text-4xl lg:text-5xl font-bold text-center text-white">
           Frequently Asked{" "}
-          <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
+          <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
             Questions
           </span>
         </h1>
@@ -41,15 +41,15 @@ const FAQItem = ({ question, answer, isOpened = false, onClick }) => {
   return (
     <div className="w-full">
       <button className="p-4 lg:px-8 border-t border-gray-300 text-lg flex w-full justify-between items-center font-semibold" onClick={onClick}>
-        <div className={`text-left text-base lg:text-lg py-2 ${isOpened ? "text-blue-700 font-bold" : "text-black font-normal"}`}>
+        <div className={`text-left text-base lg:text-lg py-2 ${isOpened ? "text-white font-bold" : "text-white font-normal"}`}>
           {question}
         </div>
         <div>
-          <AiOutlinePlus className={`text-2xl ${isOpened ? "rotate-45" : "rotate-0"} transition-all`} />
+          <AiOutlinePlus className={`text-2xl ${isOpened ? "text-white rotate-45" : "text-white rotate-0"} transition-all`} />
         </div>
       </button>
       <div
-        className={`${isOpened ? "h-fit px-4 lg:px-8 py-4 " : "h-0 overflow-y-hidden"
+        className={`${isOpened ? "text-white h-fit px-4 lg:px-8 py-4 " : "text-white h-0 overflow-y-hidden"
           } transition-all ease-in-out text-sm`}
       >
         {answer}

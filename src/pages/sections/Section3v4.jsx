@@ -28,7 +28,7 @@ const Section3v4 = () => {
 
     <div id='section3' className='flex justify-center flex-col bg-black text-white items-center py-28 '>
 
-    <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-white mb-6"><span className='bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] text-transparent bg-clip-text'>Exciting Categories</span></h1>
+      <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-white mb-6"><span className='bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] text-transparent bg-clip-text'>EVENTS</span></h1>
       {/* <div className='grid grid-cols-1 lg:grid-cols-6 gap-4 px-[15%]'>
 
         <motion.div variants={variant1} initial='initial' whileHover='hover' className='hover:shadow-2xl flex flex-col space-y-4 lg:col-span-3 justify-between bg-1 bg-cover rounded-xl py-8 px-6 '>
@@ -215,20 +215,20 @@ const Section3v4 = () => {
 
       </div> */}
 
-{/* we can use this for workshop  i.category === "Gold" to  i.category === "WorkShop once the events24.json  is edited is edited" */}
-        <div className='text-white text-3xl'> Events</div>
-        <EventsGrid
-          imgurl={
-            "https://media.istockphoto.com/id/1181359760/vector/gold-glitter-and-shiny-golden-rain-on-black-background-vector-square-luxury-background.jpg?s=612x612&w=0&k=20&c=L8On7JUZdmNYNTMBeD03-45lsBvaD1E0c2z8h-MsVOs="
-          }
-          arrowCircleStart="from-[#8B5523]"
-          arrowCircleEnd="to-[#F2CC3E]"
-          obj={events.filter((i) => i.category === "Gold")}
-          topCurve="bg-[#010101]"
-          rightCurve="bg-[#010101]"
-          iconImg={"https://cdn-icons-png.flaticon.com/512/3309/3309977.png"}
-        />
-        <div className='text-white text-3xl'> Workshop</div>
+      {/* we can use this for workshop  i.category === "Gold" to  i.category === "WorkShop once the events24.json  is edited is edited" */}
+      {/* <div className='text-white text-3xl'></div> */}
+      <EventsGrid
+        imgurl={
+          "https://media.istockphoto.com/id/1181359760/vector/gold-glitter-and-shiny-golden-rain-on-black-background-vector-square-luxury-background.jpg?s=612x612&w=0&k=20&c=L8On7JUZdmNYNTMBeD03-45lsBvaD1E0c2z8h-MsVOs="
+        }
+        arrowCircleStart="from-[#8B5523]"
+        arrowCircleEnd="to-[#F2CC3E]"
+        obj={events.filter((i) => i.category === "Gold")}
+        topCurve="bg-[#010101]"
+        rightCurve="bg-[#010101]"
+        iconImg={"https://cdn-icons-png.flaticon.com/512/3309/3309977.png"}
+      />
+      {/* <div className='text-white text-3xl'> Workshop</div>
         <EventsGrid
           imgurl={
             "https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/coding"
@@ -241,8 +241,8 @@ const Section3v4 = () => {
           iconImg={
             "/assets/CatLogo/coding.png"
           }
-        />
-        <div className='text-white text-3xl'> Paper Presentation</div>
+        /> */}
+      {/* <div className='text-white text-3xl'> Paper Presentation</div>
         <EventsGrid
           imgurl={
             "https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/management"
@@ -255,10 +255,10 @@ const Section3v4 = () => {
           iconImg={
             "/assets/CatLogo/manager.png"
           }
-        />
+        /> */}
 
 
-       
+
     </div>
   )
 }
@@ -296,27 +296,27 @@ const EventsGrid = ({
   return (
     <div className="flex-wrap flex gap-8 py-12 justify-center">
       {obj.map((i) => {
-  return (
-    i.eventId === 'EVNT0043' ? (
-      <React.Fragment key={i.id}></React.Fragment>
-    ) : (
-      <EventGrid
-        key={i.id}
-        title={toTitleCase(i.name)}
-        description={i.desc}
-        date={i.date}
-        time={i.time}
-        iconImg={iconImg}
-        imgurl={imgurl}
-        arrowCircleStart={arrowCircleStart}
-        arrowCircleEnd={arrowCircleEnd}
-        topCurve={topCurve}
-        rightCurve={rightCurve}
-        to={`/portal/event/${i.id}`}
-      />
-    )
-  );
-})}
+        return (
+          i.eventId === 'EVNT0043' ? (
+            <React.Fragment key={i.id}></React.Fragment>
+          ) : (
+            <EventGrid
+              key={i.id}
+              title={toTitleCase(i.name)}
+              description={i.desc}
+              date={i.date}
+              time={i.time}
+              iconImg={iconImg}
+              imgurl={imgurl}
+              arrowCircleStart={arrowCircleStart}
+              arrowCircleEnd={arrowCircleEnd}
+              topCurve={topCurve}
+              rightCurve={rightCurve}
+              to={`/portal/event/${i.id}`}
+            />
+          )
+        );
+      })}
     </div>
   );
 };

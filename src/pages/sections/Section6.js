@@ -40,7 +40,7 @@ const Section6 = () => {
           <div className="flex flex-col p-8 lg:pl-0 font-poppins space-y-8 lg:space-y-4">
             <div className="flex flex-col lg:flex-row justify-center items-center">
               <div className=" p-4 px-6 space-y-4 flex lg:w-[30%] flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100">
-                <p className="text-2xl font-semibold tracking-wider text-center lg:text-left">
+                <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
                   <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
                     {"TITLE "}
                   </span>
@@ -67,7 +67,7 @@ const Section6 = () => {
             </div>
             <div className="flex flex-col lg:flex-row justify-center items-center">
               <div className=" p-4 px-6 space-y-4 flex flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100">
-                <p className="text-2xl font-semibold tracking-wider text-center lg:text-left">
+                <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
                   <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
                     {"CO "}
                   </span>
@@ -77,7 +77,7 @@ const Section6 = () => {
                 <div className="flex flex-row">
                   <div className="flex flex-col gap-y-2 w-48 lg:w-80">
                     <div className="bg-opacity-50 bg-gray-200 flex justify-center items-center p-4 lg:p-6 h-28 lg:w-80 lg:h-48 rounded-2xl">
-                      <div 
+                      <div
                         style={{
                           backgroundPosition: "center",
                           backgroundRepeat: "no-repeat",
@@ -94,7 +94,7 @@ const Section6 = () => {
               </div>
               <div className="flex flex-col lg:flex-row justify-center items-center">
                 <div className=" p-4 px-6 space-y-4 flex flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100">
-                  <p className="text-2xl font-semibold tracking-wider text-center lg:text-left">
+                  <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
                     <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
                       {"CO "}
                     </span>
@@ -110,7 +110,7 @@ const Section6 = () => {
                           backgroundSize: "contain",
                         }}
                         className={`flex justify-center items-center w-full h-full bg-white`}
-                      ><img src="https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/vites"/></div>
+                      ><img src="https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/vites" /></div>
                     </div>
                     <p className="uppercase font-bold text-base lg:text-lg text-[#181818] tracking-wider text-center">
                       {"VITES TECHNOLOGIES"}
@@ -120,8 +120,8 @@ const Section6 = () => {
               </div>
             </div>
 
-           
-            
+
+
 
             {/* <div className="p-0 lg:p-4 flex justify-center space-y-4 sponsors-text opacity-0 delay-100">
               <p className="text-2xl font-semibold tracking-wider text-center lg:text-left">

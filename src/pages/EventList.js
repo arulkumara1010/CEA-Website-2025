@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { FaSoundcloud } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 import EventGrid from "../components/EventGrid";
@@ -17,16 +17,16 @@ const EventList = () => {
     // starting from v2 you can add only the features you need reducing the bundle size
     //await loadFull(engine);
     await loadSlim(engine);
-}, []);
+  }, []);
 
-const particlesLoaded = (container) => {
-  console.log(container);
-};
-
-
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
 
 
-  
+
+
+
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -58,14 +58,14 @@ const particlesLoaded = (container) => {
     localStorage.setItem("hasVideoPlayed", "false");
   }, []);
   return (
-    
-  
-  <div className="w-full font-poppins py-12 pt-24 lg:pt-12 h-screen overflow-y-scroll">
- 
-    
 
-    <section className="h-fit w-full relative overflow-x-hidden lg:overflow-hidden font-poppins px-6 lg:px-8 flex flex-col items-center lg:block p-8">
-    
+
+    <div className="w-full font-poppins py-12 pt-24 lg:pt-12 h-screen overflow-y-scroll">
+
+
+
+      <section className="h-fit w-full relative overflow-x-hidden lg:overflow-hidden font-poppins px-6 lg:px-8 flex flex-col items-center lg:block p-8">
+
         {/* <div className="w-full my-8 lg:mt-0">
           <h1 className={`text-4xl lg:text-6xl text-white font-semibold font-poppins text-center py-2`}
             id="soon-text"
@@ -77,7 +77,7 @@ const particlesLoaded = (container) => {
           className={`text-4xl bg-gradient-to-r from-[#ffee35] to-[#ffa228] bg-clip-text text-transparent lg:text-5xl tracking-wide font-semibold text-center pt-8`}
           id="gold"
         >
-          GOLD EVENTS
+          EVENTS
         </h1>
         <EventsGrid
           imgurl={
@@ -93,7 +93,7 @@ const particlesLoaded = (container) => {
 
 
 
-        <h1
+        {/* <h1
           className={`text-3xl lg:text-4xl font-semibold text-center pt-8`}
           id="kriyative"
         >
@@ -228,7 +228,7 @@ const particlesLoaded = (container) => {
           iconImg={
             "/assets/CatLogo/manager.png"
           }
-        />
+        /> */}
       </section>
 
     </div>
@@ -268,27 +268,27 @@ const EventsGrid = ({
   return (
     <div className="flex-wrap flex gap-8 py-12 justify-center">
       {obj.map((i) => {
-  return (
-    i.eventId === 'EVNT0043' ? (
-      <React.Fragment key={i.id}></React.Fragment>
-    ) : (
-      <EventGrid
-        key={i.id}
-        title={toTitleCase(i.name)}
-        description={i.desc}
-        date={i.date}
-        time={i.time}
-        iconImg={iconImg}
-        imgurl={imgurl}
-        arrowCircleStart={arrowCircleStart}
-        arrowCircleEnd={arrowCircleEnd}
-        topCurve={topCurve}
-        rightCurve={rightCurve}
-        to={`/portal/event/${i.id}`}
-      />
-    )
-  );
-})}
+        return (
+          i.eventId === 'EVNT0043' ? (
+            <React.Fragment key={i.id}></React.Fragment>
+          ) : (
+            <EventGrid
+              key={i.id}
+              title={toTitleCase(i.name)}
+              description={i.desc}
+              date={i.date}
+              time={i.time}
+              iconImg={iconImg}
+              imgurl={imgurl}
+              arrowCircleStart={arrowCircleStart}
+              arrowCircleEnd={arrowCircleEnd}
+              topCurve={topCurve}
+              rightCurve={rightCurve}
+              to={`/portal/event/${i.id}`}
+            />
+          )
+        );
+      })}
     </div>
   );
 };

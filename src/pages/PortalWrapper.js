@@ -22,7 +22,7 @@ const PortalWrapper = ({ children }) => {
   }, []);
   return (
     <main className="w-screen h-screen overflow-x-hidden flex items-center bg-[#181818] ">
-      
+
       <NavBarForDesktop />
       <NavBarForMobile />
       <Outlet />
@@ -129,32 +129,33 @@ const NavBarForDesktop = () => {
             <HiOutlinePresentationChartBar className="text-2xl" />
             <p className="">Paper Presentations</p>
           </Link>
-          <Link
+          {/* <Link
             to="/portal/accommodation"
             className="w-full text-gray-600 text-left hover:text-black text-base py-2 flex items-center space-x-4"
           >
             <BiBuildingHouse className="text-2xl" />
             <p className="">Accommodations</p>
-          </Link>
+          </Link> */}
         </div>
         <div className="py-8">
-          <div className="flex space-x-4 items-center">
+          {/* <div className="flex space-x-4 items-center">
             <h3 className="text-base font-semibold py-3">Workshops</h3>
-            {/* <div className="w-fit h-fit p-2 rounded-lg"
+            <div className="w-fit h-fit p-2 rounded-lg"
               id="early-bird"
             >
               <p className="text-white text-xs font-poppins">✨ Early Bird Offer ✨</p>
-            </div> */}
-          </div>
+            </div>
+          </div> */}
+          <h3 className="text-base font-semibold py-3">Workshops</h3>
           <WorkNav noMargin workshops={workshops} />
           <h3 className="text-base font-semibold py-3">Events</h3>
-          <EventNav category="Kriyative" noMargin events={events} />
+          {/* <EventNav category="Kriyative" noMargin events={events} />
           <EventNav category="Brainiac" events={events} />
           <EventNav category="Coding" events={events} />
           <EventNav category="Amuse" events={events} />
           <EventNav category="Core Engineering" events={events} />
           <EventNav category="Management" events={events} />
-          <h3 className="text-base font-semibold py-3">Gold Events</h3>
+          <h3 className="text-base font-semibold py-3">Gold Events</h3> */}
           <GoldNav noMargin goldEvents={goldEvents} />
           <h3 className="text-base font-semibold py-3">Paper Presentations</h3>
           <PaperNav noMargin papers={papers} />
@@ -287,9 +288,8 @@ const NavBarForMobile = () => {
       </div>
 
       <div
-        className={`divide-y divide-gray-600 ${
-          isOpen ? "h-fit" : "h-0 overflow-hidden"
-        } transition-all ease-in-out duration-300`}
+        className={`divide-y divide-gray-600 ${isOpen ? "h-fit" : "h-0 overflow-hidden"
+          } transition-all ease-in-out duration-300`}
       >
         <div className="py-8 w-full flex flex-col px-6">
           <Link
@@ -319,7 +319,7 @@ const NavBarForMobile = () => {
             id="navElements"
             className="w-full text-gray-600 text-left hover:text-black text-base py-2"
           >
-            Events
+            Event
           </Link>
           <Link
             to="/../?sn=section5"
@@ -335,25 +335,25 @@ const NavBarForMobile = () => {
           >
             Paper Presentations
           </Link>
-          <Link
-            to="/portal/accommodation"
-            id="navElements"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2"
-          >
-            Accommodations
-          </Link>
+          {/* <Link
+                        to="/portal/accommodation"
+                        id="navElements"
+                        className="w-full text-gray-600 text-left hover:text-black text-base py-2"
+                    >
+                        Accommodations
+                    </Link> */}
         </div>
         <div className="py-8 pb-16 px-6" id="navOpen">
-          <div className="flex space-x-4 items-center">
+          {/* <div className="flex space-x-4 items-center">
             <h3 className="text-base font-semibold py-3" id="navElements">
               Workshops
             </h3>
-            {/* <div className="w-fit h-fit p-2 rounded-lg"
+            <div className="w-fit h-fit p-2 rounded-lg"
               id="early-bird"
             >
               <p className="text-white text-xs font-poppins">✨ Early Bird Offer ✨</p>
-            </div> */}
-          </div>
+            </div>
+          </div> */}
           <WorkNav
             openState={[isOpen, setIsOpen]}
             isMobile
@@ -361,9 +361,9 @@ const NavBarForMobile = () => {
             workshops={workshops}
           />
           <h3 className="text-base font-semibold py-3" id="navElements">
-            Events
+            Event
           </h3>
-          <EventNav
+          {/* <EventNav
             openState={[isOpen, setIsOpen]}
             isMobile
             category="Kriyative"
@@ -402,7 +402,7 @@ const NavBarForMobile = () => {
           />
           <h3 className="text-base font-semibold py-3" id="navElements">
             Gold Events
-          </h3>
+          </h3> */}
           <GoldNav
             openState={[isOpen, setIsOpen]}
             isMobile
@@ -446,7 +446,7 @@ const EventNav = ({
   noMargin = false,
   events,
   isMobile = false,
-  openState = [true, () => {}],
+  openState = [true, () => { }],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);
@@ -481,17 +481,15 @@ const EventNav = ({
   return (
     <React.Fragment>
       <button
-        className={`flex justify-between group items-center ${
-          !noMargin && "mt-0"
-        } my-2`}
+        className={`flex justify-between group items-center ${!noMargin && "mt-0"
+          } my-2`}
         onClick={() => setHideContent(!hideContent)}
         id="navElements"
       >
         <div>
           <IoMdArrowDropright
-            className={`text-lg text-gray-500 ${
-              hideContent ? "rotate-90" : "rotate-0"
-            } transition-all`}
+            className={`text-lg text-gray-500 ${hideContent ? "rotate-90" : "rotate-0"
+              } transition-all`}
           />
         </div>
         <p
@@ -501,9 +499,8 @@ const EventNav = ({
         </p>
       </button>
       <div
-        className={`${
-          !hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
-        } transition-all overflow-hidden flex flex-col`}
+        className={`${!hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
+          } transition-all overflow-hidden flex flex-col`}
         id="navElements"
       >
         {events
@@ -538,7 +535,7 @@ const GoldNav = ({
   noMargin = false,
   goldEvents,
   isMobile = false,
-  openState = [true, () => {}],
+  openState = [true, () => { }],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);
@@ -596,7 +593,7 @@ const WorkNav = ({
   noMargin = false,
   workshops,
   isMobile = false,
-  openState = [true, () => {}],
+  openState = [true, () => { }],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);
@@ -640,17 +637,15 @@ const WorkNav = ({
           )}
       </div>
       <button
-        className={`flex justify-between group items-center ${
-          !noMargin && "mt-0"
-        } my-2 pl-2`}
+        className={`flex justify-between group items-center ${!noMargin && "mt-0"
+          } my-2 pl-2`}
         onClick={() => setHideContent(!hideContent)}
         id="navElements"
       >
         <div>
           <IoMdArrowDropright
-            className={`text-lg text-gray-500 ${
-              hideContent ? "rotate-90" : "rotate-0"
-            } transition-all`}
+            className={`text-lg text-gray-500 ${hideContent ? "rotate-90" : "rotate-0"
+              } transition-all`}
           />
         </div>
         <p className={`w-full text-sm text-gray-500 py-2 pl-1`}>
@@ -658,9 +653,8 @@ const WorkNav = ({
         </p>
       </button>
       <div
-        className={`${
-          !hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
-        } transition-all overflow-hidden flex flex-col`}
+        className={`${!hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
+          } transition-all overflow-hidden flex flex-col`}
         id="navElements"
       >
         {workshops
@@ -695,7 +689,7 @@ const PaperNav = ({
   noMargin = false,
   papers,
   isMobile = false,
-  openState = [true, () => {}],
+  openState = [true, () => { }],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);

@@ -132,6 +132,7 @@ const Section1 = ({ scrollByVH }) => {
             className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
           >
             Events
+
           </button>
           <button
             onClick={() => {
@@ -160,7 +161,7 @@ const Section1 = ({ scrollByVH }) => {
           >
             Sponsors
           </button>
-         
+
           <button
             onClick={() => {
               const element = document.querySelector("#section8");
@@ -331,7 +332,7 @@ const Section1 = ({ scrollByVH }) => {
               >
                 Sponsors
               </button>
-             
+
               <button
                 onClick={() => {
                   setIsOpen(!isOpen);

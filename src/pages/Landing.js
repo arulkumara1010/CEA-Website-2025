@@ -78,70 +78,74 @@ const Landing = () => {
 
   return (
     <React.Fragment>
-      
+
       {/* <div className="bg-white p-4 hiddn rounded-lg fixed top-10 left-10 z-50">
         {consolee}
       </div> */}
       <div className="overflow-hidden">
-      <NavBar consolee={consolee} />
-      <NavBarForMobile consolee={consolee} />
+        <NavBar consolee={consolee} />
+        <NavBarForMobile consolee={consolee} />
 
-      <main
-        className={`w-screen overflow-x-hidden transition-all duration-300`}
-        style={{
-          background: `#0a0a0a`,
-            
-          flexBasis: "50%",
-          overflowY: "scroll",
-          transition: 'background 0.3 ease'
-        }}
-      >
-        {!paid && popup && (
-          <div className={`fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-\[100\] hidden items-center justify-center`}>
-            <div className="bg-gradient-to-l from-[#eccdde] to-[#cfbaea] w-[20rem] lg:w-[36rem] h-[24rem] p-8 rounded-2xl flex items-center justify-center relative">
-              <button
-                className="absolute right-4 top-4 text-2xl text-black"
-                onClick={() => {
-                  setPopup(false);
-                }}
-              >
-                <IoMdClose />
-              </button>
-              <div className="flex flex-col items-center justify-center space-y-6 lg:space-y-8 w-full lg:w-[60%] z-10 ml-20 ">
-                <h1 className={`text-3xl lg:text-4xl font-semibold font-poppins text-center lg:text-center`}>
-                  Unlock the full{" "}
-                  <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#C80067] to-[#5451B6]">
-                    experience.
-                  </span>
-                </h1>
-                <p className="text-lg font-poppins text-center lg:text-center">
-                  Pay the general registration fee and gain access to the <b className="font-[500]">pro show</b> plus the chance to participate in <b className="font-[500]">all the exciting events</b>!
-                </p>
-                <button className="bg-[#5451B6] text-white font-poppins font-semibold text-lg px-4 py-2 rounded-lg shadow-lg hover:scale-105 transition-all"
+        <main
+          className={`w-screen overflow-x-hidden transition-all duration-300`}
+          style={{
+            background: `#0a0a0a`,
+
+            flexBasis: "50%",
+            overflowY: "scroll",
+            transition: 'background 0.3 ease'
+          }}
+        >
+          {!paid && popup && (
+            <div className={`fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-\[100\] hidden items-center justify-center`}>
+              <div className="bg-gradient-to-l from-[#eccdde] to-[#cfbaea] w-[20rem] lg:w-[36rem] h-[24rem] p-8 rounded-2xl flex items-center justify-center relative">
+                <button
+                  className="absolute right-4 top-4 text-2xl text-black"
                   onClick={() => {
-                    navigate("/auth/payment?type=GENERAL");
+                    setPopup(false);
                   }}
                 >
-                  Pay Now
+                  <IoMdClose />
                 </button>
+                <div className="flex flex-col items-center justify-center space-y-6 lg:space-y-8 w-full lg:w-[60%] z-10 ml-20 ">
+                  <h1 className={`text-3xl lg:text-4xl font-semibold font-poppins text-center lg:text-center`}>
+                    Unlock the full{" "}
+                    <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#C80067] to-[#5451B6]">
+                      experience.
+                    </span>
+                  </h1>
+                  <p className="text-lg font-poppins text-center lg:text-center">
+                    Pay the general registration fee and gain access to the <b className="font-[500]">pro show</b> plus the chance to participate in <b className="font-[500]">all the exciting events</b>!
+                  </p>
+                  <button className="bg-[#5451B6] text-white font-poppins font-semibold text-lg px-4 py-2 rounded-lg shadow-lg hover:scale-105 transition-all"
+                    onClick={() => {
+                      navigate("/auth/payment?type=GENERAL");
+                    }}
+                  >
+                    Pay Now
+                  </button>
+                </div>
+                {/* <img src="/assets/Design/im.png" alt="" className="hidden lg:block absolute bottom-0 right-0 rounded-br-2xl h-5/6" /> */}
               </div>
-              {/* <img src="/assets/Design/im.png" alt="" className="hidden lg:block absolute bottom-0 right-0 rounded-br-2xl h-5/6" /> */}
             </div>
-          </div>
-        )}
-        <Section1v2 scrollYByVH={consolee} />
-       
-        <Section2 scrollYByVH={consolee} />
-       
-        <Section3v4 scrollYByVH={consolee} />
-       
-       
-        
-        <Section6 scrollYByVH={consolee} />
-        <Section7 scrollYByVH={consolee} />
-        <Section8 />
-        <Section9 />
-      </main>
+          )}
+          <Section1v2 scrollYByVH={consolee} />
+
+          <Section2 scrollYByVH={consolee} />
+
+          <Section3v4 scrollYByVH={consolee} />
+          <Section4 scrollYByVH={consolee} />
+
+
+          <Section5 scrollYByVH={consolee} />
+
+
+
+          <Section6 scrollYByVH={consolee} />
+          <Section7 scrollYByVH={consolee} />
+          <Section8 />
+          <Section9 />
+        </main>
       </div>
     </React.Fragment>
   );
@@ -169,10 +173,31 @@ const NavBar = ({ consolee }) => {
           } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
           } transition-all`}
       >
-        Itenary
+        Events
       </button>
-      
-      
+      <button
+        onClick={(e) => {
+          const element = document.getElementById("section4");
+          element.scrollIntoView({ behavior: "smooth" });
+        }}
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+          } transition-all`}
+      >
+        Paper Presentations
+      </button>
+      <button
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+          } transition-all`}
+        onClick={(e) => {
+          const element = document.getElementById("section5");
+          element.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Workshops
+      </button>
+
       <button
         className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
           } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
@@ -184,9 +209,9 @@ const NavBar = ({ consolee }) => {
       >
         Sponsors
       </button>
-      
-      
-      
+
+
+
       <button
         className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
           } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
@@ -365,7 +390,7 @@ const NavBarForMobile = ({ consolee }) => {
           >
             Sponsors
           </button>
-         
+
           <button
             onClick={() => {
               setIsOpen(!isOpen);
