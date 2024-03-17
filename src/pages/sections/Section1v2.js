@@ -6,7 +6,7 @@ import { CgScrollV } from "react-icons/cg";
 import { useSpring, animated } from "react-spring";
 import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
-import BgPlate from "./yutira_1.png";
+import BgPlate from "./Website.png";
 const variant1 = {
     initial: {
         opacity: 0
