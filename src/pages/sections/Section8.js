@@ -60,24 +60,20 @@ const FAQItem = ({ question, answer, isOpened = false, onClick }) => {
 
 const FAQContent = [
   {
-    question: "What is Kriya?",
+    question: "What is Yutira ?",
     answer:
-      "Kriya is the largest technical symposium conducted by PSG College of Technology. The Students Union is ecstatic to spread the aura of knowledge and healthy competition through Kriya by carrying out 40+ Events, 10+ Workshops and 4 Technical Paper Presentations that encompasses an array of engineering streams, Kriya brings together the savviest brains on the planet, from proficient scholars to dexterous techno-wizards, to who’s who of the industrial domain, and also eminent leaders from different walks of life, to enrich and aggrandize the minds of participating students.",
+      "Yutira 2024 is a National level Technical Symposium conducted by the Department of Civil Engineering, PSG College of Technology. It encompasses 2 events, a workshop and a paper presentation.",
   },
   {
-    question: "Who can participate in Kriya?",
+    question: "Who can participate in Yutira?",
     answer:
       "The contest is open for all Undergraduate and Postgraduate students from AICTE approved Technical Higher Educational Institutions of India.",
   },
+ 
   {
-    question: "What are the benefits of taking part in Kriya ?",
+    question: "What is the fee to participate in Yutira?",
     answer:
-      "Kriya is a national level technical fest where participants get an opportunity to compete in various events with students from across the country and win attractive cash prizes. Kriya is a also platform for participants to stay at the forefront of technical advancements through its industry-led workshops and technical paper presentations. ",
-  },
-  {
-    question: "What is the fee to participate in Kriya?",
-    answer:
-      "The general registration fee is Rs. 200 for PSG Tech students and Rs. 250 for students from other colleges. No separate registration fee is required to participate in each event. However, participants have to pay separately to participate in workshops.",
+      "The general registration fee is Rs. 100 for PSG Tech students and Rs. 150 for students from other colleges. No separate registration fee is required to participate in each event and paper presentations. However, participants have to pay separately to participate in workshops.",
   },
   {
     question:

@@ -308,7 +308,7 @@ const NavBarForMobile = ({ consolee }) => {
           }}
           className={`w-[4.5rem] h-[3.25rem] ${condition && "hidden"}`}
           style={{
-            background: `url(/assets/Logo/Yutira_black.png)`,
+            background: `url(public/assets/Logo/yutira_rmbg.png)`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",

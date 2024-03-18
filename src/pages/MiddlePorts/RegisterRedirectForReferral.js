@@ -23,7 +23,7 @@ const RegisterRedirectForReferral = () => {
   return (
     <section className="h-screen w-screen flex flex-col justify-center items-center space-y-6">
       <img
-        src="assets/Logo/KriyaLogoKLAWhite.png"
+        src="public//assets//Logo//yutira_rmbg.png"
         alt=""
         className="h-24 invert"
       />

@@ -202,7 +202,7 @@ function Section1v2({ scrollByVH }) {
             </div>
 
             <div className="flex justify-center items-center lg:hidden py-16">
-                <img src="/assets/Logo/Yutira_black.png" />
+                <img src="public//assets//Logo//yutira_rmbg.png"/>
 
             </div>
 

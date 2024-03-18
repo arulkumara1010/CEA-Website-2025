@@ -23,13 +23,13 @@ const Event = () => {
 
   const particlesInit = useCallback(async engine => {
     console.log(engine);
- 
-    await loadSlim(engine);
-}, []);
 
-const particlesLoaded = (container) => {
-  console.log(container);
-}
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  }
 
   const toTitleCase = (phrase) => {
     const wordsToIgnore = ["of", "in", "for", "and", "an", "or"];
@@ -95,96 +95,96 @@ const particlesLoaded = (container) => {
       <p className="text-white text-xl px-8">Loading...</p>
     </section>
   ) : (
-    <section className="w-full lg:px-16 font-poppins py-12 pt-36 lg:pt-12 h-screen overflow-y-scroll">
-    <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
-      <h2 className="text-base mb-2 text-gray-400 tracking-widest px-8 lg:px-0">
+    <section className="w-full lg:px-16 font-poppins py-12 pt-36 lg:pt-12 h-screen bg-white overflow-y-scroll">
+      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
+      {/* <h2 className="text-base mb-2 text-gray-400 tracking-widest px-8 lg:px-0">
         {eventDetail.category}
-      </h2>
+      </h2> */}
       <div className="w-fit">
-        <h1 className="text-3xl text-white font-semibold px-8 lg:px-0">
+        <h1 className="text-3xl text-black font-semibold px-8 lg:px-0">
           {toTitleCase(eventDetail.eventName)}
         </h1>
-        <div className="w-[60%] lg:w-[80%] ml-8 lg:ml-0 mt-2 h-[4px] bg-gradient-to-r rounded-[2px] from-[#3b82f6] to-[#8b5cf6]"></div>
+        <div className="w-[60%] lg:w-[80%] ml-8 lg:ml-0 mt-2 h-[4px] bg-gradient-to-r rounded-[2px] from-[#ffdc73] to-[#ffdc73]"></div>
       </div>
-      <p className="text-white text-justify mt-8 text-base w-full lg:w-[90%] pb-8 px-8 lg:px-0">
+      <p className="text-black text-justify mt-8 text-base w-full lg:w-[90%] pb-8 px-8 lg:px-0">
         {eventDetail.description}
       </p>
 
-      <div className="flex flex-col lg:flex-row gap-4 w-full lg:px-0 my-4 text-black">
-        <div className="bg-white w-full lg:w-2/3 lg:rounded-3xl lg:p-12 space-y-12 relative py-8 px-8">
-        {eventDetail.eventId === "EVNT0043" ? (
-  <div className="flex w-full">
-    <div className="space-y-2 z-30 flex-1">
-      <p className="text-base lg:text-base text-justify text-[#3c4043] pt-4 lg:pt-0">
-          <div>
-            <p>Are you passionate about getting your dream IT job and don’t know how? Join us for a FREE "IT Career Guidance and Placement Assistance" workshop! This power-packed session will equip you with:
-            <br/>
-            <br/>
-            <ul className="list-disc text-base text-[#3c4043] pl-4 space-y-2">
+      <div className="flex flex-col lg:flex-row gap-4 w-full lg:px-0 my-4 text-white">
+        <div className="bg-black w-full lg:w-2/3 lg:rounded-3xl lg:p-12 space-y-12 relative py-8 px-8">
+          {eventDetail.eventId === "EVNT0043" ? (
+            <div className="flex w-full">
+              <div className="space-y-2 z-30 flex-1">
+                <p className="text-base lg:text-base text-justify text-[#3c4043] pt-4 lg:pt-0">
+                  <div>
+                    <p>Are you passionate about getting your dream IT job and don’t know how? Join us for a FREE "IT Career Guidance and Placement Assistance" workshop! This power-packed session will equip you with:
+                      <br />
+                      <br />
+                      <ul className="list-disc text-base text-[#3c4043] pl-4 space-y-2">
 
-            <li>Expert insights into in-demand IT skills and career paths.</li>
-            <li>Insider tips on crafting a winning resume and acing interviews.</li>
-            <li>Exclusive guidance on navigating the placement process.</li>
-            <li>Direct interaction with industry professionals from Vites Technologies.</li>
-            <li>Networking opportunities with fellow tech enthusiasts</li>
-            <li>Gain a competitive edge in the job market.</li>
+                        <li>Expert insights into in-demand IT skills and career paths.</li>
+                        <li>Insider tips on crafting a winning resume and acing interviews.</li>
+                        <li>Exclusive guidance on navigating the placement process.</li>
+                        <li>Direct interaction with industry professionals from Vites Technologies.</li>
+                        <li>Networking opportunities with fellow tech enthusiasts</li>
+                        <li>Gain a competitive edge in the job market.</li>
 
 
-            </ul>
+                      </ul>
 
-            </p>
-            <br />
-          </div>
-      </p>
-    </div>
-  </div>
-) : (
-  <>
-    <RoundDescription
-      roundNumber={1}
-      title={eventDetail.round_title_1}
-      description={eventDetail.round_desc_1}
-    />
+                    </p>
+                    <br />
+                  </div>
+                </p>
+              </div>
+            </div>
+          ) : (
+            <>
+              <RoundDescription
+                roundNumber={1}
+                title={eventDetail.round_title_1}
+                description={eventDetail.round_desc_1}
+              />
 
-    {eventDetail?.round_title_2?.length > 0 &&
-      eventDetail?.round_desc_2?.length > 0 && (
-        <RoundDescription
-          roundNumber={2}
-          title={eventDetail.round_title_2}
-          description={eventDetail.round_desc_2}
-        />
-      )}
+              {eventDetail?.round_title_2?.length > 0 &&
+                eventDetail?.round_desc_2?.length > 0 && (
+                  <RoundDescription
+                    roundNumber={2}
+                    title={eventDetail.round_title_2}
+                    description={eventDetail.round_desc_2}
+                  />
+                )}
 
-    {eventDetail?.round_title_3?.length > 0 &&
-      eventDetail?.round_desc_3?.length > 0 && (
-        <RoundDescription
-          roundNumber={3}
-          title={eventDetail?.round_title_3}
-          description={eventDetail?.round_desc_3}
-        />
-      )}
+              {eventDetail?.round_title_3?.length > 0 &&
+                eventDetail?.round_desc_3?.length > 0 && (
+                  <RoundDescription
+                    roundNumber={3}
+                    title={eventDetail?.round_title_3}
+                    description={eventDetail?.round_desc_3}
+                  />
+                )}
 
-    {eventDetail?.round_title_4?.length > 0 &&
-      eventDetail?.round_desc_4?.length > 0 && (
-        <RoundDescription
-          roundNumber={4}
-          title={eventDetail.round_title_4}
-          description={eventDetail.round_desc_4}
-        />
-      )}
-  </>
-)}
+              {eventDetail?.round_title_4?.length > 0 &&
+                eventDetail?.round_desc_4?.length > 0 && (
+                  <RoundDescription
+                    roundNumber={4}
+                    title={eventDetail.round_title_4}
+                    description={eventDetail.round_desc_4}
+                  />
+                )}
+            </>
+          )}
         </div>
         <div className="w-full lg:w-1/3 space-y-4 flex flex-col justify-between">
           {eventDetail.closed ? (
-            <div className="lg:bg-white lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start">
-              <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
+            <div className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start ">
+              <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
                 Registrations Closed
               </span>
             </div>
           ) : (
             <button
-              className="lg:bg-white lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
+              className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
               onClick={() => {
                 !userEventDetails.find((i) => i.eventId === id) &&
                   (window.confirm("Are you sure you want to register ?")
@@ -193,7 +193,7 @@ const particlesLoaded = (container) => {
               }}
             >
               {userEventDetails && (
-                <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
+                <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text bg-black [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
                   {userEventDetails.find((i) => i.eventId === id)
                     ? "Registered"
                     : "Register Here!"}
@@ -203,46 +203,45 @@ const particlesLoaded = (container) => {
           )}
           {/* <p className="bg-gradient-to-r from-[#C80067] to-[#7470ff] py-4 px-6 rounded-xl shadow-lg shadow-gray-900 lg:shadow-md w-fit text-white text-2xl hover:underline">Register Here !</p> */}
 
-          <div className="bg-[#ffffff] flex flex-col lg:rounded-3xl p-8 lg:p-12 space-y-2 justify-center">
+          <div className="bg-black flex flex-col lg:rounded-3xl p-8 lg:p-12 space-y-2 justify-center">
             <div className="flex flex-row items-center gap-4 lg:gap-4">
-              <p className="text-6xl lg:text-6xl font-semibold tracking-wide text-[#3c4043]">
+              <p className="text-6xl lg:text-6xl font-semibold tracking-wide text-white">
                 {eventDetail.date}
               </p>
               <div className="flex flex-col">
-                <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
-                    February
+                <p className="text-lg font-semibold tracking-wide text-white">
+                  February
                 </p>
-                <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
+                <p className="text-lg font-semibold tracking-wide text-white">
                   2024
                 </p>
               </div>
             </div>
             <div className="flex flex-row items-center gap-4 lg:gap-6">
-              <p className="text-4xl font-semibold tracking-wide text-[#3c4043] p-3">
+              <p className="text-4xl font-semibold tracking-wide text-whitep-3">
                 <MdAccessTime />
               </p>
               <div className="pl-2 flex flex-col">
-                <p className="text-base lg:text-base font-semibold tracking-wider text-[#3c4043]">
+                <p className="text-base lg:text-base font-semibold tracking-wider text-[white">
                   {eventDetail.timing}
                 </p>
               </div>
             </div>
             <div className="flex flex-row items-center gap-4 lg:gap-6">
-              <p className="text-4xl font-semibold tracking-wide text-[#3c4043] p-3">
+              <p className="text-4xl font-semibold tracking-wide text-white p-3">
                 <MdOutlineLocationOn />
               </p>
               <div className="pl-2 flex flex-col">
                 <p
-                  className={`text-base ${
-                    eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
-                  } font-semibold tracking-wider text-[#3c4043]`}
+                  className={`text-base ${eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
+                    } font-semibold tracking-wider text-white`}
                 >
                   {eventDetail.hall}
                 </p>
               </div>
             </div>
             <div className="flex flex-row items-center gap-4 lg:gap-6">
-              <p className="text-4xl font-semibold tracking-wide text-[#3c4043] p-3">
+              <p className="text-4xl font-semibold tracking-wide text-white p-3">
                 {eventDetail.teamSize !== "1" ? (
                   <AiOutlineTeam />
                 ) : (
@@ -250,7 +249,7 @@ const particlesLoaded = (container) => {
                 )}
               </p>
               <div className="pl-2 flex flex-col">
-                <p className="text-base lg:text-lg font-semibold tracking-wide text-[#3c4043]">
+                <p className="text-base lg:text-lg font-semibold tracking-wide text-white">
                   {eventDetail.teamSize} Member
                   {eventDetail.teamSize !== 1 ? "s" : ""}
                 </p>
@@ -258,10 +257,10 @@ const particlesLoaded = (container) => {
             </div>
             {eventDetail.teamSize !== "1" && (
               <div>
-                <p className="text-2xl font-semibold tracking-wide py-4 text-[#3c4043]">
+                <p className="text-2xl font-semibold tracking-wide py-4 text-white]">
                   Note
                 </p>
-                <ul className="list-disc text-base text-[#3c4043] pl-4 space-y-2">
+                <ul className="list-disc text-base text-white pl-4 space-y-2">
                   <li>
                     For team events,{" "}
                     <b className="font-semibold">every member</b> of the team is
@@ -273,17 +272,17 @@ const particlesLoaded = (container) => {
             )}
           </div>
 
-          <div className="lg:bg-[#ffffff] flex-1 flex flex-col lg:rounded-3xl p-8 lg:px-0 lg:pb-0 lg:pt-12 space-y-6">
-            <p className="text-3xl lg:text-3xl font-semibold tracking-wide text-white lg:text-[#3c4043] lg:px-12">
+          <div className="bg-black flex-1 flex flex-col lg:rounded-3xl p-8 lg:px-0 lg:pb-0 lg:pt-12 space-y-6">
+            <p className="text-3xl lg:text-3xl font-semibold tracking-wide text-white lg:text-white lg:px-12">
               Contact
             </p>
 
             <div className="flex flex-row items-center justify-between lg:px-12">
               <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-[#3c4043]">
+                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
                   {toTitleCase(eventDetail.contact_name_1)}
                 </p>
-                <p className="text-base lg:text-sm tracking-wide text-white lg:text-[#3c4043]">
+                <p className="text-base lg:text-sm tracking-wide text-white lg:text-white">
                   {eventDetail.contact_mobile_1}
                 </p>
               </div>
@@ -293,7 +292,7 @@ const particlesLoaded = (container) => {
                     window.open(`tel:${eventDetail.contact_mobile_1}`);
                   }}
                 >
-                  <IoMdCall className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
+                  <IoMdCall className="text-white hover:text-white lg:text-white lg:hover:text- text-3xl" />
                 </button>
                 <button
                   onClick={() => {
@@ -302,17 +301,17 @@ const particlesLoaded = (container) => {
                     );
                   }}
                 >
-                  <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
+                  <IoLogoWhatsapp className="text-white hover:text-white lg:text-white lg:hover:text-white text-3xl" />
                 </button>
               </div>
             </div>
 
-            {eventDetail.eventId==="EVNT0043"?<></>:<div className="flex flex-row items-center justify-between lg:px-12">
+            {eventDetail.eventId === "EVNT0043" ? <></> : <div className="flex flex-row items-center justify-between lg:px-12">
               <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-[#3c4043]">
+                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
                   {toTitleCase(eventDetail.contact_name_2)}
                 </p>
-                <p className="text-base lg:text-sm tracking-wide text-white lg:text-[#3c4043]">
+                <p className="text-base lg:text-sm tracking-wide text-white lg:text-white">
                   {eventDetail.contact_mobile_2}
                 </p>
               </div>
@@ -322,7 +321,7 @@ const particlesLoaded = (container) => {
                     window.open(`tel:${eventDetail.contact_mobile_2}`);
                   }}
                 >
-                  <IoMdCall className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
+                  <IoMdCall className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
                 </button>
                 <button
                   onClick={() => {
@@ -331,7 +330,7 @@ const particlesLoaded = (container) => {
                     );
                   }}
                 >
-                  <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
+                  <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
                 </button>
               </div>
             </div>}
@@ -350,11 +349,11 @@ const particlesLoaded = (container) => {
 
       {eventDetail.eventRules && eventDetail.eventRules.length > 0 && (
         <div className="flex flex-row gap-4 w-full my-4 lg:px-0">
-          <div className="bg-[#ffffff] w-full lg:rounded-3xl p-8 lg:p-12 space-y-4">
-            <p className="text-3xl font-semibold tracking-wider text-[#3c4043]">
+          <div className="bg-black w-full lg:rounded-3xl p-8 lg:p-12 space-y-4">
+            <p className="text-3xl font-semibold tracking-wider text-white">
               Rules
             </p>
-            <ul className="list-disc text-base tracking-wide text-justify text-[#3c4043] pl-4">
+            <ul className="list-disc text-base tracking-wide text-justify text-white pl-4">
               {eventDetail.eventRules.split("\n").map((rule, index) => (
                 <div>
                   {
@@ -393,7 +392,7 @@ const RoundDescription = ({ roundNumber, description, title = "" }) => {
 
   return (
     <div className="flex w-full ">
-      <p className="hidden lg:block w-28 pr-4 text-9xl font-jetbrains tracking-wider text-[#3c4043] z-10 opacity-40 text-right">
+      <p className="hidden lg:block w-28 pr-4 text-9xl font-jetbrains tracking-wider text-whitez-10 opacity-40 text-right">
         {roundNumber}
       </p>
       <div className="space-y-2 z-30 flex-1">
@@ -401,19 +400,19 @@ const RoundDescription = ({ roundNumber, description, title = "" }) => {
           <React.Fragment>
             <p className="tracking-wider uppercase">ROUND {roundNumber}</p>
             <div className="flex flex-row items-end gap-y-4">
-              <p className="text-3xl font-semibold tracking-wide text-[#3c4043]">
+              <p className="text-3xl font-semibold tracking-wide text-white">
                 {toTitleCase(title)}
               </p>
             </div>
           </React.Fragment>
         ) : (
           <div className="flex flex-row items-end gap-y-4">
-            <p className="text-3xl font-semibold tracking-wide text-[#3c4043]">
+            <p className="text-3xl font-semibold tracking-wide text-white">
               ROUND {roundNumber}
             </p>
           </div>
         )}
-        <p className="text-base lg:text-base text-justify text-[#3c4043] pt-4 lg:pt-0">
+        <p className="text-base lg:text-base text-justify text-white pt-4 lg:pt-0">
           {description.split("\n").map((desc, index) => (
             <div>
               <p key={index}>{desc}</p>

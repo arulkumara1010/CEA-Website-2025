@@ -87,7 +87,7 @@ const NavBarForDesktop = () => {
       </div>
 
       <div
-        className={`divide-y divide-gray-600 h-fit transition-all ease-in-out duration-300 px-6 bg-white `}
+        className={`divide-y divide-gray-600 h-fit transition-all ease-in-out duration-300 px-6 bg-black `}
       >
         <div className="py-8 w-full flex flex-col">
           {/* <Link to="/auth" className="w-full text-gray-600 text-left hover:text-black text-base py-2">
@@ -96,35 +96,35 @@ const NavBarForDesktop = () => {
           {(!userDetails || !localStorage.getItem("token")) && (
             <button
               onClick={() => navigate("/auth?type=signup")}
-              className="bg-black text-white rounded-lg px-6 py-3 text-lg mb-4"
+              className="bg-white text-black rounded-lg px-6 py-3 text-lg mb-4"
             >
-              Register / Login
+              Register/Login
             </button>
           )}
           <Link
             to="/"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2 flex items-center space-x-4"
+            className="w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
             <AiOutlineHome className="text-2xl" />
             <p className="">Home</p>
           </Link>
           <Link
             to="/portal/event"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2 flex items-center space-x-4"
+            className="w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
             <MdOutlineEmojiEvents className="text-2xl" />
             <p className="">Events</p>
           </Link>
           <Link
             to="/../?sn=section5"
-            className="group w-full text-gray-600 text-left hover:text-black text-base py-2 flex items-center space-x-4"
+            className="group w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
             <GrWorkshop className="text-xl opacity-70 group-hover:opacity-100" />
             <p className="">Workshops</p>
           </Link>
           <Link
             to="/../?sn=section4"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2 flex items-center space-x-4"
+            className="w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
             <HiOutlinePresentationChartBar className="text-2xl" />
             <p className="">Paper Presentations</p>
@@ -146,9 +146,9 @@ const NavBarForDesktop = () => {
               <p className="text-white text-xs font-poppins">✨ Early Bird Offer ✨</p>
             </div>
           </div> */}
-          <h3 className="text-base font-semibold py-3">Workshops</h3>
+          <h3 className="text-base text-white  font-semibold py-3">Workshops</h3>
           <WorkNav noMargin workshops={workshops} />
-          <h3 className="text-base font-semibold py-3">Events</h3>
+          <h3 className="text-base text-white font-semibold py-3">Events</h3>
           {/* <EventNav category="Kriyative" noMargin events={events} />
           <EventNav category="Brainiac" events={events} />
           <EventNav category="Coding" events={events} />
@@ -157,7 +157,7 @@ const NavBarForDesktop = () => {
           <EventNav category="Management" events={events} />
           <h3 className="text-base font-semibold py-3">Gold Events</h3> */}
           <GoldNav noMargin goldEvents={goldEvents} />
-          <h3 className="text-base font-semibold py-3">Paper Presentations</h3>
+          <h3 className="text-base text-white font-semibold py-3">Paper Presentations</h3>
           <PaperNav noMargin papers={papers} />
         </div>
       </div>
@@ -249,8 +249,8 @@ const NavBarForMobile = () => {
   }, []);
 
   return (
-    <nav className="lg:hidden z-50 w-screen lg:w-1/4 bg-white fixed lg:relative top-0 max-h-screen lg:h-screen overflow-y-scroll font-poppins shadow-md">
-      <div className="flex w-full z-10 justify-between items-center sticky top-0 bg-white px-4">
+    <nav className="lg:hidden z-50 w-screen lg:w-1/4 bg-black fixed lg:relative top-0 max-h-screen lg:h-screen overflow-y-scroll font-poppins shadow-md">
+      <div className="flex w-full z-10 justify-between items-center sticky top-0 bg-black px-4">
         <MenuToggle isOpen={isOpen} setIsOpen={setIsOpen} className="" />
         <div className="flex justify-center">
           <Link
@@ -295,21 +295,21 @@ const NavBarForMobile = () => {
           <Link
             to="/"
             id="navElements"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2"
+            className="w-full text-white text-left hover:text-white text-base py-2"
           >
             Home
           </Link>
           {localStorage.getItem("token") && userDetails ? (
             <Link
               to="/portal/profile"
-              className="w-full text-gray-600 text-left hover:text-black text-base py-2"
+              className="w-full text-white text-left hover:text-white text-base py-2"
             >
               Dashboard
             </Link>
           ) : (
             <Link
               to="/auth?type=login"
-              className="w-full text-gray-600 text-left hover:text-black text-base py-2"
+              className="w-full text-white text-left hover:text-white text-base py-2"
             >
               Register / Login
             </Link>
@@ -317,21 +317,21 @@ const NavBarForMobile = () => {
           <Link
             to="/portal/event"
             id="navElements"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2"
+            className="w-full text-white text-left hover:text-white text-base py-2"
           >
             Event
           </Link>
           <Link
             to="/../?sn=section5"
             id="navElements"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2"
+            className="w-full text-white text-left hover:text-white text-base py-2"
           >
             Workshops
           </Link>
           <Link
             to="/../?sn=section4"
             id="navElements"
-            className="w-full text-gray-600 text-left hover:text-black text-base py-2"
+            className="w-full text-white text-left hover:text-white text-base py-2"
           >
             Paper Presentations
           </Link>
@@ -344,23 +344,23 @@ const NavBarForMobile = () => {
                     </Link> */}
         </div>
         <div className="py-8 pb-16 px-6" id="navOpen">
-          {/* <div className="flex space-x-4 items-center">
-            <h3 className="text-base font-semibold py-3" id="navElements">
+          <div className="flex space-x-4 items-center">
+            <h3 className="text-white font-semibold py-3" id="navElements">
               Workshops
             </h3>
-            <div className="w-fit h-fit p-2 rounded-lg"
+            {/* <div className="w-fit h-fit p-2 rounded-lg"
               id="early-bird"
             >
               <p className="text-white text-xs font-poppins">✨ Early Bird Offer ✨</p>
-            </div>
-          </div> */}
+            </div> */}
+          </div>
           <WorkNav
             openState={[isOpen, setIsOpen]}
             isMobile
             noMargin
             workshops={workshops}
           />
-          <h3 className="text-base font-semibold py-3" id="navElements">
+          <h3 className="text-base text-white font-semibold py-3" id="navElements">
             Event
           </h3>
           {/* <EventNav
@@ -409,7 +409,7 @@ const NavBarForMobile = () => {
             noMargin
             goldEvents={goldEvents}
           />
-          <h3 className="text-base font-semibold py-3" id="navElements">
+          <h3 className="text-base text-white  font-semibold py-3" id="navElements">
             Paper Presentations
           </h3>
           <PaperNav
@@ -513,14 +513,14 @@ const EventNav = ({
                   setIsOpen(!isOpen);
                   navigate(`/portal/event/${e.id}`);
                 }}
-                className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-8 block"
+                className="w-full text-white text-left hover:text-black text-base py-2 px-8 block"
               >
                 {toTitleCase(e.name)}
               </button>
             ) : (
               <Link
                 to={`/portal/event/${e.id}`}
-                className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-8 block"
+                className="w-full text-white text-left hover:text-black text-base py-2 px-8 block"
               >
                 {toTitleCase(e.name)}
               </Link>
@@ -571,14 +571,14 @@ const GoldNav = ({
                 setIsOpen(!isOpen);
                 navigate(`/portal/event/${e.id}`);
               }}
-              className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+              className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
             >
               {toTitleCase(e.name)}
             </button>
           ) : (
             <Link
               to={`/portal/event/${e.id}`}
-              className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+              className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
             >
               {toTitleCase(e.name)}
             </Link>
@@ -622,14 +622,14 @@ const WorkNav = ({
                   setIsOpen(!isOpen);
                   navigate(`/portal/workshop/${e.id}`);
                 }}
-                className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
               >
                 {e.name}
               </button>
             ) : (
               <Link
                 to={`/portal/workshop/${e.id}`}
-                className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
               >
                 {e.name}
               </Link>
@@ -642,8 +642,8 @@ const WorkNav = ({
         onClick={() => setHideContent(!hideContent)}
         id="navElements"
       >
-        
-        
+
+
       </button>
       <div
         className={`${!hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
@@ -660,14 +660,14 @@ const WorkNav = ({
                   setIsOpen(!isOpen);
                   navigate(`/portal/workshop/${e.id}`);
                 }}
-                className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
               >
                 {e.name}
               </button>
             ) : (
               <Link
                 to={`/portal/workshop/${e.id}`}
-                className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
               >
                 {e.name}
               </Link>
@@ -718,14 +718,14 @@ const PaperNav = ({
                 setIsOpen(!isOpen);
                 navigate(`/portal/paper/${e.id}`);
               }}
-              className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+              className="w-full text-white text-left hover:text-white text-base py-2 px-4 block"
             >
               {toTitleCase(e.name)}
             </button>
           ) : (
             <Link
               to={`/portal/paper/${e.id}`}
-              className="w-full text-gray-600 text-left hover:text-black text-base py-2 px-4 block"
+              className="w-full text-white text-left hover:text-white text-base py-2 px-4 block"
             >
               {toTitleCase(e.name)}
             </Link>
@@ -739,7 +739,7 @@ const PaperNav = ({
 const MenuToggle = ({ isOpen, setIsOpen, className }) => {
   return (
     <button
-      className={`${className} lg:hidden relative z-20 flex items-center p-1 text-gray-500 lg:hover:text-gray-300`}
+      className={`${className} lg:hidden relative z-20 flex items-center p-1 text-white lg:hover:text-white`}
       onClick={() => setIsOpen(!isOpen)}
     >
       {isOpen ? (
