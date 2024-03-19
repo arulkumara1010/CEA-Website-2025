@@ -53,10 +53,7 @@ const EventList = () => {
     console.log(events);
   }, [events]);
 
-  useEffect(() => {
-    // Your logic here to reset hasVideoPlayed to false
-    localStorage.setItem("hasVideoPlayed", "false");
-  }, []);
+
   return (
 
 
