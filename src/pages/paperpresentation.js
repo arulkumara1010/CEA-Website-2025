@@ -23,13 +23,13 @@ const Event = () => {
 
   const particlesInit = useCallback(async engine => {
     console.log(engine);
- 
-    await loadSlim(engine);
-}, []);
 
-const particlesLoaded = (container) => {
-  console.log(container);
-}
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  }
 
   const toTitleCase = (phrase) => {
     const wordsToIgnore = ["of", "in", "for", "and", "an", "or"];
@@ -96,7 +96,7 @@ const particlesLoaded = (container) => {
     </section>
   ) : (
     <section className="w-full lg:px-16 font-poppins py-12 pt-36 lg:pt-12 h-screen overflow-y-scroll">
-    <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
+      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
       <h2 className="text-base mb-2 text-gray-400 tracking-widest px-8 lg:px-0">
         {eventDetail.category}
       </h2>
@@ -148,7 +148,7 @@ const particlesLoaded = (container) => {
         <div className="w-full lg:w-1/3 space-y-4 flex flex-col justify-between">
           {eventDetail.closed ? (
             <div className="lg:bg-white lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start">
-              <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
+              <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#fcc] to-[#8b5cf6]">
                 Registrations Closed
               </span>
             </div>
@@ -180,7 +180,7 @@ const particlesLoaded = (container) => {
               </p>
               <div className="flex flex-col">
                 <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
-                    February
+                  April
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
                   2024
@@ -203,9 +203,8 @@ const particlesLoaded = (container) => {
               </p>
               <div className="pl-2 flex flex-col">
                 <p
-                  className={`text-base ${
-                    eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
-                  } font-semibold tracking-wider text-[#3c4043]`}
+                  className={`text-base ${eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
+                    } font-semibold tracking-wider text-[#3c4043]`}
                 >
                   {eventDetail.hall}
                 </p>
@@ -243,78 +242,7 @@ const particlesLoaded = (container) => {
             )}
           </div>
 
-          <div className="lg:bg-[#ffffff] flex-1 flex flex-col lg:rounded-3xl p-8 lg:px-0 lg:pb-0 lg:pt-12 space-y-6">
-            <p className="text-3xl lg:text-3xl font-semibold tracking-wide text-white lg:text-[#3c4043] lg:px-12">
-              Contact
-            </p>
 
-            <div className="flex flex-row items-center justify-between lg:px-12">
-              <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-[#3c4043]">
-                  {toTitleCase(eventDetail.contact_name_1)}
-                </p>
-                <p className="text-base lg:text-sm tracking-wide text-white lg:text-[#3c4043]">
-                  {eventDetail.contact_mobile_1}
-                </p>
-              </div>
-              <div className="space-x-8">
-                <button
-                  onClick={() => {
-                    window.open(`tel:${eventDetail.contact_mobile_1}`);
-                  }}
-                >
-                  <IoMdCall className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
-                </button>
-                <button
-                  onClick={() => {
-                    window.open(
-                      `https://wa.me/${eventDetail.contact_mobile_1}`
-                    );
-                  }}
-                >
-                  <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
-                </button>
-              </div>
-            </div>
-
-            <div className="flex flex-row items-center justify-between lg:px-12">
-              <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-[#3c4043]">
-                  {toTitleCase(eventDetail.contact_name_2)}
-                </p>
-                <p className="text-base lg:text-sm tracking-wide text-white lg:text-[#3c4043]">
-                  {eventDetail.contact_mobile_2}
-                </p>
-              </div>
-              <div className="space-x-8">
-                <button
-                  onClick={() => {
-                    window.open(`tel:${eventDetail.contact_mobile_2}`);
-                  }}
-                >
-                  <IoMdCall className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
-                </button>
-                <button
-                  onClick={() => {
-                    window.open(
-                      `https://wa.me/${eventDetail.contact_mobile_2}`
-                    );
-                  }}
-                >
-                  <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-[#3c4043] lg:hover:text-[#5f6164] text-3xl" />
-                </button>
-              </div>
-            </div>
-
-            <div
-              className=" hidden lg:block flex-1  rounded-b-3xl"
-              style={{
-                background:
-                  "linear-gradient(to bottom, white 10%, rgba(255,255,255,0) 100%), url(/assets/Design/heightFiller.png) ",
-                backgroundSize: "350%",
-              }}
-            ></div>
-          </div>
         </div>
       </div>
 
@@ -340,7 +268,7 @@ const particlesLoaded = (container) => {
           </div>
         </div>
       )}
-      
+
 
 
     </section>

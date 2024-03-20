@@ -65,16 +65,16 @@ const Section6 = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
-              <div className=" p-4 px-6 space-y-4 flex flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100">
-                <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
+            {/* <div className="flex flex-col lg:flex-row justify-center items-center">
+              <div className=" p-4 px-6 space-y-4 flex flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100"> */}
+            {/* <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
                   <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
                     {"CO "}
                   </span>
                   Sponsor
-                </p>
+                </p> */}
 
-                <div className="flex flex-row">
+            {/* <div className="flex flex-row">
                   <div className="flex flex-col gap-y-2 w-48 lg:w-80">
                     <div className="bg-opacity-50 bg-gray-200 flex justify-center items-center p-4 lg:p-6 h-28 lg:w-80 lg:h-48 rounded-2xl">
                       <div
@@ -90,18 +90,18 @@ const Section6 = () => {
                       {"Societe Generale"}
                     </p>
                   </div>
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row justify-center items-center">
-                <div className=" p-4 px-6 space-y-4 flex flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100">
-                  <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
+                </div> */}
+            {/* </div> */}
+            {/* <div className="flex flex-col lg:flex-row justify-center items-center">
+                <div className=" p-4 px-6 space-y-4 flex flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100"> */}
+            {/* <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
                     <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
                       {"CO "}
                     </span>
                     Sponsor
-                  </p>
+                  </p> */}
 
-                  <div className="flex flex-col gap-y-2 w-48 lg:w-80">
+            {/* <div className="flex flex-col gap-y-2 w-48 lg:w-80">
                     <div className="bg-opacity-50 bg-gray-200 flex justify-center items-center p-4 lg:p-6 h-28 lg:w-80 lg:h-48 rounded-2xl">
                       <div
                         style={{
@@ -115,10 +115,10 @@ const Section6 = () => {
                     <p className="uppercase font-bold text-base lg:text-lg text-[#181818] tracking-wider text-center">
                       {"VITES TECHNOLOGIES"}
                     </p>
-                  </div>
-                </div>
+                  </div> */}
+            {/* </div>
               </div>
-            </div>
+            </div> */}
 
 
 
@@ -259,13 +259,13 @@ const Section6 = () => {
             </div> */}
           </div>
         </div>
-      </section>
+      </section >
       <a
         id="anchor7"
         className="absolute top-[40%] lg:top-[75%] w-full h-20 -z-10"
       ></a>
       <div className="absolute top-[100%] w-full h-10"></div>
-    </div>
+    </div >
   );
 };
 

@@ -166,7 +166,7 @@ const Paper = () => {
             >
               <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
                 {/* {"Register Here!"} */}
-                
+
               </span>
             </button>
           ) : (
@@ -240,7 +240,7 @@ const Paper = () => {
             </p>
             <div className="flex flex-col">
               <p className="text-lg font-semibold tracking-wide text-white">
-                February
+                April
               </p>
               <p className="text-lg font-semibold tracking-wide text-white">
                 2024

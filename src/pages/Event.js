@@ -203,14 +203,14 @@ const Event = () => {
           )}
           {/* <p className="bg-gradient-to-r from-[#C80067] to-[#7470ff] py-4 px-6 rounded-xl shadow-lg shadow-gray-900 lg:shadow-md w-fit text-white text-2xl hover:underline">Register Here !</p> */}
 
-          <div className="bg-black flex flex-col lg:rounded-3xl p-8 lg:p-12 space-y-2 justify-center">
+          <div className="bg-black flex flex-col lg:rounded-3xl p-8 lg:p-1 space-y-12 justify-center">
             <div className="flex flex-row items-center gap-4 lg:gap-4">
               <p className="text-6xl lg:text-6xl font-semibold tracking-wide text-white">
                 {eventDetail.date}
               </p>
               <div className="flex flex-col">
                 <p className="text-lg font-semibold tracking-wide text-white">
-                  February
+                  April
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-white">
                   2024
@@ -272,78 +272,7 @@ const Event = () => {
             )}
           </div>
 
-          <div className="bg-black flex-1 flex flex-col lg:rounded-3xl p-8 lg:px-0 lg:pb-0 lg:pt-12 space-y-6">
-            <p className="text-3xl lg:text-3xl font-semibold tracking-wide text-white lg:text-white lg:px-12">
-              Contact
-            </p>
 
-            <div className="flex flex-row items-center justify-between lg:px-12">
-              <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
-                  {toTitleCase(eventDetail.contact_name_1)}
-                </p>
-                <p className="text-base lg:text-sm tracking-wide text-white lg:text-white">
-                  {eventDetail.contact_mobile_1}
-                </p>
-              </div>
-              <div className="space-x-8">
-                <button
-                  onClick={() => {
-                    window.open(`tel:${eventDetail.contact_mobile_1}`);
-                  }}
-                >
-                  <IoMdCall className="text-white hover:text-white lg:text-white lg:hover:text- text-3xl" />
-                </button>
-                <button
-                  onClick={() => {
-                    window.open(
-                      `https://wa.me/${eventDetail.contact_mobile_1}`
-                    );
-                  }}
-                >
-                  <IoLogoWhatsapp className="text-white hover:text-white lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-              </div>
-            </div>
-
-            {eventDetail.eventId === "EVNT0043" ? <></> : <div className="flex flex-row items-center justify-between lg:px-12">
-              <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
-                  {toTitleCase(eventDetail.contact_name_2)}
-                </p>
-                <p className="text-base lg:text-sm tracking-wide text-white lg:text-white">
-                  {eventDetail.contact_mobile_2}
-                </p>
-              </div>
-              <div className="space-x-8">
-                <button
-                  onClick={() => {
-                    window.open(`tel:${eventDetail.contact_mobile_2}`);
-                  }}
-                >
-                  <IoMdCall className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-                <button
-                  onClick={() => {
-                    window.open(
-                      `https://wa.me/${eventDetail.contact_mobile_2}`
-                    );
-                  }}
-                >
-                  <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-              </div>
-            </div>}
-
-            <div
-              className=" hidden lg:block flex-1  rounded-b-3xl"
-              style={{
-                background:
-                  "linear-gradient(to bottom, white 10%, rgba(255,255,255,0) 100%), url(/assets/Design/heightFiller.png) ",
-                backgroundSize: "350%",
-              }}
-            ></div>
-          </div>
         </div>
       </div>
 

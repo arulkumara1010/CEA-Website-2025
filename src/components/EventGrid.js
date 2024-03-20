@@ -27,7 +27,7 @@ const EventGrid = ({
       <div className="hidden lg:block absolute group-hover:shadow-lg opacity-0 -translate-y-20 group-hover:-translate-y-2 group-hover:opacity-100 left-0 top-[100%] w-full group-hover:scale-[110%] bg-gray-200 rounded-b-3xl px-4 pt-2 transition-all ease-in-out">
         <div className="flex flex-row justify-evenly py-4 text-gray-700">
           <div className="pt-2">
-            <p className="font-poppins font-semibold text-center">{date}{date=='23'?<sup>rd</sup>:<sup>th</sup>} February</p>
+            <p className="font-poppins font-semibold text-center">{date}{date == '23' ? <sup>rd</sup> : <sup>th</sup>} April</p>
             <p className="font-poppins text-center">Date</p>
           </div>
 
@@ -51,7 +51,7 @@ const EventGrid = ({
           className={`hidden lg:block ${arrowColor} rounded-bl-3xl p-2  absolute top-0 right-0 z-20`}
         >
           <div className={`absolute top-0 -left-4 ${arrowColor}`}>
-            
+
           </div>
           <button
             onClick={(e) => {
@@ -63,7 +63,7 @@ const EventGrid = ({
             <FiArrowUpRight className="text-white text-3xl" />
           </button>
           <div className={`absolute -bottom-4 right-0 ${arrowColor}`}>
-            
+
           </div>
         </button>
 
@@ -95,7 +95,7 @@ const EventGrid = ({
         <div className="lg:hidden shadow-lg w-full bg-gray-200 rounded-b-xl px-4 font-poppins">
           <div className="flex flex-row justify-evenly py-2 text-gray-700 text-base">
             <div className="pt-2">
-              <p className="font-poppins font-semibold text-center">{date}{date=='23'?<sup>rd</sup>:<sup>th</sup>} Feb</p>
+              <p className="font-poppins font-semibold text-center">{date}{date == '23' ? <sup>rd</sup> : <sup>th</sup>} April</p>
               <p className="font-poppins text-center">Date</p>
             </div>
 

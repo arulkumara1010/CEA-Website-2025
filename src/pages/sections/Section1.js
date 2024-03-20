@@ -183,7 +183,7 @@ const Section1 = ({ scrollByVH }) => {
         </div>
 
         <div className="flex flex-row space-x-8">
-         
+
           <button
             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
             onClick={() =>
@@ -201,9 +201,9 @@ const Section1 = ({ scrollByVH }) => {
           >
             <SiGmail size={24} className=" text-gray-500 hover:text-black" />
           </button>
-         
-           
-         
+
+
+
         </div>
       </div>
 
@@ -327,7 +327,7 @@ const Section1 = ({ scrollByVH }) => {
               </button>
               <div className="flex-1"></div>
               <div className="flex flex-row space-x-8 pb-8">
-                
+
                 <button
                   className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                   onClick={() =>
@@ -382,9 +382,9 @@ const Section1 = ({ scrollByVH }) => {
         </h1>
         <div className="w-full flex flex-col items-center">
           <div className="hidden lg:flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between">
-           
-          
-          
+
+
+
           </div>
           {localStorage.getItem("token") ? (
             <div className="flex flex-row space-x-6 lg:mt-8 items-center justify-center lg:px-12 w-full px-16 z-10">

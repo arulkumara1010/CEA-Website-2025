@@ -74,19 +74,19 @@ function Section1v2({ scrollByVH }) {
                 className={`lg:hidden pt-12 flex flex-row w-screen ${isOpen && "shadow-lg"
                     } h-auto absolute`}
             >
-                <div className={`px-4 ${isOpen ? "h-full pb-[110%]" : "h-fit"} z-40 bg-white`}>
+                <div className={`px-4 ${isOpen ? "h-full pb-[110%]" : "h-fit"} z-40 bg-black`}>
                     <MenuToggle isOpen={isOpen} setIsOpen={setIsOpen} />
 
                 </div>
                 <div
                     className={`w-screen divide-y divide-gray-600 ${isOpen ? "h-auto overflow-hidden z-60" : "hidden h-0 overflow-hidden"
-                        } transition-all ease-in-out duration-300 w-5/6 bg-white`}
+                        } transition-all ease-in-out duration-300 w-5/6 bg-black`}
                 >
 
 
                     <div
                         className={`w-5/6 flex flex-col font-poppins absolute ${isOpen ? "z-70 h-[50%]" : "-z-20"
-                            } transition-all ease-in-out duration-300 bg-white`}
+                            } transition-all ease-in-out duration-300 bg-black`}
                     >
                         <button
                             onClick={() => {
@@ -97,6 +97,16 @@ function Section1v2({ scrollByVH }) {
                             className={`w-full text-white text-left text-base py-2`}
                         >
                             Campus Tour
+                        </button>
+                        <button
+                            onClick={() => {
+                                setIsOpen(!isOpen);
+                                window.open("/portal/accommodation")
+                            }}
+                            id="nav-button"
+                            className={`w-full text-white text-left text-base py-2`}
+                        >
+                            Accomodation
                         </button>
                         <button
                             onClick={() => {
@@ -117,7 +127,7 @@ function Section1v2({ scrollByVH }) {
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
-                            className={`w-full text-gray-600 text-left text-base py-2`}
+                            className={`w-full text-white text-left text-base py-2`}
                         >
                             Paper Presentations
                         </button>
@@ -128,7 +138,7 @@ function Section1v2({ scrollByVH }) {
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
-                            className={`w-full text-gray-600 text-left text-base py-2`}
+                            className={`w-full text-white text-left text-base py-2`}
                         >
                             Workshops
                         </button>
@@ -139,7 +149,7 @@ function Section1v2({ scrollByVH }) {
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
-                            className={`w-full text-gray-600 text-left text-base py-2`}
+                            className={`w-full text-white text-left text-base py-2`}
                         >
                             Sponsors
                         </button>
@@ -151,7 +161,7 @@ function Section1v2({ scrollByVH }) {
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
-                            className={`w-full text-gray-600 text-left text-base py-2`}
+                            className={`w-full text-white text-left text-base py-2`}
                         >
                             FAQs
                         </button>
@@ -162,7 +172,7 @@ function Section1v2({ scrollByVH }) {
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
-                            className={`w-full text-gray-600 text-left text-base py-2 mb-8`}
+                            className={`w-full text-white text-left text-base py-2 mb-8`}
                         >
                             Contact Us
                         </button>
@@ -170,7 +180,7 @@ function Section1v2({ scrollByVH }) {
 
 
                         <div className="flex flex-row space-x-8 pb-8">
-                            
+
                             <button
                                 className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                                 onClick={() =>
@@ -182,7 +192,7 @@ function Section1v2({ scrollByVH }) {
                             >
                                 <BsInstagram
                                     size={24}
-                                    className=" text-gray-500 hover:text-black"
+                                    className=" text-white hover:text-white"
                                 />
                             </button>
                             <button
@@ -193,7 +203,7 @@ function Section1v2({ scrollByVH }) {
                             >
                                 <SiGmail
                                     size={24}
-                                    className=" text-gray-500 hover:text-black"
+                                    className=" text-white hover:text-white"
                                 />
                             </button>
                         </div>
@@ -202,7 +212,7 @@ function Section1v2({ scrollByVH }) {
             </div>
 
             <div className="flex justify-center items-center lg:hidden py-16">
-                <img src="public//assets//Logo//yutira_rmbg.png"/>
+                <img src="/assets/Logo/Yutira_black.png" />
 
             </div>
 
@@ -243,7 +253,7 @@ function Section1v2({ scrollByVH }) {
                     <div className="flex flex-row space-x-6 lg:hidden mt-8 items-center justify-center lg:px-12 w-full px-16 z-10">
                         <button
                             id="registration-prompt"
-                            className="lg:text-lg font-semibold w-full text-center flex justify-center font-poppins text-[#737373] bg-[#FFDC73] border-2 border-[#FFDC73] shadow-lg hover:scale-110 transition-all px-6 py-2 rounded-lg my-8 lg:mb-16 whitespace-nowrap lg:whitespace-normal"
+                            className="lg:text-lg font-semibold w-full text-center flex justify-center font-poppins text-white bg-[#FFDC73] border-2 border-[#FFDC73] shadow-lg hover:scale-110 transition-all px-6 py-2 rounded-lg my-8 lg:mb-16 whitespace-nowrap lg:whitespace-normal"
                             onClick={() => {
                                 navigate("/auth?type=signup");
                             }}
@@ -293,7 +303,7 @@ function Section1v2({ scrollByVH }) {
 
 
             {isOpen && (
-                <div className="hidden lg:flex absolute top-0 left-0 transition-all w-1/2  max-h-max bg-white z-20 items-center">
+                <div className="hidden lg:flex absolute top-0 left-0 transition-all w-1/2  max-h-max bg-black z-20 items-center">
                     <div className="lg:flex flex-col w-[25vw] h-full pl-[calc(100vw/24)] py-[calc(100vw/24)] justify-between">
                         <div className="lg:space-y-4 flex flex-col m-20 w-[80%]">
 
@@ -303,7 +313,7 @@ function Section1v2({ scrollByVH }) {
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
+                                className="text-left text-lg text-white font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-white"
                             >
                                 Events
                             </button>
@@ -313,7 +323,7 @@ function Section1v2({ scrollByVH }) {
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
+                                className="text-left text-lg text-white font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-white"
                             >
                                 Paper Presentations
                             </button>
@@ -323,9 +333,9 @@ function Section1v2({ scrollByVH }) {
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
+                                className="text-left text-lg text-white font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-white"
                             >
-                                Workshops
+                                Workshop
                             </button>
                             <button
                                 onClick={() => {
@@ -333,18 +343,18 @@ function Section1v2({ scrollByVH }) {
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
+                                className="text-left text-lg text-white font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-white"
                             >
                                 Sponsors
                             </button>
-                           
+
                             <button
                                 onClick={() => {
                                     const element = document.getElementById("section8");
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
+                                className="text-left text-lg text-white font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-white"
                             >
                                 FAQ
                             </button>
@@ -354,7 +364,7 @@ function Section1v2({ scrollByVH }) {
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
+                                className="text-left text-lg text-white font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-white"
                             >
                                 Contact Us
                             </button>
@@ -397,14 +407,14 @@ function Section1v2({ scrollByVH }) {
                         <div>
                             <ul className="flex flex-row justify-end text-sm ml-28">
                                 {/* <li
-                  onClick={() => {
-                    navigate("/portal/accommodation")
-                  }}
-                  className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
-                >
-                  Accommodation
-                </li>
-                <li
+                                    onClick={() => {
+                                        navigate("/portal/accommodation")
+                                    }}
+                                    className="mt-5 text-sm text-gray-600 font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
+                                >
+                                    Accommodation
+                                </li> */}
+                                {/* <li
                   onClick={() => {
                     const element = document.getElementById("section8");
                     element.scrollIntoView({ behavior: "smooth" });
@@ -427,12 +437,20 @@ function Section1v2({ scrollByVH }) {
                                     onClick={() => {
                                         window.open("https://campustour.psgtech.ac.in/")
                                     }}
-                                    className="mt-5 text-sm text-white font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
+                                    className="mt-5 text-sm text-white font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-white mx-4"
                                 >
                                     Campus Tour
                                 </li>
-
                                 <li
+                                    onClick={() => {
+                                        navigate("/portal/accommodation")
+                                    }}
+                                    className="mt-5 text-sm text-white font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-white mx-4"
+                                >
+                                    Accommodation
+                                </li>
+
+                                {/* <li
                                     onClick={() => {
                                         const element = document.getElementById("section3");
                                         console.log(element);
@@ -441,7 +459,7 @@ function Section1v2({ scrollByVH }) {
                                     className="mt-5 text-sm text-white font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-black mx-4"
                                 >
                                     Events
-                                </li>
+                                </li> */}
 
                                 <div className="flex ml-10 items-end justify-start h-full">
                                     <button
@@ -514,7 +532,7 @@ function Section1v2({ scrollByVH }) {
 
                 <div className="flex row-span-2 flex- bg-transparent max-w-full items-center justify-between">
                     <div className="flex flex-row space-x-8  justify-start  mt-32">
-                        
+
                         <button
                             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                             onClick={() =>
@@ -526,16 +544,16 @@ function Section1v2({ scrollByVH }) {
                         >
                             <BsInstagram
                                 size={24}
-                                className=" text-white hover:text-black"
+                                className=" text-white hover:text-white"
                             />
                         </button>
                         <button
                             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                             onClick={() => window.open("mailto:cea.civil@psgtech.ac.in", "_blank")}
                         >
-                            <SiGmail size={25} className=" text-white hover:text-black" />
+                            <SiGmail size={25} className=" text-white hover:text-white" />
                         </button>
-                        
+
                         <button
                             style={{
                                 background: `url(https://d1fdloi71mui9q.cloudfront.net/sdQF8AHkQY6RCSGRVJY5_HjZ8Yx97jSnr03x4)`,
@@ -589,7 +607,7 @@ function Section1v2({ scrollByVH }) {
                                 <div className="flex flex-row space-x-6 lg:items-center justify-center lg: pl-10 w-full  z-10">
                                     <button
                                         id="registration-prompt"
-                                        className="lg:text-lg font-semibold text-[#737373] w-full text-center flex justify-center font-poppins text-white bg-[#FFDC73] border-2 border-[#FFDC73] shadow-lg hover:scale-110 transition-all px-6 py-2 rounded-lg my-8 lg:mb-16 whitespace-nowrap lg:whitespace-normal"
+                                        className="lg:text-lg font-semibold text-[white w-full text-center flex justify-center font-poppins text-white bg-[#FFDC73] border-2 border-[#FFDC73] shadow-lg hover:scale-110 transition-all px-6 py-2 rounded-lg my-8 lg:mb-16 whitespace-nowrap lg:whitespace-normal"
                                         onClick={() => {
                                             navigate("/auth?type=signup");
                                         }}
@@ -637,7 +655,7 @@ function Section1v2({ scrollByVH }) {
 const MenuToggle = ({ isOpen, setIsOpen }) => {
     return (
         <button
-            className="lg:hidden flex items-center p-1 text-gray-500 lg:hover:text-gray-300"
+            className="lg:hidden flex items-center p-1 text-white lg:hover:text-white"
             onClick={() => setIsOpen(!isOpen)}
         >
             {isOpen ? (

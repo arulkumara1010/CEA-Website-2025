@@ -101,7 +101,7 @@ const Workshop = () => {
     </section>
   ) : (
     <section className="w-full lg:px-16 font-poppins py-12 pt-24 lg:pt-12 h-screen bg-white overflow-y-scroll">
-      <Particles
+      {/* <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -109,8 +109,8 @@ const Workshop = () => {
         height="100vh"
         width="100vh"
         options={particleOptions}
-      />
-      {earlyBird && (
+      /> */}
+      {/* {earlyBird && (
         <div className="flex w-[calc(100%+4rem)] lg:w-[calc(100%+8rem)] overflow-x-hidden space-x-6 whitespace-nowrap py-2 mb-12 text-white bg-gradient-to-r from-[#C80067] to-[#5451B6] -mx-16">
           <div className="animate-marquee [will-change:transform] whitespace-nowrap flex space-x-6">
             <p className="">
@@ -139,7 +139,7 @@ const Workshop = () => {
             </p>
           </div>
         </div>
-      )}
+      )} */}
       <div className="w-fit">
         <h1 className="text-3xl text-black font-semibold px-8 lg:px-0">
           {workshopDetail.workName}
@@ -177,7 +177,7 @@ const Workshop = () => {
                 </p>
                 <div className="flex flex-col">
                   <p className="text-lg font-semibold tracking-wide text-white">
-                    February
+                    April
                   </p>
                   <p className="text-lg font-semibold tracking-wide text-white">
                     2024
@@ -203,12 +203,12 @@ const Workshop = () => {
           )}
         </div>
 
-        <div className="w-full lg:w-1/3 space-y-4 flex flex-col justify-between">
+        <div className="w-full lg:w-1/3 space-y-6 flex-col justify-between">
           {
             id === "WKSP0006" ? (
               <>
                 <button
-                  className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
+                  className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-12 text-center lg:text-left flex justify-center lg:justify-start"
                   onClick={() => {
                     console.log("paymentDetails:", paymentDetails);
                     console.log("currentCount:", currentCount);
@@ -250,7 +250,7 @@ const Workshop = () => {
                   )}
                 </button>
                 <button
-                  className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
+                  className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-12 text-center lg:text-left flex justify-center lg:justify-start"
                   onClick={() => {
                     console.log("paymentDetails:", paymentDetails);
                     console.log("currentCount:", currentCount);
@@ -300,7 +300,7 @@ const Workshop = () => {
 
             ) : (
               <button
-                className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
+                className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-12 text-center lg:text-left flex justify-center lg:justify-start"
                 onClick={() => {
                   console.log("paymentDetails:", paymentDetails);
                   console.log("currentCount:", currentCount);
@@ -393,7 +393,9 @@ const Workshop = () => {
 
 
 
-          <div className="flex flex-col bg-black lg:rounded-3xl p-8 space-y-2 justify-center">
+          <div className="flex flex-col bg-black lg:rounded-3xl p-8 space-y-12 justify-center" >
+
+
             <div className="flex flex-row items-center gap-4">
               <p className="text-4xl lg:text-4xl font-semibold tracking-wide text-white p-3">
                 <MdOutlineLocationOn />
@@ -453,74 +455,7 @@ const Workshop = () => {
             </div>
           </div>
 
-          <div className="bg-black flex-1 flex flex-col lg:rounded-3xl p-8 lg:px-0 lg:pb-0 lg:pt-12 space-y-6">
-            <p className="text-3xl lg:text-3xl font-semibold tracking-wide text-white lg:text-white lg:px-12">
-              Contact
-            </p>
 
-            <div className="flex flex-row items-center justify-between lg:px-12">
-              <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
-                  {toTitleCase(workshopDetail.c1Name)}
-                </p>
-                <p className="text-base lg:text-base tracking-wider text-white lg:text-white">
-                  {workshopDetail.c1Num}
-                </p>
-              </div>
-              <div className="space-x-8">
-                <button
-                  onClick={() => {
-                    window.open(`tel:${workshopDetail.c1Num}`);
-                  }}
-                >
-                  <IoMdCall className="text-white hover:text-white lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-                <button
-                  onClick={() => {
-                    window.open(`https://wa.me/${workshopDetail.c1Num}`);
-                  }}
-                >
-                  <IoLogoWhatsapp className="text-white hover:text-white lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-              </div>
-            </div>
-
-            <div className="flex flex-row items-center justify-between lg:px-12">
-              <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
-                  {toTitleCase(workshopDetail.c2Name)}
-                </p>
-                <p className="text-base lg:text-base tracking-wider text-white lg:text-white">
-                  {workshopDetail.c2Num}
-                </p>
-              </div>
-              <div className="space-x-8">
-                <button
-                  onClick={() => {
-                    window.open(`tel:${workshopDetail.c2Num}`);
-                  }}
-                >
-                  <IoMdCall className="text-white hover:text-white lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-                <button
-                  onClick={() => {
-                    window.open(`https://wa.me/${workshopDetail.c2Num}`);
-                  }}
-                >
-                  <IoLogoWhatsapp className="text-white hover:text-white lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-              </div>
-            </div>
-
-            <div
-              className=" hidden lg:block flex-1  rounded-b-3xl"
-              style={{
-                background:
-                  "linear-gradient(to bottom, white 10%, rgba(255,255,255,0) 100%), url(/assets/Design/heightFiller.png) ",
-                backgroundSize: "350%",
-              }}
-            ></div>
-          </div>
         </div>
       </div>
       {workshopDetail.prerequisites ? (

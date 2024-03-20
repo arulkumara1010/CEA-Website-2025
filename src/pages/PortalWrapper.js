@@ -513,14 +513,14 @@ const EventNav = ({
                   setIsOpen(!isOpen);
                   navigate(`/portal/event/${e.id}`);
                 }}
-                className="w-full text-white text-left hover:text-black text-base py-2 px-8 block"
+                className="w-full text-white text-left hover:text-white text-base py-2 px-8 block"
               >
                 {toTitleCase(e.name)}
               </button>
             ) : (
               <Link
                 to={`/portal/event/${e.id}`}
-                className="w-full text-white text-left hover:text-black text-base py-2 px-8 block"
+                className="w-full text-white text-left hover:text-white text-base py-2 px-8 block"
               >
                 {toTitleCase(e.name)}
               </Link>
@@ -571,14 +571,14 @@ const GoldNav = ({
                 setIsOpen(!isOpen);
                 navigate(`/portal/event/${e.id}`);
               }}
-              className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
+              className="w-full text-white text-left hover:text-whitetext-base py-2 px-4 block"
             >
               {toTitleCase(e.name)}
             </button>
           ) : (
             <Link
               to={`/portal/event/${e.id}`}
-              className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
+              className="w-full text-white text-left hover:text-white text-base py-2 px-4 block"
             >
               {toTitleCase(e.name)}
             </Link>
@@ -622,14 +622,14 @@ const WorkNav = ({
                   setIsOpen(!isOpen);
                   navigate(`/portal/workshop/${e.id}`);
                 }}
-                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-white text-base py-2 px-4 block"
               >
                 {e.name}
               </button>
             ) : (
               <Link
                 to={`/portal/workshop/${e.id}`}
-                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-white text-base py-2 px-4 block"
               >
                 {e.name}
               </Link>
@@ -660,14 +660,14 @@ const WorkNav = ({
                   setIsOpen(!isOpen);
                   navigate(`/portal/workshop/${e.id}`);
                 }}
-                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-white text-base py-2 px-4 block"
               >
                 {e.name}
               </button>
             ) : (
               <Link
                 to={`/portal/workshop/${e.id}`}
-                className="w-full text-white text-left hover:text-black text-base py-2 px-4 block"
+                className="w-full text-white text-left hover:text-white text-base py-2 px-4 block"
               >
                 {e.name}
               </Link>

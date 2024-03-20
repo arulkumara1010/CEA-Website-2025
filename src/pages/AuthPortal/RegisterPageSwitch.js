@@ -31,15 +31,15 @@ const RegisterPageSwitch = ({ switchPage }) => {
       </div>
       <button
         onClick={() => navigate(-2)}
-        className="flex hover:cursor-pointer group text-sm items-center space-x-2"
+        className="flex hover:cursor-pointer group text-sm items-center space-x-2 text-white"
       >
         <MdOutlineArrowBackIosNew size={12} />
-        <p className="group-hover:underline">Back</p>
+        <p className="group-hover:underline text-white">Back</p>
       </button>
       <h1 className="text-2xl font-bold text-white">
         Register for Yutira 2024
       </h1>
-      <p className="">Choose the method of Registration</p>
+      <p className="text-white">Choose the method of Registration</p>
       <a
         href={`${BACKEND_URL}/api/auth/google`}
         className="bg-white shadow-lg px-4 py-3 w-full hover:bg-gray-300 transition-all border-gray-300 border-2 rounded-lg flex items-center justify-center space-x-6"
@@ -59,7 +59,7 @@ const RegisterPageSwitch = ({ switchPage }) => {
       </button>
       <button
         onClick={(e) => switchPage("login")}
-        className="w-full text-center"
+        className="w-full text-center text-white"
       >
         Already have an account ? <u>Login</u>
       </button>

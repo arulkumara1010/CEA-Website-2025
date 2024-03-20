@@ -131,14 +131,14 @@ const Landing = () => {
           )}
           <Section1v2 scrollYByVH={consolee} />
 
-          <Section2 scrollYByVH={consolee} />
+          {/* <Section2 scrollYByVH={consolee} /> */}
 
           <Section3v4 scrollYByVH={consolee} />
           <Section4 scrollYByVH={consolee} />
 
 
           <Section5 scrollYByVH={consolee} />
-          <Section52 scrollYByVH={consolee}/>
+          <Section52 scrollYByVH={consolee} />
 
 
           <Section6 scrollYByVH={consolee} />
@@ -169,8 +169,8 @@ const NavBar = ({ consolee }) => {
           const element = document.getElementById("section3");
           element.scrollIntoView({ behavior: "smooth" });
         }}
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
           } transition-all`}
       >
         Events
@@ -180,15 +180,15 @@ const NavBar = ({ consolee }) => {
           const element = document.getElementById("section4");
           element.scrollIntoView({ behavior: "smooth" });
         }}
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
           } transition-all`}
       >
         Paper Presentations
       </button>
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
           } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section5");
@@ -199,8 +199,8 @@ const NavBar = ({ consolee }) => {
       </button>
 
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
           } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section6");
@@ -213,8 +213,8 @@ const NavBar = ({ consolee }) => {
 
 
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
           } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section8");
@@ -224,8 +224,8 @@ const NavBar = ({ consolee }) => {
         FAQs
       </button>
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
           } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section9");
@@ -236,8 +236,8 @@ const NavBar = ({ consolee }) => {
       </button>
       {localStorage.getItem("token") ? (
         <button
-          className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-            } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+          className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+            } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
             } transition-all`}
           onClick={(e) => {
             navigate("/portal/profile");
@@ -247,8 +247,8 @@ const NavBar = ({ consolee }) => {
         </button>
       ) : (
         <button
-          className={`hidden lg:block text-xs w-1/12 ${condition ? "text-gray-300" : "text-gray-500"
-            } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-black"
+          className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
+            } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
             } transition-all`}
           onClick={(e) => {
             navigate("/auth?type=signup");
@@ -452,7 +452,7 @@ const NavBarForMobile = ({ consolee }) => {
             </button>
           )}
           <div className="flex flex-row space-x-8 pt-14">
-           
+
             <button
               className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
               onClick={() =>
@@ -470,8 +470,8 @@ const NavBarForMobile = ({ consolee }) => {
             >
               <SiGmail size={24} className={`${condition ? "text-gray-400" : "text-gray-500"} hover:text-black`} />
             </button>
-           
-            
+
+
           </div>
         </div>
       </div>
@@ -482,7 +482,7 @@ const NavBarForMobile = ({ consolee }) => {
 const MenuToggle = ({ isOpen, setIsOpen }) => {
   return (
     <button
-      className="lg:hidden flex items-center p-1 text-gray-500 lg:hover:text-gray-300"
+      className="lg:hidden flex items-center p-1 text-red-300 lg:hover:text-white "
       onClick={() => setIsOpen(!isOpen)}
     >
       {isOpen ? (
@@ -491,6 +491,7 @@ const MenuToggle = ({ isOpen, setIsOpen }) => {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
