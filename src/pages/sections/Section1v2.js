@@ -461,18 +461,18 @@ function Section1v2({ scrollByVH }) {
                                     Events
                                 </li> */}
 
-                                <div className="flex ml-10 items-end justify-start h-full">
+                                {/* <div className="flex ml-10 items-end justify-start h-full  bg">
                                     <button
-                                        className="h-16 w-16 bg-black rounded-full flex justify-center items-center"
+                                        className="h-16 w-16 bg-black rounded-full flex justify-center items-center" disabled 
                                         onClick={toggleSection}
                                     >
                                         {!isOpen ? (
-                                            <AiOutlineMenu className="text-white " size={20} />
+                                            <AiOutlineMenu className="text-black " size={20} />
                                         ) : (
-                                            <AiOutlineClose className="text-white " size={20} />
+                                            <AiOutlineClose className="text-black " size={20} />
                                         )}
                                     </button>
-                                </div>
+                                </div> */}
                             </ul>
                         </div>
 

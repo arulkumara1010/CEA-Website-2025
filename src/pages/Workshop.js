@@ -141,10 +141,10 @@ const Workshop = () => {
           </div>
         </div>
       )} */}
-=======
-      />
+
+
      
->>>>>>> 5daa37432905849ea47193c159ac2a4fa07fcc01
+
       <div className="w-fit">
         <h1 className="text-3xl text-black font-semibold px-8 lg:px-0">
           {workshopDetail.workName}
