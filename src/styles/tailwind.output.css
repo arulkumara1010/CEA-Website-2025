@@ -1572,6 +1572,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-top-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
+.border-l-white {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -3388,6 +3393,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:bg-\[\#3c4043\] {
     --tw-bg-opacity: 1;
     background-color: rgb(60 64 67 / var(--tw-bg-opacity));
+  }
+
+  .lg\:bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
   .lg\:p-12 {
