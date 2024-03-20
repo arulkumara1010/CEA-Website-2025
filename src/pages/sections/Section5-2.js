@@ -61,7 +61,7 @@ const Section52 = () => {
   return (
     <div className="w-full relative">
       <section
-        id="section5"
+        id="section52"
         className="w-screen relative flex flex-col lg:flex-row items-start workshop-text opacity-0 pb-24"
       >
 
@@ -195,20 +195,20 @@ const PaperGrid = ({ number, imgurl, title, id }) => {
           </div>
           <div className="flex flex-row w-full justify-between items-center p-4">
             <div className="">
-              <div className="text-sm lg:text-base w-[75%] pb-4 font-semibold text-left group-hover:bg-clip-text group-hover:[-webkit-text-fill-color:transparent] group-hover:bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] transition-all">
+              <div className="text-sm text-black lg:text-base w-[75%] pb-4 font-semibold text-left ">
                 {title}
               </div>
               <Link
-                className="bg-blue-500 text-white w-fit px-4 py-2 rounded-xl text-sm flex items-center group"
+                className="bg-gold  text-black w-fit px-4 py-2 rounded-xl text-sm flex items-center group"
                 to={`/portal/paper/${id}`}
               >
                 <p className="">Explore more</p>
                 <IoIosArrowForward className="ml-1 group-hover:ml-2 transition-all" size={16} />
               </Link>
             </div>
-            <div className="text-6xl lg:text-8xl font-semibold text-gray-400 bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] transition-all">
+            {/* <div className="text-6xl lg:text-8xl font-semibold text-gray-400 bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] transition-all">
               {number}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

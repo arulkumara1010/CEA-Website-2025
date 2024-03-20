@@ -1721,9 +1721,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(115 0 254 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#FFDC73\] {
+.bg-gold {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 220 115 / var(--tw-bg-opacity));
+  background-color: #d4a929
 }
 
 .bg-\[\#8f3ccf\] {
@@ -3597,6 +3597,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-8xl {
     font-size: 6rem;
     line-height: 1;
+  }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .lg\:leading-\[4rem\] {

@@ -176,6 +176,7 @@ function Section1v2({ scrollByVH }) {
                         >
                             Contact Us
                         </button>
+                        
 
 
 
@@ -185,7 +186,7 @@ function Section1v2({ scrollByVH }) {
                                 className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                                 onClick={() =>
                                     window.open(
-                                        "https://www.instagram.com/kriya_psgtech/",
+                                        "https://www.instagram.com/cea_ici_psgtech/",
                                         "_blank"
                                     )
                                 }
@@ -194,6 +195,7 @@ function Section1v2({ scrollByVH }) {
                                     size={24}
                                     className=" text-white hover:text-white"
                                 />
+                                Instagram
                             </button>
                             <button
                                 className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
@@ -212,7 +214,7 @@ function Section1v2({ scrollByVH }) {
             </div>
 
             <div className="flex justify-center items-center lg:hidden py-16">
-                <img src="/assets/Logo/Yutira_black.png" />
+                <img src="" />
 
             </div>
 
@@ -385,7 +387,7 @@ function Section1v2({ scrollByVH }) {
 
             <div className="hidden lg:grid grid-rows-5 px-20 min-h-screen w-auto bg-transparent relative z-10">
 
-                <img className="hidden md:hidden lg:block absolute -z-10 h-full w-full" src={BgPlate} alt="" />
+                <img className="hidden md:hidden lg:block absolute -z-10 h-full w-full"  alt="" />
 
 
 
@@ -499,30 +501,8 @@ function Section1v2({ scrollByVH }) {
                                 </div>
                                 <div className="flex">
                                     <div className="hidden lg:flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between mt-10 space-x-10">
-                                        {/* <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-                                            <div className="text-5xl">
-                                                <Number n={40} />+
-                                            </div>
-                                            <h1 className="text-sm text-center tracking-wide uppercase">
-                                                Events
-                                            </h1>
-                                        </div> */}
-                                        {/* <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
-                                            <div className="text-5xl">
-                                                <Number n={10} />+
-                                            </div>
-                                            <h1 className="text-sm text-center tracking-wide uppercase">
-                                                Workshops
-                                            </h1>
-                                        </div> */}
-                                        {/* <div className="w-1/3 flex flex-col items-center justify-between space-y-5">
-                                            <div className="text-5xl">
-                                                <Number n={4} />
-                                            </div>
-                                            <h1 className="text-xs text-center tracking-wide uppercase">
-                                                Paper Presentations
-                                            </h1>
-                                        </div> */}
+                                       
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -537,7 +517,7 @@ function Section1v2({ scrollByVH }) {
                             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                             onClick={() =>
                                 window.open(
-                                    "https://www.instagram.com/kriya_psgtech/",
+                                    "https://www.instagram.com/cea_ici_psgtech/",
                                     "_blank"
                                 )
                             }
@@ -554,18 +534,7 @@ function Section1v2({ scrollByVH }) {
                             <SiGmail size={25} className=" text-white hover:text-white" />
                         </button>
 
-                        <button
-                            style={{
-                                background: `url(https://d1fdloi71mui9q.cloudfront.net/sdQF8AHkQY6RCSGRVJY5_HjZ8Yx97jSnr03x4)`,
-                                backgroundPosition: "center",
-                                backgroundRepeat: "no-repeat",
-                                backgroundSize: "contain",
-                            }}
-                            className="w-6 h-6 invert hover:-translate-y-2 transition-all duration-500 ease-in-out opacity-60 hover:opacity-100"
-                            onClick={() =>
-                                window.open("https://linktr.ee/su.psgtech", "_blank")
-                            }
-                        ></button>
+                       
                     </div>
                     <div className="mt-32 ml-10">
                         <button

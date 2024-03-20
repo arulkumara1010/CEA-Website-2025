@@ -9,22 +9,7 @@ import { SiGmail } from "react-icons/si";
 const Section9 = () => {
   return (
     <React.Fragment>
-      {/* <section
-        id="section9"
-        style={{ background: "url(/assets/Design/errorbg.png)" }}
-        className="w-screen px-[calc(100vw/12)] py-16 font-poppins flex items-center justify-center"
-      >
-        <div className="w-full lg:w-2/3 bg-white p-8 shadow-lg flex flex-col items-center">
-          <h1 className="text-4xl font-semibold font-poppins text-center">
-            Reach Us for Queries
-          </h1>
-          <h2 className="mt-8 text-lg font-poppins text-center w-[80%]">
-            Kindly contact us if you have any queries related to payments,
-            accomodation, event schedules, or other necessities.{" "}
-          </h2>
-          <button className="text-xl px-6 py-2 border-2 border-black mt-8 rounded-lg">Know more</button>
-        </div>
-      </section> */}
+      {}
       <section
         id="section9"
         className="w-screen bg-black px-[calc(100vw/12)] py-16 font-poppins"
@@ -37,13 +22,14 @@ const Section9 = () => {
               className="flex items-center space-x-4"
               onClick={() =>
                 window.open(
-                  "https://www.instagram.com/kriya_psgtech/",
+                  "https://www.instagram.com/cea_ici_psgtech/",
                   "_blank"
                 )
               }
             >
               <BsInstagram size={24} className="text-white" />
               <p className="text-lg"></p>
+              Instagram
             </button>
             <button
               className="flex items-center space-x-4"
@@ -51,25 +37,10 @@ const Section9 = () => {
             >
               <SiGmail size={24} className="text-white" />
               <p className="text-lg"></p>
+              Gmail
             </button>
             
-            {/* <button
-              className="flex items-center space-x-4"
-              onClick={() =>
-                window.open("https://linktr.ee/su.psgtech", "_blank")
-              }
-            >
-              <div
-                style={{
-                  background: `url(https://d1fdloi71mui9q.cloudfront.net/sdQF8AHkQY6RCSGRVJY5_HjZ8Yx97jSnr03x4)`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-                className="w-8 h-8 -mx-1"
-              />
-              <p className="text-lg">Linktree SU</p>
-            </button> */}
+            {}
           </div>
           <div className="flex-1 flex flex-col lg:flex-wrap gap-8 lg:gap-6 lg:gap-y-12 lg:flex-row items-center lg:justify-between">
             <div className="w-full lg:w-56">
@@ -78,17 +49,23 @@ const Section9 = () => {
 " />
               <ContactItem name="Kaveiya Priya S" phone="+91 9345773847" />
             </div>
+            <div className="flex-1 flex flex-col lg:flex-wrap gap-8 lg:gap-6 lg:gap-y-12 lg:flex-row items-center lg:justify-between">
+            <div className="w-full lg:w-56">
+              <h5 className="text-xl tracking-widest">Developers</h5>
+              <ul className="flex-1 flex flex-col lg:flex-wrap gap-4 lg:gap-2 lg:gap-y-2 lg:flex-row items-center lg:justify-between textxl tracking-widest lg:justify-between">
+                <li>Navaneetha Krishnan</li>
+                <li>Mithilesh</li>
+                <li>Elamathi Muthuswamy</li>
+                <li>Kavvya Subramani</li>
+              </ul>
+              
+              
+            </div>
+            </div>
+            
             
 
-            {/* <div className="w-full lg:w-56">
-              <h5 className="text-xs tracking-widest">Accommodation Support</h5>
-              <ContactItem name="Bharath R (Boys)" phone="+91 93447 85172" />
-              <ContactItem
-                name="Lisalini (Girls)"
-                phone="+91 87544 16195"
-                className="mt-4 lg:mt-14"
-              />
-            </div> */}
+            {}
           </div>
         </div>
       </section>

@@ -357,7 +357,7 @@ const NavBarForMobile = ({ consolee }) => {
           <button
             onClick={() => {
               setIsOpen(!isOpen);
-              const element = document.getElementById("section4");
+              const element = document.getElementById("section52");
               element.scrollIntoView({ behavior: "smooth" });
             }}
             className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
@@ -456,7 +456,7 @@ const NavBarForMobile = ({ consolee }) => {
             <button
               className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
               onClick={() =>
-                window.open("https://www.instagram.com/kriya_psgtech/", "_blank")
+                window.open("", "_blank")
               }
             >
               <BsInstagram

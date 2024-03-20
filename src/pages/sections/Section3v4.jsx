@@ -28,7 +28,7 @@ const Section3v4 = () => {
 
     <div id='section3' className='flex justify-center flex-col bg-black text-white items-center py-28 '>
 
-      <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-white mb-6"><span className='bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] text-transparent bg-clip-text'>EVENTS</span></h1>
+      <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-white mb-6"><span className='bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] text-transparent bg-clip-text'>EXCITING EVENTS</span></h1>
       {/* <div className='grid grid-cols-1 lg:grid-cols-6 gap-4 px-[15%]'>
 
         <motion.div variants={variant1} initial='initial' whileHover='hover' className='hover:shadow-2xl flex flex-col space-y-4 lg:col-span-3 justify-between bg-1 bg-cover rounded-xl py-8 px-6 '>

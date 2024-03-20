@@ -187,13 +187,15 @@ const Section1 = ({ scrollByVH }) => {
           <button
             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
             onClick={() =>
-              window.open("https://www.instagram.com/kriya_psgtech/", "_blank")
+              window.open("https://www.instagram.com/cea_ici_psgtech/", "_blank")
             }
+            
           >
             <BsInstagram
               size={24}
               className=" text-gray-500 hover:text-black"
             />
+            
           </button>
           <button
             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
@@ -332,7 +334,7 @@ const Section1 = ({ scrollByVH }) => {
                   className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                   onClick={() =>
                     window.open(
-                      "https://www.instagram.com/kriya_psgtech/",
+                      "https://www.instagram.com/cea_ici_psgtech/",
                       "_blank"
                     )
                   }

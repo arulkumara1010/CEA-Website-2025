@@ -41,7 +41,7 @@ const Section6 = () => {
             <div className="flex flex-col lg:flex-row justify-center items-center">
               <div className=" p-4 px-6 space-y-4 flex lg:w-[30%] flex-col items-center lg:justify-center sponsors-text opacity-0 delay-100">
                 <p className="text-2xl font-semibold tracking-wider text-center lg:text-left text-white">
-                  <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#5238d1] to-[#8938d1]">
+                  <span className="bg-clip-text text-3xl py-2 [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
                     {"TITLE "}
                   </span>
                   Sponsor
@@ -51,7 +51,7 @@ const Section6 = () => {
                   <div className="bg-opacity-50 bg-gray-200 flex justify-center items-center p-4 lg:p-6 h-28 lg:w-80 lg:h-48 rounded-2xl">
                     <div
                       style={{
-                        background: `url("${"https://mma.prnewswire.com/media/806571/KLA_Corporation_Logo.jpg?p=twitter"}")`,
+                        background: ``,
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "contain",
