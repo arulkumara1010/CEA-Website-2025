@@ -123,7 +123,7 @@ function Section1v2({ scrollByVH }) {
                         <button
                             onClick={() => {
                                 setIsOpen(!isOpen);
-                                const element = document.getElementById("section6");
+                                const element = document.getElementById("section5");
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
@@ -319,7 +319,7 @@ function Section1v2({ scrollByVH }) {
                             </button>
                             <button
                                 onClick={() => {
-                                    const element = document.getElementById("section4");
+                                    const element = document.getElementById("section5");
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}

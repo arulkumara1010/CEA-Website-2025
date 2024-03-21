@@ -183,7 +183,7 @@ const NavBar = ({ consolee }) => {
       </button>
       <button
         onClick={(e) => {
-          const element = document.getElementById("section4");
+          const element = document.getElementById("section52");
           element.scrollIntoView({ behavior: "smooth" });
         }}
         className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
@@ -363,7 +363,7 @@ const NavBarForMobile = ({ consolee }) => {
           <button
             onClick={() => {
               setIsOpen(!isOpen);
-              const element = document.getElementById("section52");
+              const element = document.getElementById("section5");
               element.scrollIntoView({ behavior: "smooth" });
             }}
             className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
