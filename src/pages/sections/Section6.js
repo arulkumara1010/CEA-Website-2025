@@ -51,7 +51,7 @@ const Section6 = () => {
                   <div className="bg-opacity-50 bg-gray-200 flex justify-center items-center p-4 lg:p-6 h-28 lg:w-80 lg:h-48 rounded-2xl">
                     <div
                       style={{
-                        background: ``,
+                        background:`url("${"https://i.ibb.co/VpR2x9w/RKCPL-Logo.jpg"}")`,
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "contain",
@@ -59,8 +59,8 @@ const Section6 = () => {
                       className={`w-full h-full`}
                     ></div>
                   </div>
-                  <p className="uppercase text-base font-bold lg:text-lg text-[#181818] tracking-wider text-center">
-                    {"KLA"}
+                  <p className="uppercase text-6xl text-base font-bold lg:text-lg text-white tracking-wider text-center">
+                    {"RKCPL"}
                   </p>
                 </div>
               </div>

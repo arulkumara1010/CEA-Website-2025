@@ -199,7 +199,7 @@ const WorkshopGrid = ({ number, imgurl, title, id }) => {
                 {title}
               </div>
               <Link
-                className="bg-gold text-black w-fit px-4 py-2 rounded-xl text-sm flex items-center group"
+                className="bg-[#ffdc73]  text-black w-fit px-4 py-2 rounded-xl text-sm flex items-center group"
                 to={`/portal/workshop/${id}`}
               >
                 <p className="">Explore more</p>

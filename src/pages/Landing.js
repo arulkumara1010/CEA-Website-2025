@@ -132,14 +132,18 @@ const Landing = () => {
           <Section1v2 scrollYByVH={consolee} />
 
           {/* <Section2 scrollYByVH={consolee} /> */}
+          <Section11 scrollYByVH={consolee}/>
 
           <Section3v4 scrollYByVH={consolee} />
+          
           <Section4 scrollYByVH={consolee} />
+          
+          
 
 
           <Section5 scrollYByVH={consolee} />
           <Section52 scrollYByVH={consolee} />
-
+          
 
           <Section6 scrollYByVH={consolee} />
           <Section7 scrollYByVH={consolee} />
