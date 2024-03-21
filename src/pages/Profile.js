@@ -169,7 +169,7 @@ const Profile = () => {
               />
               <TextOutput
                 className="w-full lg:grid-cols-[100px_minmax(400px,1fr)] grid"
-                heading="Kriya ID"
+                heading="Yutira ID"
                 content={userDetails.kriyaId}
               />
               <TextOutput
@@ -298,14 +298,7 @@ const Profile = () => {
                 If you have any problems with the Transactions, Please fill out
                 this forms !{" "}
               </p>
-              <button
-                className="w-20 h-10 bg-blue-500 text-white items-center"
-                onClick={() =>
-                  window.open("https://forms.gle/2EfHYngZePrxCcwb6")
-                }
-              >
-                Forms
-              </button>
+              
             </div>
           </div>
 

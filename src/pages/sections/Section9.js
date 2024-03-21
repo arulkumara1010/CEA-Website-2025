@@ -53,6 +53,7 @@ const Section9 = () => {
               <ContactItem name="Kavvya Subramani" />
               <ContactItem name="Mithilesh EN" />
               <ContactItem name="Elamathi M" />
+              <ContactItem name="Kishoreadhith" />
               <ContactItem name="Navaneetha Krishnan K S" />
             </div>
             
