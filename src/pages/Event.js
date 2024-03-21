@@ -257,18 +257,26 @@ const Event = () => {
             </div>
             {eventDetail.teamSize !== "1" && (
               <div>
-                <p className="text-2xl font-semibold tracking-wide py-4 text-white]">
-                  Note
-                </p>
-                <ul className="list-disc text-base text-white pl-4 space-y-2">
-                  <li>
-                    For team events,{" "}
-                    <b className="font-semibold">every member</b> of the team is
-                    required to register for the event and pay the general
-                    registration fee.
-                  </li>
-                </ul>
-              </div>
+              <p className="text-2xl font-semibold tracking-wide py-4 text-white]">
+                PRIZE
+              </p>
+              <ul className="list-disc text-2xl text-white pl-4 space-y-2">
+                WINNER<br></br>
+                <div className="text-xl">
+                  3000<br></br><br></br>
+                </div>
+
+                FIRST PRIZE<br></br>
+                <div className="text-xl">
+                  2000<br></br><br></br>
+                </div>
+
+                SECOND PRIZE<br></br>
+                <div className="text-xl">
+                  1000
+                </div>
+              </ul>
+            </div>
             )}
           </div>
 

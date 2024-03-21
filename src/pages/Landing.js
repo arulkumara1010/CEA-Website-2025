@@ -23,6 +23,8 @@ import Section3v4 from "./sections/Section3v4";
 import Section1v2 from "./sections/Section1v2";
 import Section13 from "./sections/Section13";
 import Section52 from "./sections/Section5-2";
+import bg from "./sections/YUTIRA_logo3.png";
+
 const Landing = () => {
   const [consolee, setConsolee] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -312,7 +314,7 @@ const NavBarForMobile = ({ consolee }) => {
           }}
           className={`w-[4.5rem] h-[3.25rem] ${condition && "hidden"}`}
           style={{
-            background: `url(public/assets/Logo/yutira_rmbg.png)`,
+            background: `url("")`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
@@ -460,7 +462,7 @@ const NavBarForMobile = ({ consolee }) => {
             <button
               className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
               onClick={() =>
-                window.open("", "_blank")
+                window.open("https://www.instagram.com/cea_ici_psgtech/", "_blank")
               }
             >
               <BsInstagram

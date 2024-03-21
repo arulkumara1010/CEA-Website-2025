@@ -123,7 +123,7 @@ function Section1v2({ scrollByVH }) {
                         <button
                             onClick={() => {
                                 setIsOpen(!isOpen);
-                                const element = document.getElementById("section4");
+                                const element = document.getElementById("section6");
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
@@ -134,7 +134,7 @@ function Section1v2({ scrollByVH }) {
                         <button
                             onClick={() => {
                                 setIsOpen(!isOpen);
-                                const element = document.getElementById("section5");
+                                const element = document.getElementById("section5-2");
                                 element.scrollIntoView({ behavior: "smooth" });
                             }}
                             id="nav-button"
@@ -176,7 +176,6 @@ function Section1v2({ scrollByVH }) {
                         >
                             Contact Us
                         </button>
-                        
 
 
 
@@ -195,7 +194,6 @@ function Section1v2({ scrollByVH }) {
                                     size={24}
                                     className=" text-white hover:text-white"
                                 />
-                                Instagram
                             </button>
                             <button
                                 className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
@@ -214,7 +212,7 @@ function Section1v2({ scrollByVH }) {
             </div>
 
             <div className="flex justify-center items-center lg:hidden py-16">
-                <img src="" />
+                <img src="/assets/Logo/Yutira_black.png" />
 
             </div>
 
@@ -295,7 +293,7 @@ function Section1v2({ scrollByVH }) {
                         Presented By
                     </p>
                     <p className="font-semibold font-poppins  mt-2 w-fit">
-                        Civil Engineering Association
+                        CEA and ICI-Students Chapter
                     </p>
                     <p className="font-poppins text-xs  w-fit">
                         PSG College of Technology
@@ -331,7 +329,7 @@ function Section1v2({ scrollByVH }) {
                             </button>
                             <button
                                 onClick={() => {
-                                    const element = document.getElementById("section5");
+                                    const element = document.getElementById("section5-2");
                                     console.log(element);
                                     element.scrollIntoView({ behavior: "smooth" });
                                 }}
@@ -387,7 +385,7 @@ function Section1v2({ scrollByVH }) {
 
             <div className="hidden lg:grid grid-rows-5 px-20 min-h-screen w-auto bg-transparent relative z-10">
 
-                <img className="hidden md:hidden lg:block absolute -z-10 h-full w-full"  alt="" />
+                <img className="hidden md:hidden lg:block absolute -z-10 h-full w-full" src={BgPlate} alt="" />
 
 
 
@@ -445,7 +443,7 @@ function Section1v2({ scrollByVH }) {
                                 </li>
                                 <li
                                     onClick={() => {
-                                        navigate("/portal/accommodation")
+                                        window.open("https://forms.gle/Fxeuz5SPBko2hYWq5")
                                     }}
                                     className="mt-5 text-sm text-white font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-white mx-4"
                                 >
@@ -463,18 +461,18 @@ function Section1v2({ scrollByVH }) {
                                     Events
                                 </li> */}
 
-                                {/* <div className="flex ml-10 items-end justify-start h-full  bg">
+                                <div className="flex ml-10 items-end justify-start h-full">
                                     <button
-                                        className="h-16 w-16 bg-black rounded-full flex justify-center items-center" disabled 
+                                        className="h-16 w-16 bg-black rounded-full flex justify-center items-center"
                                         onClick={toggleSection}
                                     >
                                         {!isOpen ? (
-                                            <AiOutlineMenu className="text-black " size={20} />
+                                            <AiOutlineMenu className="text-white " size={20} />
                                         ) : (
-                                            <AiOutlineClose className="text-black " size={20} />
+                                            <AiOutlineClose className="text-white " size={20} />
                                         )}
                                     </button>
-                                </div> */}
+                                </div>
                             </ul>
                         </div>
 
@@ -501,8 +499,30 @@ function Section1v2({ scrollByVH }) {
                                 </div>
                                 <div className="flex">
                                     <div className="hidden lg:flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between mt-10 space-x-10">
-                                       
-                                      
+                                        {/* <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
+                                            <div className="text-5xl">
+                                                <Number n={40} />+
+                                            </div>
+                                            <h1 className="text-sm text-center tracking-wide uppercase">
+                                                Events
+                                            </h1>
+                                        </div> */}
+                                        {/* <div className="w-1/3 flex flex-col items-center justify-between space-y-2">
+                                            <div className="text-5xl">
+                                                <Number n={10} />+
+                                            </div>
+                                            <h1 className="text-sm text-center tracking-wide uppercase">
+                                                Workshops
+                                            </h1>
+                                        </div> */}
+                                        {/* <div className="w-1/3 flex flex-col items-center justify-between space-y-5">
+                                            <div className="text-5xl">
+                                                <Number n={4} />
+                                            </div>
+                                            <h1 className="text-xs text-center tracking-wide uppercase">
+                                                Paper Presentations
+                                            </h1>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -534,7 +554,18 @@ function Section1v2({ scrollByVH }) {
                             <SiGmail size={25} className=" text-white hover:text-white" />
                         </button>
 
-                       
+                        <button
+                            style={{
+                                background: `url(https://d1fdloi71mui9q.cloudfront.net/sdQF8AHkQY6RCSGRVJY5_HjZ8Yx97jSnr03x4)`,
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat",
+                                backgroundSize: "contain",
+                            }}
+                            className="w-6 h-6 invert hover:-translate-y-2 transition-all duration-500 ease-in-out opacity-60 hover:opacity-100"
+                            onClick={() =>
+                                window.open("https://linktr.ee/su.psgtech", "_blank")
+                            }
+                        ></button>
                     </div>
                     <div className="mt-32 ml-10">
                         <button
@@ -609,7 +640,7 @@ function Section1v2({ scrollByVH }) {
                                 ></div>
                                 <div className="flex flex-col ml-3 text-white">
                                     <p className="flex  font-semibold ">
-                                        Presented By Civil Engineering Association
+                                        Presented By CEA and ICI-Students Chapter
                                     </p>
                                     <p className="text-sm">PSG College of Technology</p>
                                 </div>

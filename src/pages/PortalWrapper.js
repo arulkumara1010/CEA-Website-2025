@@ -72,16 +72,17 @@ const NavBarForDesktop = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="hidden lg:block z-50 w-screen lg:w-1/4 bg-white fixed lg:relative top-0 max-h-screen lg:h-screen overflow-y-scroll font-poppins shadow-md">
-      <div className="flex w-full z-10 justify-center items-center sticky top-0 bg-white px-6 shadow-sm">
+    <nav className="hidden lg:block z-50 w-screen lg:w-1/4 bg-black fixed lg:relative top-0 max-h-screen lg:h-screen overflow-y-scroll font-poppins shadow-md">
+      <div className="flex w-full z-10 justify-center items-center sticky top-0 bg-black px-6 shadow-sm">
         <Link
           to={"/"}
           className="w-28 h-28 mt-4"
           style={{
-            background: `url(/assets/Logo/black.png)`,
+            background: `url("https://i.ibb.co/c8nS8cg/yutira-rmbg.png")`,
             backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
+            
           }}
         ></Link>
       </div>

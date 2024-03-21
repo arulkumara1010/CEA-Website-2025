@@ -1873,6 +1873,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 204 204 / 0));
 }
 
+.from-\[\#ffcd73\] {
+  --tw-gradient-from: #ffcd73;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 205 115 / 0));
+}
+
 .from-\[\#FFC740\] {
   --tw-gradient-from: #FFC740;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 199 64 / 0));
@@ -1891,11 +1896,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .from-\[\#5238d1\] {
   --tw-gradient-from: #5238d1;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(82 56 209 / 0));
-}
-
-.from-\[\#ffcd73\] {
-  --tw-gradient-from: #ffcd73;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 205 115 / 0));
 }
 
 .to-\[\'\+props\.to\+\'\] {
@@ -1982,6 +1982,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #7300fe;
 }
 
+.to-\[\#ffcd73\] {
+  --tw-gradient-to: #ffcd73;
+}
+
 .to-\[rgba\(18\2c 18\2c 18\2c 0\.6\)\] {
   --tw-gradient-to: rgba(18,18,18,0.6);
 }
@@ -1992,10 +1996,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .to-\[\#00c37b\] {
   --tw-gradient-to: #00c37b;
-}
-
-.to-\[\#ffcd73\] {
-  --tw-gradient-to: #ffcd73;
 }
 
 .bg-cover {
@@ -2134,6 +2134,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 4rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -2157,16 +2167,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .pt-3 {
@@ -2395,13 +2395,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
-.text-\[30vh\] {
-  font-size: 30vh;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-\[30vh\] {
+  font-size: 30vh;
 }
 
 .font-bold {
@@ -2573,6 +2573,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
+.text-\[\#Ffcd73\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 205 115 / var(--tw-text-opacity));
+}
+
 .line-through {
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
@@ -2609,6 +2614,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .shadow-2xl {
@@ -2872,6 +2881,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 .hover\:shadow-2xl:hover {
@@ -3452,14 +3465,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: calc(100vw / 12);
   }
 
-  .lg\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
   .lg\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
+  }
+
+  .lg\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .lg\:pt-12 {
@@ -3570,6 +3583,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 2.5rem;
   }
 
+  .lg\:text-\[10rem\] {
+    font-size: 10rem;
+  }
+
   .lg\:text-\[3\.5rem\] {
     font-size: 3.5rem;
   }
@@ -3586,10 +3603,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-8xl {
     font-size: 6rem;
     line-height: 1;
-  }
-
-  .lg\:text-\[10rem\] {
-    font-size: 10rem;
   }
 
   .lg\:leading-\[4rem\] {

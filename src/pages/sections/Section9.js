@@ -54,8 +54,8 @@ const Section9 = () => {
               <h5 className="text-xl tracking-widest">Developers</h5>
               <ul className="flex-1 flex flex-col lg:flex-wrap gap-4 lg:gap-2 lg:gap-y-2 lg:flex-row items-center lg:justify-between textxl tracking-widest lg:justify-between">
                 <li>Navaneetha Krishnan</li>
-                <li>Mithilesh</li>
-                <li>Elamathi Muthuswamy</li>
+                <li>Mithilesh E N</li>
+                <li>Elamathi M</li>
                 <li>Kavvya Subramani</li>
               </ul>
               

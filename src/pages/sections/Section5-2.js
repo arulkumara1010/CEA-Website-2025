@@ -78,7 +78,7 @@ const Section52 = () => {
             <h1 className={`text-5xl font-poppins font-semibold workshop-text opacity-0 px-8 lg:p-0 pt-8`}>
               
               <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
-                {"paper presentations"}
+                {"Paper Presentation"}
               </span>{" "}
               <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]"></span>
             </h1>
@@ -186,7 +186,7 @@ const PaperGrid = ({ number, imgurl, title, id }) => {
             }}>
             <div
               style={{
-                background: `url("${imgurl}")`,
+                background: 'url("https://i.ibb.co/FY1VHLv/Whats-App-Image-2024-03-21-at-2-14-09-PM.jpg")',
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"

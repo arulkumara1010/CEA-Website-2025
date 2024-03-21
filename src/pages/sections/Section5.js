@@ -78,7 +78,7 @@ const Section5 = () => {
             <h1 className={`text-5xl font-poppins font-semibold workshop-text opacity-0 px-8 lg:p-0 pt-8`}>
               
               <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
-                {" masterclass workshops "}
+                {" Masterclass Workshop "}
               </span>{" "}
               <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]"></span>
             </h1>
@@ -126,7 +126,7 @@ const Section5 = () => {
         <div className="lg:hidden w-full p-8 pt-20 flex flex-col items-center">
           <h1 className={`text-4xl font-poppins font-semibold workshop-text opacity-0 text-center`}>
             <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
-              {" Masterclass Workshops "}
+              {" Masterclass Workshop "}
             </span>{" "}
            
           </h1>
@@ -185,12 +185,12 @@ const WorkshopGrid = ({ number, imgurl, title, id }) => {
               clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
             }}>
             <div
-              style={{
-                background: `url("${imgurl}")`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover"
-              }}
+             style={{
+              background: 'url("https://i.ibb.co/SsTj9SQ/5622.jpg")',
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover"
+              }}
               className={`w-full h-full rounded-2xl`}></div>
           </div>
           <div className="flex flex-row w-full justify-between items-center p-4">

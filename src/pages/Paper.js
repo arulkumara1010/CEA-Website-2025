@@ -116,7 +116,7 @@ const Paper = () => {
               Guidelines
             </p>
             {paperDetail.ppid !== "PRPN0004" ? <ul className="list-disc text-base lg:text-base text-white pl-10 space-y-2 lg:pr-16">
-              <li>Abstracts should be submitted in the Gform: https://forms.gIe/rp2BNABJDoWDVyYP8</li>
+              <li>Abstracts should be submitted in the Gform:<a href="https://forms.gle/rp2BNABJDoWDVyYP8" className="text-xl text-[#Ffcd73]"><br></br>Click here</a> </li>
               <li>Details such as Title of the Paper, Author Names, Degree, Year of Study, College Name, Contact Number should be clearly mentioned in the abstract.</li>
               <li>The abstracts prepared should be within 300 words describing the outline of the content.</li>
               <li>The papers/manuscript prepared should be within 6 to 10 pages including references. It should be typed in Times New Roman font with size 12.</li>
@@ -214,14 +214,36 @@ const Paper = () => {
               </div>
             </div>
 
-            {/* <div>
-              <p className="text-2xl font-semibold tracking-wide py-4 text-white lg:text-[#3c4043]">
+            { <div>
+              <p className="text-2xl font-semibold tracking-wide py-4 text-white lg:text-white">
+                PRIZE
+              </p>
+              <ul className="text-2xl  list-disc   text-white lg:text-white py-4 space-y-2">
+               Winner<br></br>
+               <div className="text-xl">
+               4000<br></br><br></br>
+               </div>
+               First Runner<br></br>
+               <div className="text-xl">
+               3000<br
+               ></br><br></br>
+</div>
+               Second Runner<br>
+               </br>
+               <div className="text-xl">
+               2000
+               </div>
+              </ul>
+            </div> 
+            }
+            { <div>
+              <p className="text-2xl font-semibold tracking-wide py-4 text-white lg:text-white">
                 Note
               </p>
-              <ul className="list-disc text-base text-white lg:text-[#3c4043] pl-4 space-y-2">
+              <ul className="list-disc text-base text-white lg:text-white pl-4 space-y-2">
                 <li>For teams, only <b className="font-semibold">one</b> team member needs to pay the general registration fee. (This is applicable only for paper presentations.)</li>
               </ul>
-            </div> */}
+            </div>}
           </div>
         </div>
       </div>

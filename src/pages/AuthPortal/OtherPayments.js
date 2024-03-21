@@ -148,7 +148,7 @@ const OtherPayments = ({ switchPage }) => {
           <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6 ">
             <div className="flex w-full justify-center lg:hidden items-center">
               <img
-                src="/public/assets/Logo/yutira_rmbg.png"
+                src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
                 alt="Kriya black"
                 className="lg:hidden h-24 w-auto opacity-70"
               />
@@ -193,7 +193,7 @@ const OtherPayments = ({ switchPage }) => {
               <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-8 lg:px-8 shadow-xl bg-white space-y-10 ">
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
-                    src="/public/assets/Logo/yutira_rmbg.png"
+                    src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
                     alt="Kriya black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
@@ -223,7 +223,7 @@ const OtherPayments = ({ switchPage }) => {
               <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6 ">
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
-                    src="/public/assets/Logo/yutira_rmbg.png"
+                    src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
                     alt="Kriya black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
