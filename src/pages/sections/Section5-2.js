@@ -62,7 +62,7 @@ const Section52 = () => {
     <div className="w-full relative">
       <section
         id="section52"
-        className="w-screen relative flex flex-col lg:flex-row items-start workshop-text opacity-0 pb-24"
+        className="w-screen relative flex flex-col justify-center lg:flex-row items-start workshop-text opacity-0 pb-24"
       >
 
         <div
@@ -125,7 +125,7 @@ const Section52 = () => {
 
         <div className="lg:hidden w-full p-8 pt-20 flex flex-col items-center">
           <h1 className={`text-4xl font-poppins font-semibold workshop-text opacity-0 text-center`}>
-            <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6]">
+            <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r  from-[#FFDC73] to-[#FFDC73]">
               {" Paper Presentations "}
             </span>{" "}
           

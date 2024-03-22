@@ -266,12 +266,12 @@ const Event = () => {
                   3000<br></br><br></br>
                 </div>
 
-                FIRST PRIZE<br></br>
+              FIRST RUNNER-UP<br></br>
                 <div className="text-md">
                   2000<br></br><br></br>
                 </div>
 
-                SECOND PRIZE<br></br>
+                SECOND RUNNER-UP<br></br>
                 <div className="text-md">
                   1000
                 </div>

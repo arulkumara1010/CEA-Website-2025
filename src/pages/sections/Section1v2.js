@@ -212,7 +212,7 @@ function Section1v2({ scrollByVH }) {
             </div>
 
             <div className="flex justify-center items-center lg:hidden py-16">
-                <img src="/assets/Logo/Yutira_black.png" />
+                <img src="/assets/Logo/YUTIRA_logo3.png" />
 
             </div>
 
@@ -220,7 +220,7 @@ function Section1v2({ scrollByVH }) {
                 id="tagline"
                 className="uppercase lg:hidden delay-500 font-poppins text-3xl lg:text-[3.5rem] font-semibold ml-8 -mt-24 mb-6 lg:-ml-40 lg:-mt-0 lg:mb-8"
             >
-                <span className=" text-white leading-[7rem] lg:leading-[8rem] relative font-poppins">
+                <span className=" text-white  lg:leading-[8rem] relative font-poppins">
                     BRIDGING IDEAS , BUILDING REALITIES.
                 </span>
             </h1>
