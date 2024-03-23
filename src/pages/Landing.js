@@ -488,7 +488,7 @@ const NavBarForMobile = ({ consolee }) => {
 const MenuToggle = ({ isOpen, setIsOpen }) => {
   return (
     <button
-      className="lg:hidden flex items-center p-1 text-red-300 lg:hover:text-white "
+      className="lg:hidden flex items-center p-1 text-white lg:hover:text-white "
       onClick={() => setIsOpen(!isOpen)}
     >
       {isOpen ? (
