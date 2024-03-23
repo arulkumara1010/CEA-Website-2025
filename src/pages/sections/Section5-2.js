@@ -201,7 +201,7 @@ const PaperGrid = ({ number, imgurl, title, id }) => {
               <Link
                 className="bg-[#ffdc73]  text-black w-fit px-4 py-2 rounded-xl text-sm flex items-center group"
                 to={`/portal/paper/${id}`}
-              >
+              > 
                 <p className="">Explore more</p>
                 <IoIosArrowForward className="ml-1 group-hover:ml-2 transition-all" size={16} />
               </Link>

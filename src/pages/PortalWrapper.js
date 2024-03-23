@@ -124,7 +124,7 @@ const NavBarForDesktop = () => {
             <p className="">Workshops</p>
           </Link>
           <Link
-            to="/../?sn=section4"
+            to="/../?sn=section5"
             className="w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
             <HiOutlinePresentationChartBar className="text-2xl" />
@@ -330,7 +330,7 @@ const NavBarForMobile = () => {
             Workshops
           </Link>
           <Link
-            to="/../?sn=section4"
+            to="/../?sn=section5"
             id="navElements"
             className="w-full text-white text-left hover:text-white text-base py-2"
           >

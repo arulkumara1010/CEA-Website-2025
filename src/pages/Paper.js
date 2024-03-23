@@ -121,7 +121,7 @@ const Paper = () => {
               <li>The abstracts prepared should be within 300 words describing the outline of the content.</li>
               <li>The papers/manuscript prepared should be within 6 to 10 pages including references. It should be typed in Times New Roman font with size 12.</li>
               <li>The papers submitted will be subjected to plagiarism detection to verify their originality by the organizing institution before the technical review process. (Accepted similarity: less than or equal to 15% for papers and 20% for review articles)</li>
-              <li>Last date of receipt of Abstracts is 2nd April 2024.</li>
+              <li>Last Date for Abstract submission is 2nd April 2024</li>
               <li>The papers will be reviewed by a panel of experts and the selected papers will be invited for presentation.
               </li></ul> :
 
