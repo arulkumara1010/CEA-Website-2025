@@ -50,11 +50,14 @@ const Section9 = () => {
             </div>
             <div className="w-full lg:w-56 whitespace-nowrap">
               <h5 className="text-xs tracking-widest">Developers</h5>
+              <ContactItem name="TG AshwinKumar" />
+              <ContactItem name="Jeyam Palaniyappanr" />
               <ContactItem name="Kavvya Subramani" />
-              <ContactItem name="Mithilesh EN" />
               <ContactItem name="Elamathi M" />
-              <ContactItem name="Kishoreadhith" />
+              <ContactItem name="Mithilesh EN" />
               <ContactItem name="Navaneetha Krishnan K S" />
+              <ContactItem name="Kishoreadhith" />
+            
             </div>
             
             
