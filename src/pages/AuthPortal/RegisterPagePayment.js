@@ -92,20 +92,20 @@ const RegisterPagePayment = ({ switchPage }) => {
         />
       </div>
       <div className="">
-        <h3 className="text-sm text-gray-500">Register for Kriya 2024</h3>
+        <h3 className="text-sm text-gray-500">Register for Yutira 2024</h3>
         <h1 className="text-2xl font-bold text-[#181818]">
           Pay for your registration
         </h1>
       </div>
       {!isPSG ? (
         <p className="">
-          The general registration for Kriya 2024 is{" "}
+          The general registration for Yutira 2024 is{" "}
           <b className="font-semibold">Rs. 250</b>. You can pay now and register
           for all the events. You are also availed of the option to pay later.
         </p>
       ) : (
         <p className="">
-          The general registration for Kriya 2024 is{" "}
+          The general registration for Yutira 2024 is{" "}
           <b className="font-semibold">Rs. 200</b> for the students of PSG
           College of Technology. You can pay now and register for all the
           events. You are also availed of the option to pay later.

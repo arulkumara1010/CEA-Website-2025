@@ -121,7 +121,7 @@ const Section2 = ({ scrollYByVH }) => {
           </h1>
           <p className={`text-xl mt-8 opacity-0 px-8 lg:p-0 ${condition} transition-color duration-300 ease-in-out calender-text font-poppins text-center lg:text-left`}>
             Join us at the forefront of technological advancements and gain
-            valuable insights at our upcoming technical symposium Kriya 2024 !
+            valuable insights at our upcoming technical symposium Yutira 2024 !
           </p>
           <div className="px-8 lg:p-0 ">
             <button

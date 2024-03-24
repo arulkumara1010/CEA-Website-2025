@@ -79,7 +79,7 @@ const RegisterPagePassword = ({ switchPage }) => {
         />
       </div>
       <div className="">
-        <h3 className="text-sm text-gray-500">Register for Kriya 2024</h3>
+        <h3 className="text-sm text-gray-500">Register for Yutira 2024</h3>
         <h1 className="text-2xl font-bold text-[#181818]">
           Enter your password
         </h1>

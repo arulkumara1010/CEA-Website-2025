@@ -162,7 +162,7 @@ const OtherPayments = ({ switchPage }) => {
             <p className="">
               The registration for workshop -{" "}
               <b className="font-semibold"> {workshopDetails.workName} </b> in{" "}
-              Kriya 2024 is{" "}
+              Yutira 2024 is{" "}
               {console.log(workshopDetails?.actualFee + "this is the fee details")}
               {console.log("current count is " + currentCount)}
               {console.log( (workshopDetails.maxCount/100)*20 )}
@@ -238,14 +238,14 @@ const OtherPayments = ({ switchPage }) => {
                 </div>
                 {!isPSG ? (
                   <p className="">
-                    The general registration for Kriya 2024 is{" "}
+                    The general registration for Yutira 2024 is{" "}
                     <b className="font-semibold">Rs. 250</b>. You will be
                     redirected to our payment gateway and an email will be sent
                     as a confirmation.
                   </p>
                 ) : (
                   <p className="">
-                    The general registration for Kriya 2024 is{" "}
+                    The general registration for Yutira 2024 is{" "}
                     <b className="font-semibold">Rs. 200</b> for the students of
                     PSG College of Technology. You can pay now and register for
                     the events. You are also availed of the option to pay later.

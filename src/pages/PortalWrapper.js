@@ -258,7 +258,7 @@ const NavBarForMobile = () => {
             to={"/"}
             className="w-[4.5rem] h-[3.25rem]"
             style={{
-              background: `url(/assets/Logo/Kriya_KLA_Logo_Final.png)`,
+              background: `https://i.ibb.co/c8nS8cg/yutira-rmbg.png`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",

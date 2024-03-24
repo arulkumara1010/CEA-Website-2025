@@ -46,7 +46,7 @@ const RegisterPageFinal = ({ switchPage }) => {
         </b>
         . You can login to the portal with your email address.
       </p>
-      <p className=""> Thank you for registering for Kriya 2024.</p>
+      <p className=""> Thank you for registering for Yutira 2024.</p>
       <button
         className="border-2 border-black bg-black hover:bg-gray-700 transition-all duration-500 text-white text-lg rounded-lg py-2 px-4 w-full"
         onClick={() => navigate("/")}

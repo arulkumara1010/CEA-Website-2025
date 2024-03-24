@@ -70,7 +70,7 @@ const Section1 = ({ scrollByVH }) => {
     );
   }, [consolee]);
 
-  console.log(`url(/assets/Logo/Kriya_KLA_Logo_Final.png)`);
+  console.log(`https://i.ibb.co/c8nS8cg/yutira-rmbg.png`);
 
   useEffect(() => {
     const element = document.querySelector("#anchor1");
@@ -116,7 +116,7 @@ const Section1 = ({ scrollByVH }) => {
           id="kriya-logo"
           className="w-36 h-36"
           style={{
-            background: `url(/assets/Logo/Kriya_KLA_Logo_Final.png)`,
+            background: `https://i.ibb.co/c8nS8cg/yutira-rmbg.png`,
             backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
@@ -232,7 +232,7 @@ const Section1 = ({ scrollByVH }) => {
           <div
             className="lg:hidden w-32 h-28"
             style={{
-              background: `url(/assets/Logo/Kriya_KLA_Logo_Final.png)`,
+              background: `https://i.ibb.co/c8nS8cg/yutira-rmbg.png`,
               backgroundPosition: "left",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",

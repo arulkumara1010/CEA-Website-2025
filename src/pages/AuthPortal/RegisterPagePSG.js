@@ -69,7 +69,7 @@ const RegisterPagePSG = ({ switchPage }) => {
   return (
     <div className="w-full h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6">
       <div className="">
-        <h3 className="text-sm text-gray-500">Register for Kriya 2024</h3>
+        <h3 className="text-sm text-gray-500">Register for Yutira 2024</h3>
         <h1 className="text-2xl font-bold text-[#181818]">
           For PSG Tech Students
         </h1>
