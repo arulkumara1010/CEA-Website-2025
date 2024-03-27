@@ -3,7 +3,7 @@ import { IoMdCall, IoLogoWhatsapp } from "react-icons/io";
 import { MdAccessTime, MdOutlineLocationOn } from "react-icons/md";
 import { AiOutlineTeam, AiOutlineUser } from "react-icons/ai";
 import { useNavigate, useParams } from "react-router-dom";
-import { fetchPaperById, fetchPaperDetailsByEmail, fetchPaperRegister, fetchUserByEmail } from "../API/call";
+import { fetchEventDetailsByEmail, fetchPaperById, fetchPaperDetailsByEmail, fetchPaperRegister, fetchUserByEmail } from "../API/call";
 import { SiGmail } from "react-icons/si";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
@@ -14,16 +14,8 @@ const Paper = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [generalPayment, setGeneralPayment] = useState(false);
   const [userPaperDetails, setUserPaperDetails] = useState([]);
-
-  const particlesInit = useCallback(async engine => {
-    console.log(engine);
-
-    await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  }
+  const [userEventDetails, setUserEventDetails] = useState(null);
+  
 
   const toTitleCase = (phrase) => {
     return phrase
@@ -39,7 +31,7 @@ const Paper = () => {
 
   useEffect(() => {
     fetchPaperDetailsByEmail(localStorage.getItem("email")).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setUserPaperDetails(res.data);
     });
   }, []);
@@ -50,25 +42,32 @@ const Paper = () => {
     } else if (!generalPayment) {
       navigate("/auth/payment?type=GENERAL");
     } else {
+      // console.log("regoster is now working and this si the ID " + id)
+      // console.log("regoster is now working and this si the ID " + localStorage.getItem("email"))
       fetchPaperRegister({
         email: localStorage.getItem("email"),
         paperId: id,
-      }).then((res) => {
-        console.log(res);
+      }).then((res) => {  
+        console.log("hello")
         window.location.reload();
       });
     }
   };
-
   useEffect(() => {
     setPaperDetail(fetchPaperById(id));
   }, [id]);
 
   useEffect(() => {
     fetchUserByEmail(localStorage.getItem("email")).then((res) => {
-      console.log(res.data.user);
+      // console.log(res.data.user);
       setIsLoggedIn(true);
       setGeneralPayment(res?.data?.user?.isPaid);
+    });
+  }, []);
+  useEffect(() => {
+    fetchEventDetailsByEmail(localStorage.getItem("email")).then((res) => {
+      // console.log(res.data);
+      setUserEventDetails(res.data);
     });
   }, []);
 
@@ -161,9 +160,13 @@ const Paper = () => {
             <button
               className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
               onClick={() => {
-                handleRegister()
+                !userEventDetails.find((i) => i.eventId === id) &&
+                  (window.confirm("Are you sure you want to register ?")
+                    ? handleRegister()
+                    : console.log("Cancelled"));
               }}
             >
+              
               <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
                 {"Register Here!"}
 

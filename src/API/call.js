@@ -78,8 +78,26 @@ export const fetchEventDetailsByEmail = (email) =>
 export const fetchEventRegister = (formData) =>
   axios.post(`${EVENT_URL}/`, formData, {});
 
-export const fetchPaperRegister = (formData) =>
-  axios.post(`${PAPER_URL}/`, formData, {});
+  export const fetchPaperRegister = (formData) =>
+  axios.post(`${PAPER_URL}/`, formData, {})
+    .then(response => {
+      return response.data; // Return the response data
+    })
+    .catch(error => {
+      // Handle errors here
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        console.error('Server responded with a status code:', error.response.status);
+        console.error('Response data:', error.response.data);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error('No response received from the server');
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.error('Error setting up the request:', error.message);
+      }
+      throw error; // Re-throw the error to handle it elsewhere if needed
+    });;
 
 export const fetchPaperDetailsByEmail = (email) =>
   axios.get(`${PAPER_URL}/papers-from-user/${email}`, {});
