@@ -207,7 +207,7 @@ const Profile = () => {
                     <div className="pr-4">
                       <p className="font-[500]">Unlock the full experience!</p>
                       <p className="font-[500] pb-1">
-                        Pay the general registration fee and,
+                        Pay the general registration fee 
                       </p>
                       
                     </div>
@@ -273,7 +273,7 @@ const Profile = () => {
                 <div className="pr-4">
                   <p className="font-[500]">Unlock the full experience!</p>
                   <p className="font-[500] pb-1">
-                    Pay the general registration fee and,
+                    Pay the general registration fee
                   </p>
                   
                 </div>
