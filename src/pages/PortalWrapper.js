@@ -298,6 +298,7 @@ const NavBarForMobile = () => {
             to="/"
             id="navElements"
             className="w-full text-white text-left hover:text-white text-base py-2"
+            
           >
             Home
           </Link>
@@ -305,6 +306,7 @@ const NavBarForMobile = () => {
             <Link
               to="/portal/profile"
               className="w-full text-white text-left hover:text-white text-base py-2"
+              onClick={() => setIsOpen(!isOpen)}
             >
               Dashboard
             </Link>
@@ -320,6 +322,7 @@ const NavBarForMobile = () => {
             to="/portal/event"
             id="navElements"
             className="w-full text-white text-left hover:text-white text-base py-2"
+            onClick={() => setIsOpen(!isOpen)}
           >
             Event
           </Link>
@@ -327,6 +330,7 @@ const NavBarForMobile = () => {
             to="/../?sn=section5"
             id="navElements"
             className="w-full text-white text-left hover:text-white text-base py-2"
+            onClick={() => setIsOpen(!isOpen)}
           >
             Workshops
           </Link>
@@ -334,6 +338,7 @@ const NavBarForMobile = () => {
             to="/../?sn=section5"
             id="navElements"
             className="w-full text-white text-left hover:text-white text-base py-2"
+            onClick={() => setIsOpen(!isOpen)}
           >
             Paper Presentations
           </Link>
