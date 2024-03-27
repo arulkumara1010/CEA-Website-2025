@@ -149,7 +149,7 @@ const OtherPayments = ({ switchPage }) => {
             <div className="flex w-full justify-center lg:hidden items-center">
               <img
                 src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
-                alt="Kriya black"
+                alt="yutira black"
                 className="lg:hidden h-24 w-auto opacity-70"
               />
             </div>
@@ -194,7 +194,7 @@ const OtherPayments = ({ switchPage }) => {
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
                     src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
-                    alt="Kriya black"
+                    alt="yutira black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
                 </div>
@@ -224,7 +224,7 @@ const OtherPayments = ({ switchPage }) => {
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
                     src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
-                    alt="Kriya black"
+                    alt="yutira black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
                 </div>

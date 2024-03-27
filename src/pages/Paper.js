@@ -42,13 +42,12 @@ const Paper = () => {
     } else if (!generalPayment) {
       navigate("/auth/payment?type=GENERAL");
     } else {
-      // console.log("regoster is now working and this si the ID " + id)
-      // console.log("regoster is now working and this si the ID " + localStorage.getItem("email"))
+      
       fetchPaperRegister({
         email: localStorage.getItem("email"),
         paperId: id,
       }).then((res) => {  
-        console.log("hello")
+
         window.location.reload();
       });
     }
@@ -58,15 +57,18 @@ const Paper = () => {
   }, [id]);
 
   useEffect(() => {
+    console.log("this is the data")
     fetchUserByEmail(localStorage.getItem("email")).then((res) => {
-      // console.log(res.data.user);
-      setIsLoggedIn(true);
+
+      setIsLoggedIn(true)
       setGeneralPayment(res?.data?.user?.isPaid);
     });
   }, []);
+
+  console.log(generalPayment + "this is the general payment ")
   useEffect(() => {
     fetchEventDetailsByEmail(localStorage.getItem("email")).then((res) => {
-      // console.log(res.data);
+      
       setUserEventDetails(res.data);
     });
   }, []);
