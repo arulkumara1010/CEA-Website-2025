@@ -34,7 +34,7 @@ const RegisterPageFinal = ({ switchPage }) => {
         />
       </div>
       <div className="">
-        <h3 className="text-sm text-gray-500">Your Kriya ID is</h3>
+        <h3 className="text-sm text-gray-500">Your Yutira ID is</h3>
         <h1 className="text-2xl font-bold text-[#181818]">
           {formData ? formData.kriyaId : "KRIYA00XXX"}
         </h1>

@@ -87,7 +87,7 @@ const OtherPayments = ({ switchPage }) => {
       email: userDetails.email,
       name: userDetails.name,
       kriyaId: userDetails.kriyaId,
-      fee: isPSG ? 200 : 250,
+      fee: isPSG ? 100 : 150,
     })
       .then((res) => {
         setTransaction(res.data);
@@ -239,14 +239,14 @@ const OtherPayments = ({ switchPage }) => {
                 {!isPSG ? (
                   <p className="">
                     The general registration for Yutira 2024 is{" "}
-                    <b className="font-semibold">Rs. 250</b>. You will be
+                    <b className="font-semibold">Rs. 150</b>. You will be
                     redirected to our payment gateway and an email will be sent
                     as a confirmation.
                   </p>
                 ) : (
                   <p className="">
                     The general registration for Yutira 2024 is{" "}
-                    <b className="font-semibold">Rs. 200</b> for the students of
+                    <b className="font-semibold">Rs. 100</b> for the students of
                     PSG College of Technology. You can pay now and register for
                     the events. You are also availed of the option to pay later.
                   </p>

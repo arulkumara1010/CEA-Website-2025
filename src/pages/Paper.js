@@ -78,7 +78,7 @@ const Paper = () => {
     </section>
   ) : (
     <section className="w-full lg:px-16 font-poppins py-12 pt-28 lg:pt-12 h-screen bg-white overflow-y-scroll">
-      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
+      
       <div className="w-fit">
         <h1 className="text-4xl text-black font-semibold px-8 lg:px-0">
           {toTitleCase(paperDetail.eventName)}
@@ -161,11 +161,11 @@ const Paper = () => {
             <button
               className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
               onClick={() => {
-                alert("Registrations Closed!")
+                handleRegister()
               }}
             >
               <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
-                {/* {"Register Here!"} */}
+                {"Register Here!"}
 
               </span>
             </button>

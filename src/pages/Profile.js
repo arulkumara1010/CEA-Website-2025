@@ -209,13 +209,7 @@ const Profile = () => {
                       <p className="font-[500] pb-1">
                         Pay the general registration fee and,
                       </p>
-                      <li className="text-sm pl-4">
-                        Gain access to the pro show
-                      </li>
-                      <li className="text-sm pl-4">
-                        Plus the chance to participate in all the exciting
-                        events.
-                      </li>
+                      
                     </div>
                     <IoIosArrowForward
                       className="ml-1 group-hover:ml-2 transition-all"
@@ -281,10 +275,7 @@ const Profile = () => {
                   <p className="font-[500] pb-1">
                     Pay the general registration fee and,
                   </p>
-                  <li className="text-sm pl-4">Gain access to the pro show</li>
-                  <li className="text-sm pl-4">
-                    Plus the chance to participate in all the exciting events.
-                  </li>
+                  
                 </div>
                 <IoIosArrowForward
                   className="ml-1 group-hover:ml-2 transition-all"
@@ -293,13 +284,7 @@ const Profile = () => {
               </Link>
             )}
 
-            <div className="w-full  mt-10 lg:pr-8 flex flex-col space-y-5">
-              <p className="text-lg">
-                If you have any problems with the Transactions, Please fill out
-                this forms !{" "}
-              </p>
-              
-            </div>
+           
           </div>
 
           <div className="w-full lg:pr-8">
@@ -417,7 +402,7 @@ const Profile = () => {
                   </p>
                   <Link
                     className="bg-blue-500 text-white w-fit px-4 py-2 rounded-xl text-sm flex items-center group"
-                    to="/../?sn=section4"
+                    to="/../?sn=section52"
                   >
                     <p className="">Register for paper presentations here !</p>
                     <IoIosArrowForward

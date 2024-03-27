@@ -366,7 +366,7 @@ const RegisterPageDetails = ({ switchPage }) => {
             title="Year"
             className="w-full lg:w-1/3 lg:pt-4"
             placeholder="Select a year"
-            options={[1, 2, 3, 4, 5]}
+            options={[1, 2, 3, 4, 5,"PG"]}
           />
         </div>
       </div>
