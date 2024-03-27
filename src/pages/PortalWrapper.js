@@ -14,6 +14,7 @@ import { HiOutlinePresentationChartBar } from "react-icons/hi";
 import { FaRegUserCircle } from "react-icons/fa";
 import "../styles/gradientAnimation.css";
 import { BiBuildingHouse } from "react-icons/bi";
+import { AiFillLayout } from "react-icons/ai";
 
 const PortalWrapper = ({ children }) => {
   useEffect(() => {
@@ -120,7 +121,7 @@ const NavBarForDesktop = () => {
             to="/../?sn=section5"
             className="group w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
-            <GrWorkshop className="text-xl opacity-70 group-hover:opacity-100" />
+            <AiFillLayout className="text-2xl"/>
             <p className="">Workshops</p>
           </Link>
           <Link
