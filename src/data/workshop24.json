@@ -18,25 +18,19 @@
     "agenda": [
       [
         {
-          "time": "1:00 PM",
-          "description": [
-            "START OF WORKSHOP"
-          ]
-        },
-        {
-          "time": "1:00 PM - 3:00 PM",
+          "time": "10:00 AM - 1:00 PM",
           "description": [
             "WORKSHOP - SESSION 1"
           ]
         },
         {
-          "time": "3:00 PM - 3:30 PM",
+          "time": "1:00 PM - 2:00 PM",
           "description": [
-            "BREAK"
+            "LUNCH"
           ]
         },
         {
-          "time": "3:30 PM - 06:00 PM",
+          "time": "2:00 PM - 05:00 PM",
           "description": [
             "WORKSHOP - SESSION 2"
           ]
@@ -45,3 +39,4 @@
     ]
   }
 ]
+
