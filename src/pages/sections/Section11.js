@@ -40,7 +40,7 @@ const Section11 = () => {
 
   function Number({ n }) {
     const props = useSpring({
-      from: { number: 19990 },
+      from: { number: 39990 },
       number: n,
       delay: 200,
       config: { mass: 1, tension: 20, friction: 10 },
@@ -70,7 +70,7 @@ const Section11 = () => {
             Register now to win from an exciting prize pool worth
           </p>
           <span className="text-5xl lg:text-[10rem] tracking-wide lg:tracking-wider bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#ffcd73] to-[#ffcd73] drop-shadow-xl font-poppins">
-            <span className="font-oswald">₹ {""}</span>{<Number n={20000} />}
+            <span className="font-oswald">₹ {""}</span>{<Number n={40000} />}
           </span>
         </h1>
       </div>

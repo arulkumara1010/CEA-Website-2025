@@ -433,14 +433,14 @@ function Section1v2({ scrollByVH }) {
                   Contact Us
                 </li> */}
 
-                                <li
+                                {/*    <li
                                     onClick={() => {
                                         window.open("https://campustour.psgtech.ac.in/")
                                     }}
                                     className="mt-5 text-sm text-white font-poppins uppercase hover:cursor-pointer tracking-wide  hover:text-white mx-4"
                                 >
                                     Campus Tour
-                                </li>
+                                </li>*/}
                                 <li
                                     onClick={() => {
                                         window.open("https://forms.gle/Fxeuz5SPBko2hYWq5")
@@ -480,9 +480,9 @@ function Section1v2({ scrollByVH }) {
                             <div className="flex justify-start items-start">
                                 <div className="w-full font-poppins text-2xl font-semibold tracking-wider text-[#FFDC73] ">
                                     <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFC740] to-[#FFDC73]">
-                                        April <br></br>
+                                        February 28<sup>th</sup> &<br></br>
                                     </span>{" "}
-                                    5<sup>th</sup>& 6<sup>th</sup> 2024
+                                    March 1<sup>st</sup> 2025
                                 </div>
                             </div>
 

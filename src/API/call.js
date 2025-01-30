@@ -9,8 +9,8 @@ import PapersList from "../data/ppr24.json"
 // import WorkList from '../data/workshopList2.json';
 import WorkList from "../data/workshop24.json";
 
-// export const BACKEND_URL = "http://localhost:4300";
-export const BACKEND_URL = "https://yutiradb.psgtech.ac.in";
+export const BACKEND_URL = "http://localhost:4300";
+//export const BACKEND_URL = "https://yutiradb.psgtech.ac.in";
 
 const BASE_URL = `${BACKEND_URL}/api`;
 const USER_URL = `${BASE_URL}/auth`;
