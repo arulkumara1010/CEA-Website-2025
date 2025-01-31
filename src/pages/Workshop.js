@@ -283,8 +283,8 @@ const Workshop = () => {
                   ) {
                     console.log("Registration not allowed due to max count reached or already registered.");
                   } else {
-                    if (window.confirm("Registrations Closed")) {
-                      console.log("Cancelled");
+                    if (window.confirm("Are you sure you want to register?")) {
+                      handleRegister();
                     } else {
                       console.log("Cancelled");
                     }
