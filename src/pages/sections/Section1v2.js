@@ -72,9 +72,9 @@ function Section1v2({ scrollByVH }) {
 
             <div
                 className={`lg:hidden pt-12 flex flex-row w-screen ${isOpen && "shadow-lg"
-                    } h-auto absolute`}
+                    } h-auto fixed top-0 left-0 z-50`}
             >
-                <div className={`px-4 ${isOpen ? "h-full pb-[110%]" : "h-fit"} z-40 bg-black`}>
+                <div className={`px-4 ${isOpen ? "h-auto" : "h-fit"} z-40 bg-black`}>
                     <MenuToggle isOpen={isOpen} setIsOpen={setIsOpen} />
 
                 </div>
