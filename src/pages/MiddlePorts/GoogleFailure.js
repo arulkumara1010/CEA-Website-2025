@@ -15,7 +15,7 @@ const GoogleFailure = () => {
         <section className="w-full lg:w-[40vw] h-screen lg:h-fit p-8 lg:px-16 bg-white shadow-lg flex flex-col">
           <div className="flex w-full justify-center lg:hidden items-center">
             <img
-              src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
+              src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
               alt="yutira black"
               className="lg:hidden h-24 w-auto opacity-70"
             />

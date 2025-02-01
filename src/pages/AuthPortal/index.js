@@ -73,8 +73,8 @@ const AuthPortal = () => {
             <img
               src={`${
                 isLogInPage
-                  ? "https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
-                  : "https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
+                  ? "https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
+                  : "https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
               } `}
               alt="logo"
               className={`transition-all duration-400 w-96`}

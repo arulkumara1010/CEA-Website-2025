@@ -24,12 +24,10 @@ const OtherPayments = ({ switchPage }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [userDetails, setUserDetails] = useState(null);
   const [workshopDetails, setWorkshopDetails] = useState(null);
-  const [currentCount , setCurrentCount] =useState(null);
+  const [currentCount, setCurrentCount] = useState(null);
 
   const navigate = useNavigate();
 
-
- 
   useEffect(() => {
     fetchUserByEmail(localStorage.getItem("email"))
       .then((res) => {
@@ -68,11 +66,11 @@ const OtherPayments = ({ switchPage }) => {
     };
   }, []);
 
-  const id = searchParams.get("eventId")
+  const id = searchParams.get("eventId");
   useEffect(() => {
     fetchWorkshopStats().then((res) => {
       setCurrentCount(
-        res.data?.workshopWiseCount.find((i) => i._id === id)?.count
+        res.data?.workshopWiseCount.find((i) => i._id === id)?.count,
       );
     });
   }, [id]);
@@ -101,11 +99,11 @@ const OtherPayments = ({ switchPage }) => {
       email: localStorage.getItem("email"),
       name: userDetails.name,
       kriyaId: userDetails.kriyaId,
-      fee: workshopDetails.actualFee, 
-    })    
+      fee: workshopDetails.actualFee,
+    })
       .then((res) => {
         setTransaction(res.data);
-        console.log(res.data)
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -115,7 +113,7 @@ const OtherPayments = ({ switchPage }) => {
     localStorage.setItem("txn", transaction.data.transactionId);
     localStorage.setItem(
       "txn_redirect_uri",
-      `/portal/workshop/${searchParams.get("eventId")}`
+      `/portal/workshop/${searchParams.get("eventId")}`,
     );
     console.log(transaction);
     window.open(transaction.url, "_blank");
@@ -125,11 +123,6 @@ const OtherPayments = ({ switchPage }) => {
     if (!searchParams.get("eventId")) return;
     setWorkshopDetails(fetchWorkshopById(searchParams.get("eventId")));
   }, []);
-
-
-
- 
- 
 
   return (
     <section className="h-screen w-screen flex  items-center bg-gray-100 font-poppins">
@@ -148,7 +141,7 @@ const OtherPayments = ({ switchPage }) => {
           <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6 ">
             <div className="flex w-full justify-center lg:hidden items-center">
               <img
-                src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
+                src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
                 alt="yutira black"
                 className="lg:hidden h-24 w-auto opacity-70"
               />
@@ -163,13 +156,23 @@ const OtherPayments = ({ switchPage }) => {
               The registration for workshop -{" "}
               <b className="font-semibold"> {workshopDetails.workName} </b> in{" "}
               Yutira 2024 is{" "}
-              {console.log(workshopDetails?.actualFee + "this is the fee details")}
+              {console.log(
+                workshopDetails?.actualFee + "this is the fee details",
+              )}
               {console.log("current count is " + currentCount)}
-              {console.log( (workshopDetails.maxCount/100)*20 )}
-              {console.log(workshopDetails?.maxCount + "this is the max count ")}
-              <b className="font-semibold">Rs. {currentCount > (workshopDetails.maxCount/100)*20   ? workshopDetails?.actualFee : workshopDetails?.alteredFee}.00</b>. You
-              will be redirected to our payment gateway and an email will be
-              sent as a confirmation.
+              {console.log((workshopDetails.maxCount / 100) * 20)}
+              {console.log(
+                workshopDetails?.maxCount + "this is the max count ",
+              )}
+              <b className="font-semibold">
+                Rs.{" "}
+                {currentCount > (workshopDetails.maxCount / 100) * 20
+                  ? workshopDetails?.actualFee
+                  : workshopDetails?.alteredFee}
+                .00
+              </b>
+              . You will be redirected to our payment gateway and an email will
+              be sent as a confirmation.
             </p>
             <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 lg:space-x-2 w-full">
               <button
@@ -193,7 +196,7 @@ const OtherPayments = ({ switchPage }) => {
               <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-8 lg:px-8 shadow-xl bg-white space-y-10 ">
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
-                    src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
+                    src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
                     alt="yutira black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
@@ -223,7 +226,7 @@ const OtherPayments = ({ switchPage }) => {
               <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6 ">
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
-                    src="/https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
+                    src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
                     alt="yutira black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
@@ -269,7 +272,15 @@ const OtherPayments = ({ switchPage }) => {
                 </div>
                 <p className="text-sm">
                   * After the transaction, the payment cannot be refunded. For
-                  any queries, <Link className="text-blue-500 font-semibold" to="/?sn=section9"> Contact us </Link>.
+                  any queries,{" "}
+                  <Link
+                    className="text-blue-500 font-semibold"
+                    to="/?sn=section9"
+                  >
+                    {" "}
+                    Contact us{" "}
+                  </Link>
+                  .
                 </p>
               </div>
             )}

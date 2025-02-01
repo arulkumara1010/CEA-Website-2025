@@ -48,9 +48,9 @@ const Section1 = ({ scrollByVH }) => {
     timeoutRef.current = setTimeout(
       () =>
         setCurrentSlide((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1,
         ),
-      4000
+      4000,
     );
 
     return () => {
@@ -66,11 +66,11 @@ const Section1 = ({ scrollByVH }) => {
       (event) => {
         setConsolee((window.pageYOffset / window.innerHeight).toFixed(2));
       },
-      { passive: true }
+      { passive: true },
     );
   }, [consolee]);
 
-  console.log(`https://i.ibb.co/c8nS8cg/yutira-rmbg.png`);
+  console.log(`https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png`);
 
   useEffect(() => {
     const element = document.querySelector("#anchor1");
@@ -116,7 +116,7 @@ const Section1 = ({ scrollByVH }) => {
           id="kriya-logo"
           className="w-36 h-36"
           style={{
-            background: `https://i.ibb.co/c8nS8cg/yutira-rmbg.png`,
+            background: `https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png`,
             backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
@@ -132,7 +132,6 @@ const Section1 = ({ scrollByVH }) => {
             className="text-left text-lg text-gray-600 font-poppins uppercase font-semibold tracking-wide hover:tracking-widest hover:translate-x-2 transition-all duration-300 ease-out hover:text-black"
           >
             Events
-
           </button>
           <button
             onClick={() => {
@@ -183,29 +182,28 @@ const Section1 = ({ scrollByVH }) => {
         </div>
 
         <div className="flex flex-row space-x-8">
-
           <button
             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
             onClick={() =>
-              window.open("https://www.instagram.com/cea_ici_psgtech/", "_blank")
+              window.open(
+                "https://www.instagram.com/cea_ici_psgtech/",
+                "_blank",
+              )
             }
-            
           >
             <BsInstagram
               size={24}
               className=" text-gray-500 hover:text-black"
             />
-            
           </button>
           <button
             className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-            onClick={() => window.open("mailto:cea.civil@psgtech.ac.in", "_blank")}
+            onClick={() =>
+              window.open("mailto:cea.civil@psgtech.ac.in", "_blank")
+            }
           >
             <SiGmail size={24} className=" text-gray-500 hover:text-black" />
           </button>
-
-
-
         </div>
       </div>
 
@@ -215,8 +213,9 @@ const Section1 = ({ scrollByVH }) => {
       >
         {slides.map((slide, index) => (
           <div
-            className={`w-full h-full absolute top-0 right-0 left-0 transition-all duration-100 ease-linear ${currentSlide === index ? "opacity-100" : "opacity-0"
-              }`}
+            className={`w-full h-full absolute top-0 right-0 left-0 transition-all duration-100 ease-linear ${
+              currentSlide === index ? "opacity-100" : "opacity-0"
+            }`}
             style={{
               background: `url(${slides[index]})`,
               backgroundPosition: "50% 50%  ",
@@ -232,7 +231,7 @@ const Section1 = ({ scrollByVH }) => {
           <div
             className="lg:hidden w-32 h-28"
             style={{
-              background: `https://i.ibb.co/c8nS8cg/yutira-rmbg.png`,
+              background: `https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png`,
               backgroundPosition: "left",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
@@ -246,19 +245,22 @@ const Section1 = ({ scrollByVH }) => {
           </div>
         </div>
         <div
-          className={`lg:hidden flex flex-row w-full ${isOpen && "shadow-lg"
-            } h-[50vh]`}
+          className={`lg:hidden flex flex-row w-full ${
+            isOpen && "shadow-lg"
+          } h-[50vh]`}
         >
           <div className={`px-4 ${isOpen ? "h-full" : "h-fit"} z-10 bg-white`}>
             <MenuToggle isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           <div
-            className={`divide-y divide-gray-600 ${isOpen ? "h-full overflow-hidden" : "h-0 overflow-hidden"
-              } transition-all ease-in-out duration-300`}
+            className={`divide-y divide-gray-600 ${
+              isOpen ? "h-full overflow-hidden" : "h-0 overflow-hidden"
+            } transition-all ease-in-out duration-300`}
           >
             <div
-              className={`w-full flex flex-col font-poppins absolute ${isOpen ? "z-20 h-[50%]" : "-z-20"
-                } bg-white transition-all ease-in-out duration-300`}
+              className={`w-full flex flex-col font-poppins absolute ${
+                isOpen ? "z-20 h-[50%]" : "-z-20"
+              } bg-white transition-all ease-in-out duration-300`}
             >
               <button
                 onClick={() => {
@@ -329,13 +331,12 @@ const Section1 = ({ scrollByVH }) => {
               </button>
               <div className="flex-1"></div>
               <div className="flex flex-row space-x-8 pb-8">
-
                 <button
                   className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
                   onClick={() =>
                     window.open(
                       "https://www.instagram.com/cea_ici_psgtech/",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -361,8 +362,9 @@ const Section1 = ({ scrollByVH }) => {
           <div className="w-full h-full relative" id="image-multi-2">
             {slides.map((slide, index) => (
               <div
-                className={`w-full h-full absolute top-0 right-0 left-0 ${currentSlide === index ? "opacity-100" : "opacity-0"
-                  }`}
+                className={`w-full h-full absolute top-0 right-0 left-0 ${
+                  currentSlide === index ? "opacity-100" : "opacity-0"
+                }`}
                 style={{
                   background: `url(${slides[index]})`,
                   backgroundPosition: "50% 50%  ",
@@ -383,11 +385,7 @@ const Section1 = ({ scrollByVH }) => {
           </span>
         </h1>
         <div className="w-full flex flex-col items-center">
-          <div className="hidden lg:flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between">
-
-
-
-          </div>
+          <div className="hidden lg:flex flex-row w-full text-[#3c4043] font-poppins font-semibold justify-between"></div>
           {localStorage.getItem("token") ? (
             <div className="flex flex-row space-x-6 lg:mt-8 items-center justify-center lg:px-12 w-full px-16 z-10">
               <button
@@ -434,8 +432,9 @@ const Section1 = ({ scrollByVH }) => {
           )}
         </div>
         <div
-          className={`flex flex-row space-x-8 lg:space-x-4 w-full justify-center ${consolee >= 0.75 && "invert"
-            }`}
+          className={`flex flex-row space-x-8 lg:space-x-4 w-full justify-center ${
+            consolee >= 0.75 && "invert"
+          }`}
         >
           <div
             className="w-16 h-auto"
@@ -464,8 +463,9 @@ const Section1 = ({ scrollByVH }) => {
         <div className="w-full h-full relative">
           {slides.map((slide, index) => (
             <div
-              className={`w-full h-full absolute top-0 right-0 left-0 ${currentSlide === index ? "opacity-100" : "opacity-0"
-                }`}
+              className={`w-full h-full absolute top-0 right-0 left-0 ${
+                currentSlide === index ? "opacity-100" : "opacity-0"
+              }`}
               style={{
                 background: `linear-gradient(to bottom, rgba(200,0,103,0.7) , rgba(84,81,182,0.7) ), url(${slides[index]})`,
                 backgroundPosition: "left",

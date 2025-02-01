@@ -23,7 +23,6 @@ const PortalWrapper = ({ children }) => {
   }, []);
   return (
     <main className="w-screen h-screen overflow-x-hidden flex items-center bg-[#181818] ">
-
       <NavBarForDesktop />
       <NavBarForMobile />
       <Outlet />
@@ -79,11 +78,10 @@ const NavBarForDesktop = () => {
           to={"/"}
           className="w-28 h-28 mt-4"
           style={{
-            background: `url("https://i.ibb.co/c8nS8cg/yutira-rmbg.png")`,
+            background: `url("https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png")`,
             backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
-            
           }}
         ></Link>
       </div>
@@ -121,7 +119,7 @@ const NavBarForDesktop = () => {
             to="/../?sn=section5"
             className="group w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
-            <AiFillLayout className="text-2xl"/>
+            <AiFillLayout className="text-2xl" />
             <p className="">Workshops</p>
           </Link>
           <Link
@@ -148,7 +146,9 @@ const NavBarForDesktop = () => {
               <p className="text-white text-xs font-poppins">✨ Early Bird Offer ✨</p>
             </div>
           </div> */}
-          <h3 className="text-base text-white  font-semibold py-3">Workshops</h3>
+          <h3 className="text-base text-white  font-semibold py-3">
+            Workshops
+          </h3>
           <WorkNav noMargin workshops={workshops} />
           <h3 className="text-base text-white font-semibold py-3">Events</h3>
           {/* <EventNav category="Kriyative" noMargin events={events} />
@@ -159,7 +159,9 @@ const NavBarForDesktop = () => {
           <EventNav category="Management" events={events} />
           <h3 className="text-base font-semibold py-3">Gold Events</h3> */}
           <GoldNav noMargin goldEvents={goldEvents} />
-          <h3 className="text-base text-white font-semibold py-3">Paper Presentations</h3>
+          <h3 className="text-base text-white font-semibold py-3">
+            Paper Presentations
+          </h3>
           <PaperNav noMargin papers={papers} />
         </div>
       </div>
@@ -259,7 +261,7 @@ const NavBarForMobile = () => {
             to={"/"}
             className="w-[4.5rem] h-[3.25rem]"
             style={{
-              background: `https://i.ibb.co/c8nS8cg/yutira-rmbg.png`,
+              background: `https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
@@ -290,15 +292,15 @@ const NavBarForMobile = () => {
       </div>
 
       <div
-        className={`divide-y divide-gray-600 ${isOpen ? "h-fit" : "h-0 overflow-hidden"
-          } transition-all ease-in-out duration-300`}
+        className={`divide-y divide-gray-600 ${
+          isOpen ? "h-fit" : "h-0 overflow-hidden"
+        } transition-all ease-in-out duration-300`}
       >
         <div className="py-8 w-full flex flex-col px-6">
           <Link
             to="/"
             id="navElements"
             className="w-full text-white text-left hover:text-white text-base py-2"
-            
           >
             Home
           </Link>
@@ -367,7 +369,10 @@ const NavBarForMobile = () => {
             noMargin
             workshops={workshops}
           />
-          <h3 className="text-base text-white font-semibold py-3" id="navElements">
+          <h3
+            className="text-base text-white font-semibold py-3"
+            id="navElements"
+          >
             Event
           </h3>
           {/* <EventNav
@@ -416,7 +421,10 @@ const NavBarForMobile = () => {
             noMargin
             goldEvents={goldEvents}
           />
-          <h3 className="text-base text-white  font-semibold py-3" id="navElements">
+          <h3
+            className="text-base text-white  font-semibold py-3"
+            id="navElements"
+          >
             Paper Presentations
           </h3>
           <PaperNav
@@ -453,7 +461,7 @@ const EventNav = ({
   noMargin = false,
   events,
   isMobile = false,
-  openState = [true, () => { }],
+  openState = [true, () => {}],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);
@@ -488,15 +496,17 @@ const EventNav = ({
   return (
     <React.Fragment>
       <button
-        className={`flex justify-between group items-center ${!noMargin && "mt-0"
-          } my-2`}
+        className={`flex justify-between group items-center ${
+          !noMargin && "mt-0"
+        } my-2`}
         onClick={() => setHideContent(!hideContent)}
         id="navElements"
       >
         <div>
           <IoMdArrowDropright
-            className={`text-lg text-gray-500 ${hideContent ? "rotate-90" : "rotate-0"
-              } transition-all`}
+            className={`text-lg text-gray-500 ${
+              hideContent ? "rotate-90" : "rotate-0"
+            } transition-all`}
           />
         </div>
         <p
@@ -506,8 +516,9 @@ const EventNav = ({
         </p>
       </button>
       <div
-        className={`${!hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
-          } transition-all overflow-hidden flex flex-col`}
+        className={`${
+          !hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
+        } transition-all overflow-hidden flex flex-col`}
         id="navElements"
       >
         {events
@@ -531,7 +542,7 @@ const EventNav = ({
               >
                 {toTitleCase(e.name)}
               </Link>
-            )
+            ),
           )}
       </div>
     </React.Fragment>
@@ -542,7 +553,7 @@ const GoldNav = ({
   noMargin = false,
   goldEvents,
   isMobile = false,
-  openState = [true, () => { }],
+  openState = [true, () => {}],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);
@@ -589,7 +600,7 @@ const GoldNav = ({
             >
               {toTitleCase(e.name)}
             </Link>
-          )
+          ),
         )}
       </div>
     </React.Fragment>
@@ -600,7 +611,7 @@ const WorkNav = ({
   noMargin = false,
   workshops,
   isMobile = false,
-  openState = [true, () => { }],
+  openState = [true, () => {}],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);
@@ -640,21 +651,20 @@ const WorkNav = ({
               >
                 {e.name}
               </Link>
-            )
+            ),
           )}
       </div>
       <button
-        className={`flex justify-between group items-center ${!noMargin && "mt-0"
-          } my-2 pl-2`}
+        className={`flex justify-between group items-center ${
+          !noMargin && "mt-0"
+        } my-2 pl-2`}
         onClick={() => setHideContent(!hideContent)}
         id="navElements"
-      >
-
-
-      </button>
+      ></button>
       <div
-        className={`${!hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
-          } transition-all overflow-hidden flex flex-col`}
+        className={`${
+          !hideContent ? "h-0 overflow-hidden" : "flex h-fit mb-8"
+        } transition-all overflow-hidden flex flex-col`}
         id="navElements"
       >
         {workshops
@@ -678,7 +688,7 @@ const WorkNav = ({
               >
                 {e.name}
               </Link>
-            )
+            ),
           )}
       </div>
     </React.Fragment>
@@ -689,7 +699,7 @@ const PaperNav = ({
   noMargin = false,
   papers,
   isMobile = false,
-  openState = [true, () => { }],
+  openState = [true, () => {}],
 }) => {
   const [isOpen, setIsOpen] = openState;
   const [hideContent, setHideContent] = useState(false);
@@ -736,7 +746,7 @@ const PaperNav = ({
             >
               {toTitleCase(e.name)}
             </Link>
-          )
+          ),
         )}
       </div>
     </React.Fragment>

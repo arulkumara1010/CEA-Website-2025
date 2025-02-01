@@ -88,7 +88,7 @@ function Section1v2({ scrollByVH }) {
                         className={`w-5/6 flex flex-col font-poppins absolute ${isOpen ? "z-70 h-[50%]" : "-z-20"
                             } transition-all ease-in-out duration-300 bg-black`}
                     >
-                        <button
+                        {/*<button
                             onClick={() => {
                                 setIsOpen(!isOpen);
                                 window.open("https://campustour.psgtech.ac.in")
@@ -97,11 +97,11 @@ function Section1v2({ scrollByVH }) {
                             className={`w-full text-white text-left text-base py-2`}
                         >
                             Campus Tour
-                        </button>
+                        </button>*/}
                         <button
                             onClick={() => {
                                 setIsOpen(!isOpen);
-                                window.open("/portal/accommodation")
+                                window.open("https://forms.gle/Fxeuz5SPBko2hYWq5")
                             }}
                             id="nav-button"
                             className={`w-full text-white text-left text-base py-2`}
@@ -280,14 +280,15 @@ function Section1v2({ scrollByVH }) {
                     }`}
             >
                 <div
-                    className="w-16 h-auto"
+                    className="w-16 h-16"
                     style={{
-                        background: `url(https://upload.wikimedia.org/wikipedia/en/e/eb/PSG_College_of_Technology_logo.png)`,
+                        background: `url(https://i.ibb.co/p6ypJzk9/psg.png)`,
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "contain",
                     }}
                 ></div>
+
                 <div className=" text-sm lg:text-base w-fit  ">
                     <p className="uppercase tracking-wider font-poppins text-sm w-fit">
                         Presented By
@@ -626,20 +627,20 @@ function Section1v2({ scrollByVH }) {
                                 </div>
                             )}
                         </div>
-                        <div className="flex flex-row  mb-16">
+
+                        <div className="flex flex-row mb-16">
                             <div className="flex ml-10">
                                 <div
-                                    className="w-16 h-16 "
+                                    className="w-16 h-16"
                                     style={{
-                                        background: `url(https://upload.wikimedia.org/wikipedia/en/e/eb/PSG_College_of_Technology_logo.png)`,
-
+                                        background: `url(https://i.ibb.co/p6ypJzk9/psg.png)`,
                                         backgroundPosition: "center",
                                         backgroundRepeat: "no-repeat",
                                         backgroundSize: "contain",
                                     }}
                                 ></div>
                                 <div className="flex flex-col ml-3 text-white">
-                                    <p className="flex  font-semibold ">
+                                    <p className="flex font-semibold">
                                         Presented By CEA and ICI-Students Chapter
                                     </p>
                                     <p className="text-sm">PSG College of Technology</p>

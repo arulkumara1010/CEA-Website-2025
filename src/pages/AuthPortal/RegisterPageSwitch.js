@@ -6,15 +6,15 @@ import { BACKEND_URL } from "../../API/call";
 
 const GOOGLE_ICON = "https://cdn-icons-png.flaticon.com/512/281/281764.png";
 
-
 const RegisterPageSwitch = ({ switchPage }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!searchParams.get("referral")) return;
-    if (searchParams.get("referral") === "invalid") return toast.error("Invalid Referral Code");
-  }, [searchParams])
+    if (searchParams.get("referral") === "invalid")
+      return toast.error("Invalid Referral Code");
+  }, [searchParams]);
 
   const handleRegisterWithEmail = () => {
     setSearchParams({ ...searchParams, type: "signup", page: "details" });
@@ -24,7 +24,7 @@ const RegisterPageSwitch = ({ switchPage }) => {
     <div className="w-full h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-black space-y-6">
       <div className="flex w-full justify-center lg:hidden items-center">
         <img
-          src="https://i.ibb.co/c8nS8cg/yutira-rmbg.png"
+          src="https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
           alt="yutira black"
           className="lg:hidden h-24 w-auto opacity-70"
         />
