@@ -70,7 +70,7 @@ const OtherPayments = ({ switchPage }) => {
   useEffect(() => {
     fetchWorkshopStats().then((res) => {
       setCurrentCount(
-        res.data?.workshopWiseCount.find((i) => i._id === id)?.count,
+        res.data?.workshopWiseCount.find((i) => i._id === id)?.count
       );
     });
   }, [id]);
@@ -113,7 +113,7 @@ const OtherPayments = ({ switchPage }) => {
     localStorage.setItem("txn", transaction.data.transactionId);
     localStorage.setItem(
       "txn_redirect_uri",
-      `/portal/workshop/${searchParams.get("eventId")}`,
+      `/portal/workshop/${searchParams.get("eventId")}`
     );
     console.log(transaction);
     window.open(transaction.url, "_blank");
@@ -155,14 +155,14 @@ const OtherPayments = ({ switchPage }) => {
             <p className="">
               The registration for workshop -{" "}
               <b className="font-semibold"> {workshopDetails.workName} </b> in{" "}
-              Yutira 2024 is{" "}
+              Yutira 2025 is{" "}
               {console.log(
-                workshopDetails?.actualFee + "this is the fee details",
+                workshopDetails?.actualFee + "this is the fee details"
               )}
               {console.log("current count is " + currentCount)}
               {console.log((workshopDetails.maxCount / 100) * 20)}
               {console.log(
-                workshopDetails?.maxCount + "this is the max count ",
+                workshopDetails?.maxCount + "this is the max count "
               )}
               <b className="font-semibold">
                 Rs.{" "}
@@ -241,14 +241,14 @@ const OtherPayments = ({ switchPage }) => {
                 </div>
                 {!isPSG ? (
                   <p className="">
-                    The general registration for Yutira 2024 is{" "}
+                    The general registration for Yutira 2025 is{" "}
                     <b className="font-semibold">Rs. 150</b>. You will be
                     redirected to our payment gateway and an email will be sent
                     as a confirmation.
                   </p>
                 ) : (
                   <p className="">
-                    The general registration for Yutira 2024 is{" "}
+                    The general registration for Yutira 2025 is{" "}
                     <b className="font-semibold">Rs. 100</b> for the students of
                     PSG College of Technology. You can pay now and register for
                     the events. You are also availed of the option to pay later.

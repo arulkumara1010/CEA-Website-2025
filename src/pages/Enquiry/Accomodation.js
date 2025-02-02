@@ -30,15 +30,15 @@ const Accomodation = () => {
     breakfast1: false,
     breakfast2: false,
     breakfast3: false,
-    lunch1:false,
-    lunch2:false,
-    lunch3:false,
+    lunch1: false,
+    lunch2: false,
+    lunch3: false,
     dinner1: false,
     dinner2: false,
     days: 0,
     amount: 0,
-    amenities : "No",
-    vacated:false
+    amenities: "No",
+    vacated: false,
   });
   const [paid, setPaid] = useState(false);
   const fromDates = [
@@ -51,12 +51,12 @@ const Accomodation = () => {
     "23rd February Night",
     "24th February Night",
     "25th February Evening",
-  ]
+  ];
   const roomCost = {
     "Common Free Hall": 0,
-    "Room": 125,
-    "Two Sharing":125,
-    "Two Sharing with common bathroom":250
+    Room: 125,
+    "Two Sharing": 125,
+    "Two Sharing with common bathroom": 250,
   };
   const [accomodationDetails, setAccomodationDetails] = useState(false);
   const [maleCurrent, setMaleCurrent] = useState(0);
@@ -109,41 +109,42 @@ const Accomodation = () => {
 
   useEffect(() => {
     fetchMasterAccommodation().then((res) => {
-      setMaleCurrent(res.data?.maleStats?.find((item) => item.roomType === "Common Free Hall")?.count);
-      setFemaleCurrent(res.data?.femaleStats?.find((item) => item.roomType === "Common Free Hall")?.count);
+      setMaleCurrent(
+        res.data?.maleStats?.find(
+          (item) => item.roomType === "Common Free Hall"
+        )?.count
+      );
+      setFemaleCurrent(
+        res.data?.femaleStats?.find(
+          (item) => item.roomType === "Common Free Hall"
+        )?.count
+      );
     });
   }, []);
 
   const handleProceed = async () => {
     const newFormData = {
       ...formData,
-      days: (formData.from === "22nd February Night" ?
-        (
-          toDates.indexOf(formData.to) -
-          fromDates.indexOf(formData.from) + 1
-        ) : (
-          toDates.indexOf(formData.to) -
-          fromDates.indexOf(formData.from) + 2
-        )
-      ),
-      amount: ((formData.from === "22nd February Night" ?
-        (
-          toDates.indexOf(formData.to) -
-          fromDates.indexOf(formData.from) + 1
-        ) : (
-          toDates.indexOf(formData.to) -
-          fromDates.indexOf(formData.from) + 2
-        )
-      ) * roomCost[formData.roomType]) +
+      days:
+        formData.from === "22nd February Night"
+          ? toDates.indexOf(formData.to) - fromDates.indexOf(formData.from) + 1
+          : toDates.indexOf(formData.to) - fromDates.indexOf(formData.from) + 2,
+      amount:
+        (formData.from === "22nd February Night"
+          ? toDates.indexOf(formData.to) - fromDates.indexOf(formData.from) + 1
+          : toDates.indexOf(formData.to) -
+            fromDates.indexOf(formData.from) +
+            2) *
+          roomCost[formData.roomType] +
         50 *
-        (formData.breakfast1 +
-          formData.breakfast2 +
-          formData.breakfast3 +
-          formData.lunch1+
-          formData.lunch2+
-          formData.lunch3+
-          formData.dinner1 +
-          formData.dinner2) 
+          (formData.breakfast1 +
+            formData.breakfast2 +
+            formData.breakfast3 +
+            formData.lunch1 +
+            formData.lunch2 +
+            formData.lunch3 +
+            formData.dinner1 +
+            formData.dinner2),
     };
 
     toast.promise(fetchAccomodationRegister(newFormData), {
@@ -175,9 +176,10 @@ const Accomodation = () => {
                 <p className="font-semibold">Dear participant, </p>
                 <p className="">
                   Rooms are available from the night of{" "}
-                  <b className="font-semibold"> 22nd February 2024</b> to the{" "}
-                  <b className="font-semibold"> 25th February 2024 evening</b>. (No
-                  accommodation will be provided on the 25th of February night).
+                  <b className="font-semibold"> 22nd February 2025</b> to the{" "}
+                  <b className="font-semibold"> 25th February 2025 evening</b>.
+                  (No accommodation will be provided on the 25th of February
+                  night).
                 </p>
                 {!localStorage.getItem("email") && (
                   <React.Fragment>
@@ -338,16 +340,13 @@ const Accomodation = () => {
                         <p className="mt-2 pl-2">
                           No. of days:{" "}
                           <b className="font-semibold">
-                            {
-                              formData.from === "22nd February Night" ?
-                                (
-                                  toDates.indexOf(formData.to) -
-                                  fromDates.indexOf(formData.from) + 1
-                                ) : (
-                                  toDates.indexOf(formData.to) -
-                                  fromDates.indexOf(formData.from) + 2
-                                )
-                            }
+                            {formData.from === "22nd February Night"
+                              ? toDates.indexOf(formData.to) -
+                                fromDates.indexOf(formData.from) +
+                                1
+                              : toDates.indexOf(formData.to) -
+                                fromDates.indexOf(formData.from) +
+                                2}
                           </b>
                         </p>
                       </div>
@@ -360,23 +359,24 @@ const Accomodation = () => {
                     </h1>
                     <div className="flex flex-col lg:flex-row gap-6">
                       <div className="flex flex-col lg:w-2/3">
-                      <Toggle
-                        title="Room Type"
-                        valueState={[
-                          formData.roomType,
-                          (val) => setFormData({ ...formData, roomType: val }),
-                        ]}
-                        // options={femaleCurrent >= femaleMax ? ["2 Sharing with common bathroom", "2 Sharing with attached bathroom"] : [
-                        //   "Common Free Hall", "2 Sharing with common bathroom", "2 Sharing with attached bathroom",]}
-                        //   options={femaleCurrent >= femaleMax ? ["Two Sharing with common bathroom"] : [
-                        //    "Two Sharing with common bathroom",]}
-                        // amount={femaleCurrent >= femaleMax ? ["₹ 150", "₹ 600"] : ["₹ 250"]}
-                        options={["Two Sharing with common bathroom"]}
-                        amount={["₹ 250"]}
-                        // amount={femaleCurrent >= femaleMax ? ["₹ 150", "₹ 600"] : ["Free", "₹ 250", "₹ 600"]}
-                        className="w-full lg:w-2/3"
-                      />
-                      <h1>*Accommodation will be provided at PSG IMSR</h1>
+                        <Toggle
+                          title="Room Type"
+                          valueState={[
+                            formData.roomType,
+                            (val) =>
+                              setFormData({ ...formData, roomType: val }),
+                          ]}
+                          // options={femaleCurrent >= femaleMax ? ["2 Sharing with common bathroom", "2 Sharing with attached bathroom"] : [
+                          //   "Common Free Hall", "2 Sharing with common bathroom", "2 Sharing with attached bathroom",]}
+                          //   options={femaleCurrent >= femaleMax ? ["Two Sharing with common bathroom"] : [
+                          //    "Two Sharing with common bathroom",]}
+                          // amount={femaleCurrent >= femaleMax ? ["₹ 150", "₹ 600"] : ["₹ 250"]}
+                          options={["Two Sharing with common bathroom"]}
+                          amount={["₹ 250"]}
+                          // amount={femaleCurrent >= femaleMax ? ["₹ 150", "₹ 600"] : ["Free", "₹ 250", "₹ 600"]}
+                          className="w-full lg:w-2/3"
+                        />
+                        <h1>*Accommodation will be provided at PSG IMSR</h1>
                       </div>
                       <div className="flex flex-col w-full lg:w-1/3 justify-center">
                         <Dropdown
@@ -398,16 +398,13 @@ const Accomodation = () => {
                         <p className="mt-2 pl-2">
                           No. of days:{" "}
                           <b className="font-semibold">
-                            {
-                              formData.from === "22nd February Night" ?
-                                (
-                                  toDates.indexOf(formData.to) -
-                                  fromDates.indexOf(formData.from) + 1
-                                ) : (
-                                  toDates.indexOf(formData.to) -
-                                  fromDates.indexOf(formData.from) + 2
-                                )
-                            }
+                            {formData.from === "22nd February Night"
+                              ? toDates.indexOf(formData.to) -
+                                fromDates.indexOf(formData.from) +
+                                1
+                              : toDates.indexOf(formData.to) -
+                                fromDates.indexOf(formData.from) +
+                                2}
                           </b>
                         </p>
                       </div>
@@ -416,7 +413,12 @@ const Accomodation = () => {
                 )}
 
                 <div className="flex flex-col lg:flex-row w-full mt-16 space-y-8 lg:space-y-0">
-                  <div className={"w-full lg:w-1/2 "+(formData.gender==="Male"?"inline":"hidden")}>
+                  <div
+                    className={
+                      "w-full lg:w-1/2 " +
+                      (formData.gender === "Male" ? "inline" : "hidden")
+                    }
+                  >
                     <h1 className="mt-1 text-lg font-semibold">Meals</h1>
                     <h1 className="mt-1 text-sm">
                       Amount - <b className="font-semibold">Rs.50</b> per meal
@@ -433,8 +435,9 @@ const Accomodation = () => {
                       <p className="w-1/3">23rd February</p>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.breakfast1 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.breakfast1 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -444,12 +447,12 @@ const Accomodation = () => {
                         >
                           <FiCheck className="w-8 h-8" />
                         </button>
-                        
                       </div>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.lunch1 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.lunch1 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -459,12 +462,12 @@ const Accomodation = () => {
                         >
                           <FiCheck className="w-8 h-8" />
                         </button>
-                        
                       </div>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.dinner1 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.dinner1 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -480,8 +483,9 @@ const Accomodation = () => {
                       <p className="w-1/3">24th February</p>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.breakfast2 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.breakfast2 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -494,8 +498,9 @@ const Accomodation = () => {
                       </div>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.lunch2 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.lunch2 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -508,8 +513,9 @@ const Accomodation = () => {
                       </div>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.dinner2 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.dinner2 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -525,8 +531,9 @@ const Accomodation = () => {
                       <p className="w-1/3">25th February</p>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.breakfast3 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.breakfast3 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -539,8 +546,9 @@ const Accomodation = () => {
                       </div>
                       <div className="w-1/3 flex justify-center">
                         <button
-                          className={`${formData.lunch3 && "bg-[#3b82f6]"
-                            } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
+                          className={`${
+                            formData.lunch3 && "bg-[#3b82f6]"
+                          } border-2 border-[#3b82f6] text-white rounded-lg font-poppins flex items-center`}
                           onClick={() => {
                             setFormData({
                               ...formData,
@@ -551,29 +559,28 @@ const Accomodation = () => {
                           <FiCheck className="w-8 h-8" />
                         </button>
                       </div>
-                      <div className="w-1/3 flex justify-center">
-                      </div>
+                      <div className="w-1/3 flex justify-center"></div>
                     </div>
                   </div>
 
                   <div className="w-full lg:w-1/2">
-                    {formData.gender==='Male'?(<></>):
-                    (<div>
-                      <h1 className="mt-1 text-lg font-semibold">Amenities</h1>
-                      <h1 className="mt-1 text-sm">
-                    Enjoy inclusive amenities during your stay.
-                    </h1>
-                    <ul className="mt-1 text-sm list-disc pl-4">
-                      <li>Bed + Bed cover</li>
-                      <li>Pillow + Pillow cover</li>
-                      <li>Bedsheet</li>
-                    </ul>
-                    </div>
-                    )
-                    }
-                    
-                    
-                   
+                    {formData.gender === "Male" ? (
+                      <></>
+                    ) : (
+                      <div>
+                        <h1 className="mt-1 text-lg font-semibold">
+                          Amenities
+                        </h1>
+                        <h1 className="mt-1 text-sm">
+                          Enjoy inclusive amenities during your stay.
+                        </h1>
+                        <ul className="mt-1 text-sm list-disc pl-4">
+                          <li>Bed + Bed cover</li>
+                          <li>Pillow + Pillow cover</li>
+                          <li>Bedsheet</li>
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -585,83 +592,81 @@ const Accomodation = () => {
                         <p className="font-semibold">Accomodation</p>
                         <p className="text-sm">{formData.roomType}</p>
                         <p className="text-sm">
-                          {
-                            formData.from === "22nd February Night" ?
-                              (
-                                toDates.indexOf(formData.to) -
-                                fromDates.indexOf(formData.from) + 1
-                              ) : (
-                                toDates.indexOf(formData.to) -
-                                fromDates.indexOf(formData.from) + 2
-                              )
-                          }
-                          {" "}Days
+                          {formData.from === "22nd February Night"
+                            ? toDates.indexOf(formData.to) -
+                              fromDates.indexOf(formData.from) +
+                              1
+                            : toDates.indexOf(formData.to) -
+                              fromDates.indexOf(formData.from) +
+                              2}{" "}
+                          Days
                         </p>
                       </div>
 
                       <p className="text-lg font-semibold w-1/2 flex justify-end">
                         ₹
-                        {(formData.from === "22nd February Night" ?
-                          (
-                            toDates.indexOf(formData.to) -
-                            fromDates.indexOf(formData.from) + 1
-                          ) : (
-                            toDates.indexOf(formData.to) -
-                            fromDates.indexOf(formData.from) + 2
-                          )
-                        ) *
-                          roomCost[formData.roomType]}
+                        {(formData.from === "22nd February Night"
+                          ? toDates.indexOf(formData.to) -
+                            fromDates.indexOf(formData.from) +
+                            1
+                          : toDates.indexOf(formData.to) -
+                            fromDates.indexOf(formData.from) +
+                            2) * roomCost[formData.roomType]}
                       </p>
                     </div>
-                    {formData.gender==='Male'?(
+                    {formData.gender === "Male" ? (
                       <div className="flex flex-row w-full items-center">
-                      <p className="w-1/2">
-                        Meals x{" "}
-                        {formData.breakfast1 +
-                          formData.breakfast2 +
-                          formData.breakfast3 +
-                          formData.lunch1+
-                          formData.lunch2+
-                          formData.lunch3+
-                          formData.dinner1 +
-                          formData.dinner2}
-                      </p>
-                      <p className="text-lg font-semibold w-1/2 flex justify-end">
-                        ₹{" "}
-                        {50 *
-                          (formData.breakfast1 +
-                          formData.breakfast2 +
-                          formData.breakfast3 +
-                          formData.lunch1+
-                          formData.lunch2+
-                          formData.lunch3+
-                          formData.dinner1 +
-                          formData.dinner2)}
-                      </p>
-                    </div>
-                    ):<></>}
-                    
+                        <p className="w-1/2">
+                          Meals x{" "}
+                          {formData.breakfast1 +
+                            formData.breakfast2 +
+                            formData.breakfast3 +
+                            formData.lunch1 +
+                            formData.lunch2 +
+                            formData.lunch3 +
+                            formData.dinner1 +
+                            formData.dinner2}
+                        </p>
+                        <p className="text-lg font-semibold w-1/2 flex justify-end">
+                          ₹{" "}
+                          {50 *
+                            (formData.breakfast1 +
+                              formData.breakfast2 +
+                              formData.breakfast3 +
+                              formData.lunch1 +
+                              formData.lunch2 +
+                              formData.lunch3 +
+                              formData.dinner1 +
+                              formData.dinner2)}
+                        </p>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+
                     <div className="flex flex-row w-full items-center border-t border-black pt-2">
                       <p className="w-1/2 text-lg">Total</p>
                       <p className="text-xl font-semibold w-1/2 flex justify-end">
                         ₹{" "}
-                        {((formData.from === "22nd February Night" ?
-                          (
-                            toDates.indexOf(formData.to) -
-                            fromDates.indexOf(formData.from) + 1
-                          ) : (
-                            toDates.indexOf(formData.to) -
-                            fromDates.indexOf(formData.from) + 2
-                          )
-                        ) * roomCost[formData.roomType]) + (formData.gender=='Male'?50 *
-                          (formData.breakfast1 +
-                          formData.breakfast2 +
-                          formData.breakfast3 +
-                          formData.lunch1+
-                          formData.lunch2+
-                          formData.lunch3+
-                          formData.dinner1 +
-                          formData.dinner2):0)} 
+                        {(formData.from === "22nd February Night"
+                          ? toDates.indexOf(formData.to) -
+                            fromDates.indexOf(formData.from) +
+                            1
+                          : toDates.indexOf(formData.to) -
+                            fromDates.indexOf(formData.from) +
+                            2) *
+                          roomCost[formData.roomType] +
+                          (formData.gender == "Male"
+                            ? 50 *
+                              (formData.breakfast1 +
+                                formData.breakfast2 +
+                                formData.breakfast3 +
+                                formData.lunch1 +
+                                formData.lunch2 +
+                                formData.lunch3 +
+                                formData.dinner1 +
+                                formData.dinner2)
+                            : 0)}
                       </p>
                     </div>
                   </div>
@@ -684,17 +689,15 @@ const Accomodation = () => {
                         ) {
                           toast.error("Please fill all the details");
                         } else if (
-                          (formData.from === "22nd February Night" ?
-                            (
-                              toDates.indexOf(formData.to) -
-                              fromDates.indexOf(formData.from) + 1
-                            ) : (
-                              toDates.indexOf(formData.to) -
-                              fromDates.indexOf(formData.from) + 2
-                            )
-                          ) <= 0
+                          (formData.from === "22nd February Night"
+                            ? toDates.indexOf(formData.to) -
+                              fromDates.indexOf(formData.from) +
+                              1
+                            : toDates.indexOf(formData.to) -
+                              fromDates.indexOf(formData.from) +
+                              2) <= 0
                         ) {
-                          toast.error("Please select valid dates")
+                          toast.error("Please select valid dates");
                         } else {
                           handleProceed();
                         }
@@ -706,9 +709,16 @@ const Accomodation = () => {
                 </div>
 
                 <p className="mt-16 text-sm">
-                  For accommodation related queries, contact:<br />
-                  <b className="font-semibold">MITHUN P- <a href="tel:6380348811">6380348811</a></b><br />
-                  <b className="font-semibold">AKSHAYAA MAHESH - <a href="tel:9042301353">9042301353</a></b><br />
+                  For accommodation related queries, contact:
+                  <br />
+                  <b className="font-semibold">
+                    MITHUN P- <a href="tel:6380348811">6380348811</a>
+                  </b>
+                  <br />
+                  <b className="font-semibold">
+                    AKSHAYAA MAHESH - <a href="tel:9042301353">9042301353</a>
+                  </b>
+                  <br />
                 </p>
               </section>
             )}

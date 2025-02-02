@@ -3,7 +3,13 @@ import { IoMdCall, IoLogoWhatsapp } from "react-icons/io";
 import { MdAccessTime, MdOutlineLocationOn } from "react-icons/md";
 import { AiOutlineTeam, AiOutlineUser } from "react-icons/ai";
 import { useNavigate, useParams } from "react-router-dom";
-import { fetchEventDetailsByEmail, fetchPaperById, fetchPaperDetailsByEmail, fetchPaperRegister, fetchUserByEmail } from "../API/call";
+import {
+  fetchEventDetailsByEmail,
+  fetchPaperById,
+  fetchPaperDetailsByEmail,
+  fetchPaperRegister,
+  fetchUserByEmail,
+} from "../API/call";
 import { SiGmail } from "react-icons/si";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
@@ -15,7 +21,6 @@ const Paper = () => {
   const [generalPayment, setGeneralPayment] = useState(false);
   const [userPaperDetails, setUserPaperDetails] = useState([]);
   const [userEventDetails, setUserEventDetails] = useState(null);
-  
 
   const toTitleCase = (phrase) => {
     return phrase
@@ -42,12 +47,10 @@ const Paper = () => {
     } else if (!generalPayment) {
       navigate("/auth/payment?type=GENERAL");
     } else {
-      
       fetchPaperRegister({
         email: localStorage.getItem("email"),
         paperId: id,
-      }).then((res) => {  
-
+      }).then((res) => {
         window.location.reload();
       });
     }
@@ -57,18 +60,16 @@ const Paper = () => {
   }, [id]);
 
   useEffect(() => {
-    console.log("this is the data")
+    console.log("this is the data");
     fetchUserByEmail(localStorage.getItem("email")).then((res) => {
-
-      setIsLoggedIn(true)
+      setIsLoggedIn(true);
       setGeneralPayment(res?.data?.user?.isPaid);
     });
   }, []);
 
-  console.log(generalPayment + "this is the general payment ")
+  console.log(generalPayment + "this is the general payment ");
   useEffect(() => {
     fetchEventDetailsByEmail(localStorage.getItem("email")).then((res) => {
-      
       setUserEventDetails(res.data);
     });
   }, []);
@@ -79,7 +80,6 @@ const Paper = () => {
     </section>
   ) : (
     <section className="w-full lg:px-16 font-poppins py-12 pt-28 lg:pt-12 h-screen bg-white overflow-y-scroll">
-      
       <div className="w-fit">
         <h1 className="text-4xl text-black font-semibold px-8 lg:px-0">
           {toTitleCase(paperDetail.eventName)}
@@ -88,11 +88,7 @@ const Paper = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-4 w-full lg:px-0 my-8 text-black ">
-
         <div className="flex flex-col w-full justify-between lg:w-3/5 space-y-5 ">
-
-
-
           <div className="bg-black text-white lg:rounded-3xl lg:px-0 space-y-8 relative py-8 px-8 h-full">
             <p className="text-2xl text-left pl-10 font-semibold tracking-wider text-white lg:text-white">
               Topics
@@ -101,10 +97,11 @@ const Paper = () => {
               {paperDetail.topic.split("\n").map((item, index) => (
                 <li
                   key={index}
-                  className={`${item.slice(-1) === ":"
-                    ? "text-xl font-semibold -ml-2 py-2"
-                    : "text-lg"
-                    }`}
+                  className={`${
+                    item.slice(-1) === ":"
+                      ? "text-xl font-semibold -ml-2 py-2"
+                      : "text-lg"
+                  }`}
                 >
                   {item}
                 </li>
@@ -116,19 +113,50 @@ const Paper = () => {
             <p className="text-2xl font-semibold tracking-wider text-white pl-10">
               Guidelines
             </p>
-            {paperDetail.ppid !== "PRPN0004" ? <ul className="list-disc text-base lg:text-base text-white pl-10 space-y-2 lg:pr-16">
-              <li>Abstracts should be submitted in the Gform:<a href="https://forms.gle/rp2BNABJDoWDVyYP8" className="text-xl text-[#Ffcd73]"><br></br>Click here</a> </li>
-              <li>Details such as Title of the Paper, Author Names, Degree, Year of Study, College Name, Contact Number should be clearly mentioned in the abstract.</li>
-              <li>The abstracts prepared should be within 300 words describing the outline of the content.</li>
-              <li>The papers/manuscript prepared should be within 6 to 10 pages including references. It should be typed in Times New Roman font with size 12.</li>
-              <li>The papers submitted will be subjected to plagiarism detection to verify their originality by the organizing institution before the technical review process. (Accepted similarity: less than or equal to 15% for papers and 20% for review articles)</li>
-              <li>Last Date for Abstract submission is 2nd April 2024</li>
-              <li>The papers will be reviewed by a panel of experts and the selected papers will be invited for presentation.
-              </li></ul> :
-
-
+            {paperDetail.ppid !== "PRPN0004" ? (
+              <ul className="list-disc text-base lg:text-base text-white pl-10 space-y-2 lg:pr-16">
+                <li>
+                  Abstracts should be submitted in the Gform:
+                  <a
+                    href="https://forms.gle/rp2BNABJDoWDVyYP8"
+                    className="text-xl text-[#Ffcd73]"
+                  >
+                    <br></br>Click here
+                  </a>{" "}
+                </li>
+                <li>
+                  Details such as Title of the Paper, Author Names, Degree, Year
+                  of Study, College Name, Contact Number should be clearly
+                  mentioned in the abstract.
+                </li>
+                <li>
+                  The abstracts prepared should be within 300 words describing
+                  the outline of the content.
+                </li>
+                <li>
+                  The papers/manuscript prepared should be within 6 to 10 pages
+                  including references. It should be typed in Times New Roman
+                  font with size 12.
+                </li>
+                <li>
+                  The papers submitted will be subjected to plagiarism detection
+                  to verify their originality by the organizing institution
+                  before the technical review process. (Accepted similarity:
+                  less than or equal to 15% for papers and 20% for review
+                  articles)
+                </li>
+                <li>Last Date for Abstract submission is 2nd April 2025</li>
+                <li>
+                  The papers will be reviewed by a panel of experts and the
+                  selected papers will be invited for presentation.
+                </li>
+              </ul>
+            ) : (
               <ul className="list-disc text-base lg:text-base text-[#3c4043] pl-10 space-y-2 lg:pr-16">
-                <li>கீழே கொடுக்கப்பட்டுள்ள டேப்  மூலம் அனைத்து சுருக்கங்களும் மின்னணு முறையில் மட்டுமே சமர்ப்பிக்கப்பட வேண்டும்.</li>
+                <li>
+                  கீழே கொடுக்கப்பட்டுள்ள டேப் மூலம் அனைத்து சுருக்கங்களும்
+                  மின்னணு முறையில் மட்டுமே சமர்ப்பிக்கப்பட வேண்டும்.
+                </li>
                 <li>
                   ஆய்வு கட்டுரைக்ககான விருப்பமான அமைப்பு:
                   <ul className="list-disc pl-8 my-2">
@@ -143,17 +171,40 @@ const Paper = () => {
                     <li>முடிவுரை</li>
                   </ul>
                 </li>
-                <li>அனைத்து சுருக்கங்களும் இரண்டு பக்கங்களில் போர்ட்ரெய்ட் நோக்குநிலையில் PDF வடிவத்தில் மட்டுமே சமர்ப்பிக்கப்பட வேண்டும்.(அதிகபட்சம் இரண்டு பக்கங்கள்).</li>
-                <li>ஹைப்பர்லிங்க்கள், அனிமேஷன் படங்கள் அல்லது வீடியோக்கள் அனுமதிக்கப்படமாட்டாது.</li>
-                <li>கட்டுரையை சமர்ப்பிக்க விரும்பும் பங்கேற்பாளர்கள்  பொது பதிவுக் கட்டணத்தைச் செலுத்த வேண்டும். 1 பங்கேற்பாளர் மட்டுமே முன்வைக்க அனுமதிக்கப்படுகிறது. இணை பங்கேற்பாளர்கள் விளக்கக்காட்சியில் கலந்து கொள்ளத் தயாராக இருந்தால், அவர்கள் பொது பதிவு கட்டணம் செலுத்தியிருக்க வேண்டும்.</li>
-                <li>பங்கேற்பாளர், கொடுக்கப்பட்ட தலைப்பில் இருந்து மட்டுமே தலைப்பைத் தேர்ந்தெடுத்து கட்டுரையை சமர்ப்பிக்க வேண்டும்.</li>
-                <li>தாள்களின் சுருக்கங்கள் ஆசிரியர் குழுவால் ஆராயப்படும். ஆசிரியர் குழுவின் உடைய பரிந்துரையே இறுதியானது.</li>
-                <li>கட்டுரையை சமர்ப்பிப்பதற்கான கடைசி நாள்: 15 பிப்ரவரி 2024</li>
-                <li>பங்கேற்பாளர்கள் அனைவரும் கட்டாயம் முன்பதிவு செய்திருக்க வேண்டும் மற்றும் விளக்கக் காட்சியை சமர்ப்பிக்கும் போது நேரில் வர வேண்டும்.</li>
+                <li>
+                  அனைத்து சுருக்கங்களும் இரண்டு பக்கங்களில் போர்ட்ரெய்ட்
+                  நோக்குநிலையில் PDF வடிவத்தில் மட்டுமே சமர்ப்பிக்கப்பட
+                  வேண்டும்.(அதிகபட்சம் இரண்டு பக்கங்கள்).
+                </li>
+                <li>
+                  ஹைப்பர்லிங்க்கள், அனிமேஷன் படங்கள் அல்லது வீடியோக்கள்
+                  அனுமதிக்கப்படமாட்டாது.
+                </li>
+                <li>
+                  கட்டுரையை சமர்ப்பிக்க விரும்பும் பங்கேற்பாளர்கள் பொது பதிவுக்
+                  கட்டணத்தைச் செலுத்த வேண்டும். 1 பங்கேற்பாளர் மட்டுமே முன்வைக்க
+                  அனுமதிக்கப்படுகிறது. இணை பங்கேற்பாளர்கள் விளக்கக்காட்சியில்
+                  கலந்து கொள்ளத் தயாராக இருந்தால், அவர்கள் பொது பதிவு கட்டணம்
+                  செலுத்தியிருக்க வேண்டும்.
+                </li>
+                <li>
+                  பங்கேற்பாளர், கொடுக்கப்பட்ட தலைப்பில் இருந்து மட்டுமே
+                  தலைப்பைத் தேர்ந்தெடுத்து கட்டுரையை சமர்ப்பிக்க வேண்டும்.
+                </li>
+                <li>
+                  தாள்களின் சுருக்கங்கள் ஆசிரியர் குழுவால் ஆராயப்படும். ஆசிரியர்
+                  குழுவின் உடைய பரிந்துரையே இறுதியானது.
+                </li>
+                <li>
+                  கட்டுரையை சமர்ப்பிப்பதற்கான கடைசி நாள்: 15 பிப்ரவரி 2025
+                </li>
+                <li>
+                  பங்கேற்பாளர்கள் அனைவரும் கட்டாயம் முன்பதிவு செய்திருக்க
+                  வேண்டும் மற்றும் விளக்கக் காட்சியை சமர்ப்பிக்கும் போது நேரில்
+                  வர வேண்டும்.
+                </li>
               </ul>
-            }
-
-
+            )}
           </div>
         </div>
 
@@ -168,10 +219,8 @@ const Paper = () => {
                     : console.log("Cancelled"));
               }}
             >
-              
               <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
                 {"Register Here!"}
-
               </span>
             </button>
           ) : (
@@ -214,46 +263,49 @@ const Paper = () => {
                   April
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-white lg:text-white">
-                  2024
+                  2025
                 </p>
               </div>
             </div>
 
-            { <div>
-              <p className="text-xl font-semibold tracking-wide py-4 text-white lg:text-white">
-                PRIZE
-              </p>
-              <ul className="text-md  list-disc   text-white lg:text-white py-4 space-y-2">
-               Winner<br></br>
-               <div className="text-md">
-               4000<br></br><br></br>
-               </div>
-               First Runner<br></br>
-               <div className="text-md">
-               3000<br
-               ></br><br></br>
-</div>
-               Second Runner<br>
-               </br>
-               <div className="text-md">
-               2000
-               </div>
-              </ul>
-            </div> 
+            {
+              <div>
+                <p className="text-xl font-semibold tracking-wide py-4 text-white lg:text-white">
+                  PRIZE
+                </p>
+                <ul className="text-md  list-disc   text-white lg:text-white py-4 space-y-2">
+                  Winner<br></br>
+                  <div className="text-md">
+                    4000<br></br>
+                    <br></br>
+                  </div>
+                  First Runner<br></br>
+                  <div className="text-md">
+                    3000<br></br>
+                    <br></br>
+                  </div>
+                  Second Runner<br></br>
+                  <div className="text-md">2000</div>
+                </ul>
+              </div>
             }
-            { <div>
-              <p className="text-2xl font-semibold tracking-wide py-4 text-white lg:text-white">
-                Note
-              </p>
-              <ul className="list-disc text-base text-white lg:text-white pl-4 space-y-2">
-                <li>For teams, only <b className="font-semibold">one</b> team member needs to pay the general registration fee. (This is applicable only for paper presentations.)</li>
-              </ul>
-            </div>}
+            {
+              <div>
+                <p className="text-2xl font-semibold tracking-wide py-4 text-white lg:text-white">
+                  Note
+                </p>
+                <ul className="list-disc text-base text-white lg:text-white pl-4 space-y-2">
+                  <li>
+                    For teams, only <b className="font-semibold">one</b> team
+                    member needs to pay the general registration fee. (This is
+                    applicable only for paper presentations.)
+                  </li>
+                </ul>
+              </div>
+            }
           </div>
         </div>
       </div>
-
-
 
       <div className="flex flex-col lg:flex-row space-x-5">
         <div className="bg-black w-full lg:rounded-3xl p-8 lg:p-12 space-y-4 ">
@@ -270,7 +322,7 @@ const Paper = () => {
                 April
               </p>
               <p className="text-lg font-semibold tracking-wide text-white">
-                2024
+                2025
               </p>
             </div>
           </div>
@@ -307,8 +359,6 @@ const Paper = () => {
                 </div>
               </div> */}
         </div>
-
-
 
         <div className="bg-black w-full h-auto lg:rounded-3xl p-8 space-y-5">
           <p className="text-3xl lg:text-3xl font-semibold tracking-wide text-white lg:text-white">
@@ -369,8 +419,6 @@ const Paper = () => {
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
   );

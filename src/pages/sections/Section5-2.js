@@ -3,7 +3,10 @@ import "../../styles/Landing.css";
 import { fetchPapers, fetchWorkshops } from "../../API/call";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-import { MdOutlineArrowForwardIos, MdOutlineArrowBackIosNew } from "react-icons/md";
+import {
+  MdOutlineArrowForwardIos,
+  MdOutlineArrowBackIosNew,
+} from "react-icons/md";
 import "../../styles/gradientAnimation.css";
 
 // Workshops
@@ -64,19 +67,20 @@ const Section52 = () => {
         id="section52"
         className="w-screen relative flex flex-col justify-center lg:flex-row items-start workshop-text opacity-0 pb-24"
       >
-
         <div
-          className={`hidden lg:w-screen lg:flex items-center h-screen overflow-y-hidden transition-all ${fixedPosition === "fixed"
-            ? "fixed top-0 left-0"
-            : fixedPosition === "absolute"
+          className={`hidden lg:w-screen lg:flex items-center h-screen overflow-y-hidden transition-all ${
+            fixedPosition === "fixed"
+              ? "fixed top-0 left-0"
+              : fixedPosition === "absolute"
               ? "absolute bottom-0 left-0"
               : "absolute top-0 left-0"
-            }`}
+          }`}
           id="right-workshop-grid"
         >
           <div className="w-[50%] h-full flex flex-col justify-center p-24">
-            <h1 className={`text-5xl font-poppins font-semibold workshop-text opacity-0 px-8 lg:p-0 pt-8`}>
-              
+            <h1
+              className={`text-5xl font-poppins font-semibold workshop-text opacity-0 px-8 lg:p-0 pt-8`}
+            >
               <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
                 {"Paper Presentation"}
               </span>{" "}
@@ -97,38 +101,40 @@ const Section52 = () => {
         >
           <div className="flex-1"></div>
           <div className="lg:w-[calc(100vw-75vw)] px-6 pt-56 flex flex-col items-end space-y-12">
-            {fetchPapers().map((item, index) => (
-              (index % 2 === 0) && (
-                <PaperGrid
-                  number={index + 1}
-                  imgurl={item.image}
-                  id={item.ppid}
-                  title={item.eventName}
-                />
-              )
-            ))}
+            {fetchPapers().map(
+              (item, index) =>
+                index % 2 === 0 && (
+                  <PaperGrid
+                    number={index + 1}
+                    imgurl={item.image}
+                    id={item.ppid}
+                    title={item.eventName}
+                  />
+                )
+            )}
           </div>
           <div className="lg:w-[calc(100vw-75vw)] mr-8 px-6 pt-96 flex flex-col items-start space-y-12">
-            {fetchPapers().map((item, index) => (
-              (index % 2 === 1) && (
-                <PaperGrid
-                  number={index + 1}
-                  imgurl={item.image}
-                  id={item.ppid}
-                  title={item.eventName}
-                />
-              )
-            ))}
+            {fetchPapers().map(
+              (item, index) =>
+                index % 2 === 1 && (
+                  <PaperGrid
+                    number={index + 1}
+                    imgurl={item.image}
+                    id={item.ppid}
+                    title={item.eventName}
+                  />
+                )
+            )}
           </div>
         </div>
 
-
         <div className="lg:hidden w-full p-8 pt-20 flex flex-col items-center">
-          <h1 className={`text-4xl font-poppins font-semibold workshop-text opacity-0 text-center`}>
+          <h1
+            className={`text-4xl font-poppins font-semibold workshop-text opacity-0 text-center`}
+          >
             <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r  from-[#FFDC73] to-[#FFDC73]">
               {" Paper Presentations "}
             </span>{" "}
-          
           </h1>
           {/* <div className="w-fit mt-6 p-4 rounded-2xl"
             id="early-bird"
@@ -137,7 +143,10 @@ const Section52 = () => {
           </div> */}
         </div>
 
-        <div ref={ref} className={`lg:hidden overflow-x-scroll flex flex-row items-center w-full font-poppins p-4 space-x-4`}>
+        <div
+          ref={ref}
+          className={`lg:hidden overflow-x-scroll flex flex-row items-center w-full font-poppins p-4 space-x-4`}
+        >
           {fetchPapers().map((item, index) => (
             <PaperGrid
               number={index + 1}
@@ -173,25 +182,28 @@ const Section52 = () => {
 export default Section52;
 
 const PaperGrid = ({ number, imgurl, title, id }) => {
-
   //const navigate = useNavigate();
 
   return (
     <div className="">
       <div className="w-80 h-96">
         <div className="group h-full p-2 pt-4 rounded-2xl flex flex-col items-center justify-between bg-[#f0f0f0]">
-          <div className={`bg-opacity-50 flex w-72 h-52`}
+          <div
+            className={`bg-opacity-50 flex w-72 h-52`}
             style={{
-              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
-            }}>
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            }}
+          >
             <div
               style={{
-                background: 'url("https://i.ibb.co/FY1VHLv/Whats-App-Image-2024-03-21-at-2-14-09-PM.jpg")',
+                background:
+                  'url("https://i.ibb.co/FY1VHLv/Whats-App-Image-2025-03-21-at-2-14-09-PM.jpg")',
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "cover"
+                backgroundSize: "cover",
               }}
-              className={`w-full h-full rounded-2xl`}></div>
+              className={`w-full h-full rounded-2xl`}
+            ></div>
           </div>
           <div className="flex flex-row w-full justify-between items-center p-4">
             <div className="">
@@ -201,9 +213,12 @@ const PaperGrid = ({ number, imgurl, title, id }) => {
               <Link
                 className="bg-[#ffdc73]  text-black w-fit px-4 py-2 rounded-xl text-sm flex items-center group"
                 to={`/portal/paper/${id}`}
-              > 
+              >
                 <p className="">Explore more</p>
-                <IoIosArrowForward className="ml-1 group-hover:ml-2 transition-all" size={16} />
+                <IoIosArrowForward
+                  className="ml-1 group-hover:ml-2 transition-all"
+                  size={16}
+                />
               </Link>
             </div>
             {/* <div className="text-6xl lg:text-8xl font-semibold text-gray-400 bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] transition-all">

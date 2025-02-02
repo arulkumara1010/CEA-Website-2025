@@ -21,7 +21,7 @@ const Event = () => {
   const [userDetails, setUserDetails] = useState(null);
   const [userEventDetails, setUserEventDetails] = useState(null);
 
-  const particlesInit = useCallback(async engine => {
+  const particlesInit = useCallback(async (engine) => {
     console.log(engine);
 
     await loadSlim(engine);
@@ -29,7 +29,7 @@ const Event = () => {
 
   const particlesLoaded = (container) => {
     console.log(container);
-  }
+  };
 
   const toTitleCase = (phrase) => {
     const wordsToIgnore = ["of", "in", "for", "and", "an", "or"];
@@ -96,7 +96,15 @@ const Event = () => {
     </section>
   ) : (
     <section className="w-full lg:px-16 font-poppins py-12 pt-36 lg:pt-12 h-screen bg-white overflow-y-scroll">
-      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        className="top-0 left-0 absolute"
+        height="100vh"
+        width="100vh"
+        options={particleOptions}
+      />
       {/* <h2 className="text-base mb-2 text-gray-400 tracking-widest px-8 lg:px-0">
         {eventDetail.category}
       </h2> */}
@@ -117,21 +125,35 @@ const Event = () => {
               <div className="space-y-2 z-30 flex-1">
                 <p className="text-base lg:text-base text-justify text-[#3c4043] pt-4 lg:pt-0">
                   <div>
-                    <p>Are you passionate about getting your dream IT job and don’t know how? Join us for a FREE "IT Career Guidance and Placement Assistance" workshop! This power-packed session will equip you with:
+                    <p>
+                      Are you passionate about getting your dream IT job and
+                      don’t know how? Join us for a FREE "IT Career Guidance and
+                      Placement Assistance" workshop! This power-packed session
+                      will equip you with:
                       <br />
                       <br />
                       <ul className="list-disc text-base text-[#3c4043] pl-4 space-y-2">
-
-                        <li>Expert insights into in-demand IT skills and career paths.</li>
-                        <li>Insider tips on crafting a winning resume and acing interviews.</li>
-                        <li>Exclusive guidance on navigating the placement process.</li>
-                        <li>Direct interaction with industry professionals from Vites Technologies.</li>
-                        <li>Networking opportunities with fellow tech enthusiasts</li>
+                        <li>
+                          Expert insights into in-demand IT skills and career
+                          paths.
+                        </li>
+                        <li>
+                          Insider tips on crafting a winning resume and acing
+                          interviews.
+                        </li>
+                        <li>
+                          Exclusive guidance on navigating the placement
+                          process.
+                        </li>
+                        <li>
+                          Direct interaction with industry professionals from
+                          Vites Technologies.
+                        </li>
+                        <li>
+                          Networking opportunities with fellow tech enthusiasts
+                        </li>
                         <li>Gain a competitive edge in the job market.</li>
-
-
                       </ul>
-
                     </p>
                     <br />
                   </div>
@@ -213,7 +235,7 @@ const Event = () => {
                   April
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-white">
-                  2024
+                  2025
                 </p>
               </div>
             </div>
@@ -233,8 +255,9 @@ const Event = () => {
               </p>
               <div className="pl-2 flex flex-col">
                 <p
-                  className={`text-base ${eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
-                    } font-semibold tracking-wider text-white`}
+                  className={`text-base ${
+                    eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
+                  } font-semibold tracking-wider text-white`}
                 >
                   {eventDetail.hall}
                 </p>
@@ -257,26 +280,24 @@ const Event = () => {
             </div>
             {eventDetail.teamSize !== "1" && (
               <div>
-              <p className="text-xl font-semibold tracking-wide py-4 text-white]">
-                PRIZE
-              </p>
-              <ul className="list-disc text-md text-white pl-4 space-y-2">
-                WINNER<br></br>
-                <div className="text-md">
-                  3000<br></br><br></br>
-                </div>
-
-              FIRST RUNNER-UP<br></br>
-                <div className="text-md">
-                  2000<br></br><br></br>
-                </div>
-
-                SECOND RUNNER-UP<br></br>
-                <div className="text-md">
-                  1000
-                </div>
-              </ul>
-            </div>
+                <p className="text-xl font-semibold tracking-wide py-4 text-white]">
+                  PRIZE
+                </p>
+                <ul className="list-disc text-md text-white pl-4 space-y-2">
+                  WINNER<br></br>
+                  <div className="text-md">
+                    3000<br></br>
+                    <br></br>
+                  </div>
+                  FIRST RUNNER-UP<br></br>
+                  <div className="text-md">
+                    2000<br></br>
+                    <br></br>
+                  </div>
+                  SECOND RUNNER-UP<br></br>
+                  <div className="text-md">1000</div>
+                </ul>
+              </div>
             )}
           </div>
 
@@ -314,34 +335,38 @@ const Event = () => {
               </div>
             </div>
 
-            {eventDetail.eventId === "EVNT0043" ? <></> : <div className="flex flex-row items-center justify-between lg:px-12">
-              <div className="w-1/2 lg:w-1/2">
-                <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
-                  {toTitleCase(eventDetail.contact_name_2)}
-                </p>
-                <p className="text-base lg:text-sm tracking-wide text-white lg:text-white">
-                  {eventDetail.contact_mobile_2}
-                </p>
+            {eventDetail.eventId === "EVNT0043" ? (
+              <></>
+            ) : (
+              <div className="flex flex-row items-center justify-between lg:px-12">
+                <div className="w-1/2 lg:w-1/2">
+                  <p className="text-base lg:text-base font-semibold tracking-wide text-white lg:text-white">
+                    {toTitleCase(eventDetail.contact_name_2)}
+                  </p>
+                  <p className="text-base lg:text-sm tracking-wide text-white lg:text-white">
+                    {eventDetail.contact_mobile_2}
+                  </p>
+                </div>
+                <div className="space-x-8">
+                  <button
+                    onClick={() => {
+                      window.open(`tel:${eventDetail.contact_mobile_2}`);
+                    }}
+                  >
+                    <IoMdCall className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
+                  </button>
+                  <button
+                    onClick={() => {
+                      window.open(
+                        `https://wa.me/${eventDetail.contact_mobile_2}`
+                      );
+                    }}
+                  >
+                    <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
+                  </button>
+                </div>
               </div>
-              <div className="space-x-8">
-                <button
-                  onClick={() => {
-                    window.open(`tel:${eventDetail.contact_mobile_2}`);
-                  }}
-                >
-                  <IoMdCall className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-                <button
-                  onClick={() => {
-                    window.open(
-                      `https://wa.me/${eventDetail.contact_mobile_2}`
-                    );
-                  }}
-                >
-                  <IoLogoWhatsapp className="text-white hover:text-gray-200 lg:text-white lg:hover:text-white text-3xl" />
-                </button>
-              </div>
-            </div>}
+            )}
 
             <div
               className=" hidden lg:block flex-1  rounded-b-3xl"
@@ -364,14 +389,13 @@ const Event = () => {
             <ul className="list-disc text-base tracking-wide text-justify text-white pl-4">
               {eventDetail.eventRules.split("\n").map((rule, index) => (
                 <div>
-                  {
-
-                    rule.startsWith("->") ? (
-                      <li key={index} className="ml-4">{rule.substring(2)}</li>
-                    ) : (
-                      <li key={index}>{rule}</li>
-                    )
-                  }
+                  {rule.startsWith("->") ? (
+                    <li key={index} className="ml-4">
+                      {rule.substring(2)}
+                    </li>
+                  ) : (
+                    <li key={index}>{rule}</li>
+                  )}
                 </div>
               ))}
             </ul>

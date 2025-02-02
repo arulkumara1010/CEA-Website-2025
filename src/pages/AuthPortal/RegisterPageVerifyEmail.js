@@ -28,13 +28,18 @@ const RegisterPageVerifyEmail = ({ switchPage }) => {
   }, [authEmail]);
 
   const sendMail = () => {
-    console.log(authEmail)
+    console.log(authEmail);
     toast.promise(fetchUserVerify(authEmail), {
       loading: "Sending email...",
-      success: (res) => { console.log(res); return "Email sent!"; },
-      error: (err) => { console.log(err); return "Could not send email" }
-    }
-    )
+      success: (res) => {
+        console.log(res);
+        return "Email sent!";
+      },
+      error: (err) => {
+        console.log(err);
+        return "Could not send email";
+      },
+    });
   };
 
   const onStorageUpdate = (e) => {
@@ -59,7 +64,7 @@ const RegisterPageVerifyEmail = ({ switchPage }) => {
   return (
     <div className="w-full h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6">
       <div className="">
-        <h3 className="text-sm text-gray-500">Register for Yutira 2024</h3>
+        <h3 className="text-sm text-gray-500">Register for Yutira 2025</h3>
         <h1 className="text-2xl font-bold text-[#181818]">Verify your email</h1>
       </div>
       <p className="">
@@ -71,7 +76,10 @@ const RegisterPageVerifyEmail = ({ switchPage }) => {
       <p className="">
         If you have not received the email, please check your spam folder.
       </p>
-      <button onClick={sendMail} className="border-2 border-black bg-black hover:bg-gray-700 transition-all duration-500 text-white text-lg rounded-lg py-2 px-4 w-full">
+      <button
+        onClick={sendMail}
+        className="border-2 border-black bg-black hover:bg-gray-700 transition-all duration-500 text-white text-lg rounded-lg py-2 px-4 w-full"
+      >
         Resend Email
       </button>
     </div>

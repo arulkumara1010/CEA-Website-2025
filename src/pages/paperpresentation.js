@@ -21,7 +21,7 @@ const Event = () => {
   const [userDetails, setUserDetails] = useState(null);
   const [userEventDetails, setUserEventDetails] = useState(null);
 
-  const particlesInit = useCallback(async engine => {
+  const particlesInit = useCallback(async (engine) => {
     console.log(engine);
 
     await loadSlim(engine);
@@ -29,7 +29,7 @@ const Event = () => {
 
   const particlesLoaded = (container) => {
     console.log(container);
-  }
+  };
 
   const toTitleCase = (phrase) => {
     const wordsToIgnore = ["of", "in", "for", "and", "an", "or"];
@@ -96,7 +96,15 @@ const Event = () => {
     </section>
   ) : (
     <section className="w-full lg:px-16 font-poppins py-12 pt-36 lg:pt-12 h-screen overflow-y-scroll">
-      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} className="top-0 left-0 absolute" height="100vh" width="100vh" options={particleOptions} />
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        className="top-0 left-0 absolute"
+        height="100vh"
+        width="100vh"
+        options={particleOptions}
+      />
       <h2 className="text-base mb-2 text-gray-400 tracking-widest px-8 lg:px-0">
         {eventDetail.category}
       </h2>
@@ -183,7 +191,7 @@ const Event = () => {
                   April
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
-                  2024
+                  2025
                 </p>
               </div>
             </div>
@@ -203,8 +211,9 @@ const Event = () => {
               </p>
               <div className="pl-2 flex flex-col">
                 <p
-                  className={`text-base ${eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
-                    } font-semibold tracking-wider text-[#3c4043]`}
+                  className={`text-base ${
+                    eventDetail.hall.length > 15 ? "lg:text-base" : "lg:text-lg"
+                  } font-semibold tracking-wider text-[#3c4043]`}
                 >
                   {eventDetail.hall}
                 </p>
@@ -241,8 +250,6 @@ const Event = () => {
               </div>
             )}
           </div>
-
-
         </div>
       </div>
 
@@ -255,22 +262,19 @@ const Event = () => {
             <ul className="list-disc text-base tracking-wide text-justify text-[#3c4043] pl-4">
               {eventDetail.eventRules.split("\n").map((rule, index) => (
                 <div>
-                  {
-                    rule.startsWith("->") ? (
-                      <li key={index} className="ml-4">{rule.substring(2)}</li>
-                    ) : (
-                      <li key={index}>{rule}</li>
-                    )
-                  }
+                  {rule.startsWith("->") ? (
+                    <li key={index} className="ml-4">
+                      {rule.substring(2)}
+                    </li>
+                  ) : (
+                    <li key={index}>{rule}</li>
+                  )}
                 </div>
               ))}
             </ul>
           </div>
         </div>
       )}
-
-
-
     </section>
   );
 };

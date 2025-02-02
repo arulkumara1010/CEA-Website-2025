@@ -54,7 +54,7 @@ const Section2 = ({ scrollYByVH }) => {
   };
 
   const getDeadTime = () => {
-    let deadline = new Date("2024-04-05");
+    let deadline = new Date("2025-04-05");
     return deadline;
   };
 
@@ -87,7 +87,6 @@ const Section2 = ({ scrollYByVH }) => {
     const numberTags = document.querySelectorAll(".number-tag");
     const calenderTexts = document.querySelectorAll(".calender-text");
     const observer = new IntersectionObserver((entries) => {
-
       numberTags.forEach((numberTag) => {
         numberTag.classList.add("animate-fade-in-bottom");
       });
@@ -99,7 +98,7 @@ const Section2 = ({ scrollYByVH }) => {
     observer.observe(element);
   });
 
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
 
   // const condition = `${parseFloat(consolee) < 0.50 || parseFloat(consolee)>2.50 ? "text-[#181818]" : "text-white"}`;
   // const borderCondition = `${parseFloat(consolee) < 0.50 || parseFloat(consolee)>2.50 ? "border-[#181818]" : "border-white"}`;
@@ -113,22 +112,26 @@ const Section2 = ({ scrollYByVH }) => {
         className="h-screen w-full relative [scroll-snap-align:start] m-0 p-0 py-12 lg:py-16 flex flex-col lg:flex-row lg:justify-center"
       >
         <div className="w-full lg:w-[50vw] lg:pl-[calc(100vw/12)] py-16 lg:pr-16 h-full flex flex-col items-center lg:items-start justify-center">
-          <h1 className={`text-6xl lg:text-7xl opacity-0 px-8 lg:p-0  font-[600] ${condition} transition-color duration-300 ease-in-out calender-text font-poppins text-center lg:text-left`}>
+          <h1
+            className={`text-6xl lg:text-7xl opacity-0 px-8 lg:p-0  font-[600] ${condition} transition-color duration-300 ease-in-out calender-text font-poppins text-center lg:text-left`}
+          >
             Mark your{" "}
             <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#FFDC73] to-[#FFDC73]">
               calendar
             </span>
           </h1>
-          <p className={`text-xl mt-8 opacity-0 px-8 lg:p-0 ${condition} transition-color duration-300 ease-in-out calender-text font-poppins text-center lg:text-left`}>
+          <p
+            className={`text-xl mt-8 opacity-0 px-8 lg:p-0 ${condition} transition-color duration-300 ease-in-out calender-text font-poppins text-center lg:text-left`}
+          >
             Join us at the forefront of technological advancements and gain
-            valuable insights at our upcoming technical symposium Yutira 2024 !
+            valuable insights at our upcoming technical symposium Yutira 2025 !
           </p>
           <div className="px-8 lg:p-0 ">
             <button
               className={`calender-text opacity-0 mt-8 w-fit px-4 py-2 text-lg font-poppins rounded-lg ${borderCondition} transition-color duration-300 ease-in-out ${condition} border`}
               onClick={() => {
                 window.open(
-                  "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240223T093000Z%2F20240223T113000Z&details=&location=PSG College of Technology&text=Kriya%20%2724%20Inauguration"
+                  "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250223T093000Z%2F20250223T113000Z&details=&location=PSG College of Technology&text=Kriya%20%2724%20Inauguration"
                 );
               }}
             >
@@ -189,15 +192,20 @@ const NumberAndTag = ({ number, tag, fadeInAnimate }) => {
   // const condition = `${parseFloat(consolee) < 0.50 || parseFloat(consolee)>2.50 ? "text-[#181818]" : "text-white"}`;
   // const gradientCondition = `${parseFloat(consolee) < 0.75 ? "from-[rgba(18,18,18,0.3)] to-[rgba(18,18,18,0.6)]" : "from-[rgba(255,255,255,0.3)] to-[rgba(255,255,255,0.6)]"}`;
   const condition = "text-white";
-  const gradientCondition = "from-[rgba(255,255,255,0.3)] to-[rgba(255,255,255,0.6)]";
+  const gradientCondition =
+    "from-[rgba(255,255,255,0.3)] to-[rgba(255,255,255,0.6)]";
 
   return (
     <div className="relative w-[40ch] number-tag">
-      <h1 className={`pr-4 absolute bottom-4 right-4 [line-height:40vh] bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-t ${gradientCondition} text-[30vh] 2xl:text-[40vh] text-red-400 font-oswald font-bold tracking-[-0.1em]`}>
+      <h1
+        className={`pr-4 absolute bottom-4 right-4 [line-height:40vh] bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-t ${gradientCondition} text-[30vh] 2xl:text-[40vh] text-red-400 font-oswald font-bold tracking-[-0.1em]`}
+      >
         {parseInt(number) % 10 === parseInt(number) ? `0${number}` : number}
         &nbsp;
       </h1>
-      <p className={`absolute right-4 bottom-8 uppercase ${condition} transition-color duration-300 ease-in-out text-5xl font-bold font-oswald`}>
+      <p
+        className={`absolute right-4 bottom-8 uppercase ${condition} transition-color duration-300 ease-in-out text-5xl font-bold font-oswald`}
+      >
         {tag}
       </p>
     </div>
@@ -221,7 +229,9 @@ const NumberAndTagForMobile = ({ number, tag }) => {
   const condition = "text-white";
 
   return (
-    <div className={`space-y-2 flex flex-col justify-center ${condition} transition-color duration-300 ease-in-out`}>
+    <div
+      className={`space-y-2 flex flex-col justify-center ${condition} transition-color duration-300 ease-in-out`}
+    >
       <h1 className="text-6xl  font-poppins font-bold text-center bg-gradient-to-bl from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">
         {parseInt(number) % 10 === parseInt(number) ? `0${number}` : number}
       </h1>

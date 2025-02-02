@@ -68,22 +68,17 @@ const Workshop = () => {
     });
   }, [id]);
 
-
   console.log(id);
 
   useEffect(() => {
     if (currentCount >= Number((workshopDetail?.maxCount / 100) * 20)) {
       setEarlyBird(0);
-    }
-    else if (id === "WKSP0014") {
+    } else if (id === "WKSP0014") {
       setEarlyBird(0);
-    }
-    else {
+    } else {
       setEarlyBird(0);
     }
   }, [currentCount]);
-
-
 
   const handleRegister = () => {
     if (!isLoggedIn) {
@@ -110,7 +105,6 @@ const Workshop = () => {
         width="100vh"
         options={particleOptions}
       />
-    
       <div className="w-fit">
         <h1 className="text-3xl text-black font-semibold px-8 lg:px-0">
           {workshopDetail.workName}
@@ -148,10 +142,10 @@ const Workshop = () => {
                 </p>
                 <div className="flex flex-col">
                   <p className="text-lg font-semibold tracking-wide text-white">
-                  April
+                    April
                   </p>
                   <p className="text-lg font-semibold tracking-wide text-white">
-                    2024
+                    2025
                   </p>
                 </div>
               </div>
@@ -175,120 +169,76 @@ const Workshop = () => {
         </div>
 
         <div className="w-full lg:w-1/3 space-y-4 flex flex-col justify-between">
-          {
-            id === "WKSP0006" ? (
-              <>
-                <button
-                  className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
-                  onClick={() => {
-                    console.log("paymentDetails:", paymentDetails);
-                    console.log("currentCount:", currentCount);
-                    console.log("workshopDetail.maxCount:", workshopDetail?.maxCount);
-
-                    // Rest of your code...
-
-                    !paymentDetails
-                      ?.filter((w) => w.type === "WORKSHOP" && w.status === "SUCCESS")
-                      .find((i) => i.eventId === id) &&
-                      // currentCount < workshopDetail.maxCount &&
-                      (window.confirm("Are you sure you want to register ?")
-                        ? handleRegister()
-                        : console.log("Cancelled"));
-                  }}
-                >
-                  {paymentDetails && (
-                    <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#ffdc73] to-[#ffdc73]">
-                      {paymentDetails
-                        ?.filter(
-                          (w) => w.type === "WORKSHOP" && w.status === "SUCCESS"
-                        )
-                        .find((i) => i.eventId === id) ? (
-                        "Registered"
-                      ) : currentCount / workshopDetail?.maxCount >= 0.5 &&
-                        currentCount < workshopDetail?.maxCount ? (
-                        <div>
-                          Registrations Closing Soon!<br></br>
-                          <span className="whitespace-nowrap text-sm font-normal bg-clip-text [-webkit-text-fill-color:transparent] bg-black lg:bg-black">
-                            Limited Seats Available. Hurry Up!
-                          </span>
-                        </div>
-                      ) : currentCount >= workshopDetail?.maxCount ? (
-                        "Registrations Closed!"
-                      ) : (
-                        "Register Here for Session 1 !"
-                      )}
-                    </span>
-                  )}
-                </button>
-                <button
-                  className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
-                  onClick={() => {
-                    console.log("paymentDetails:", paymentDetails);
-                    console.log("currentCount:", currentCount);
-                    console.log("workshopDetail.maxCount:", workshopDetail?.maxCount);
-
-                    // Rest of your code...
-
-                    !paymentDetails
-                      ?.filter((w) => w.type === "WORKSHOP" && w.status === "SUCCESS")
-                      .find((i) => i.eventId === id) &&
-                      // currentCount < workshopDetail.maxCount &&
-                      (window.confirm("Are you sure you want to register ?")
-                        ? handleRegister()
-                        : console.log("Cancelled"));
-                  }}
-                >
-                  {paymentDetails && (
-                    <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#ffdc73] to-[#ffdc73]">
-                      {paymentDetails
-                        ?.filter(
-                          (w) => w.type === "WORKSHOP" && w.status === "SUCCESS"
-                        )
-                        .find((i) => i.eventId === id) ? (
-                        "Registered"
-                      ) : currentCount / workshopDetail?.maxCount >= 0.5 &&
-                        currentCount < workshopDetail?.maxCount ? (
-                        <div>
-                          Registrations Closing Soon!<br></br>
-                          <span className="whitespace-nowrap text-sm font-normal bg-clip-text [-webkit-text-fill-color:transparent] bg-black lg:bg-white">
-                            Limited Seats Available. Hurry Up!
-                          </span>
-                        </div>
-                      ) : currentCount >= workshopDetail?.maxCount ? (
-                        "Registrations Closed!"
-                      ) : (
-                        "Register Here for Session 2!"
-                      )}
-                    </span>
-                  )}
-                </button>
-              </>
-
-
-
-
-
-
-            ) : (
+          {id === "WKSP0006" ? (
+            <>
               <button
-                className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
+                className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
                 onClick={() => {
                   console.log("paymentDetails:", paymentDetails);
                   console.log("currentCount:", currentCount);
-                  console.log("workshopDetail.maxCount:", workshopDetail?.maxCount);
+                  console.log(
+                    "workshopDetail.maxCount:",
+                    workshopDetail?.maxCount
+                  );
 
-                  if (
-                    currentCount >= workshopDetail?.maxCount ||
-                    paymentDetails?.filter((w) => w.type === "WORKSHOP" && w.status === "SUCCESS").find((i) => i.eventId === id)
-                  ) {
-                    console.log("Registration not allowed due to max count reached or already registered.");
-                  } else {
-                    if (window.confirm("Are you sure you want to register?")) {
-                      handleRegister();
-                    } else {
-                      console.log("Cancelled");
-                    }
-                  }
+                  // Rest of your code...
+
+                  !paymentDetails
+                    ?.filter(
+                      (w) => w.type === "WORKSHOP" && w.status === "SUCCESS"
+                    )
+                    .find((i) => i.eventId === id) &&
+                    // currentCount < workshopDetail.maxCount &&
+                    (window.confirm("Are you sure you want to register ?")
+                      ? handleRegister()
+                      : console.log("Cancelled"));
+                }}
+              >
+                {paymentDetails && (
+                  <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#ffdc73] to-[#ffdc73]">
+                    {paymentDetails
+                      ?.filter(
+                        (w) => w.type === "WORKSHOP" && w.status === "SUCCESS"
+                      )
+                      .find((i) => i.eventId === id) ? (
+                      "Registered"
+                    ) : currentCount / workshopDetail?.maxCount >= 0.5 &&
+                      currentCount < workshopDetail?.maxCount ? (
+                      <div>
+                        Registrations Closing Soon!<br></br>
+                        <span className="whitespace-nowrap text-sm font-normal bg-clip-text [-webkit-text-fill-color:transparent] bg-black lg:bg-black">
+                          Limited Seats Available. Hurry Up!
+                        </span>
+                      </div>
+                    ) : currentCount >= workshopDetail?.maxCount ? (
+                      "Registrations Closed!"
+                    ) : (
+                      "Register Here for Session 1 !"
+                    )}
+                  </span>
+                )}
+              </button>
+              <button
+                className="lg:bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
+                onClick={() => {
+                  console.log("paymentDetails:", paymentDetails);
+                  console.log("currentCount:", currentCount);
+                  console.log(
+                    "workshopDetail.maxCount:",
+                    workshopDetail?.maxCount
+                  );
+
+                  // Rest of your code...
+
+                  !paymentDetails
+                    ?.filter(
+                      (w) => w.type === "WORKSHOP" && w.status === "SUCCESS"
+                    )
+                    .find((i) => i.eventId === id) &&
+                    // currentCount < workshopDetail.maxCount &&
+                    (window.confirm("Are you sure you want to register ?")
+                      ? handleRegister()
+                      : console.log("Cancelled"));
                 }}
               >
                 {paymentDetails && (
@@ -310,14 +260,68 @@ const Workshop = () => {
                     ) : currentCount >= workshopDetail?.maxCount ? (
                       "Registrations Closed!"
                     ) : (
-                      "Register Here!"
+                      "Register Here for Session 2!"
                     )}
                   </span>
                 )}
               </button>
-            )
-          }
+            </>
+          ) : (
+            <button
+              className="bg-black lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
+              onClick={() => {
+                console.log("paymentDetails:", paymentDetails);
+                console.log("currentCount:", currentCount);
+                console.log(
+                  "workshopDetail.maxCount:",
+                  workshopDetail?.maxCount
+                );
 
+                if (
+                  currentCount >= workshopDetail?.maxCount ||
+                  paymentDetails
+                    ?.filter(
+                      (w) => w.type === "WORKSHOP" && w.status === "SUCCESS"
+                    )
+                    .find((i) => i.eventId === id)
+                ) {
+                  console.log(
+                    "Registration not allowed due to max count reached or already registered."
+                  );
+                } else {
+                  if (window.confirm("Are you sure you want to register?")) {
+                    handleRegister();
+                  } else {
+                    console.log("Cancelled");
+                  }
+                }
+              }}
+            >
+              {paymentDetails && (
+                <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#ffdc73] to-[#ffdc73]">
+                  {paymentDetails
+                    ?.filter(
+                      (w) => w.type === "WORKSHOP" && w.status === "SUCCESS"
+                    )
+                    .find((i) => i.eventId === id) ? (
+                    "Registered"
+                  ) : currentCount / workshopDetail?.maxCount >= 0.5 &&
+                    currentCount < workshopDetail?.maxCount ? (
+                    <div>
+                      Registrations Closing Soon!<br></br>
+                      <span className="whitespace-nowrap text-sm font-normal bg-clip-text [-webkit-text-fill-color:transparent] bg-black lg:bg-white">
+                        Limited Seats Available. Hurry Up!
+                      </span>
+                    </div>
+                  ) : currentCount >= workshopDetail?.maxCount ? (
+                    "Registrations Closed!"
+                  ) : (
+                    "Register Here!"
+                  )}
+                </span>
+              )}
+            </button>
+          )}
 
           {/* <button
             className="lg:bg-white lg:rounded-3xl p-8 lg:p-12 space-y-4 text-center lg:text-left flex justify-center lg:justify-start"
@@ -362,8 +366,6 @@ const Workshop = () => {
             )}
           </button> */}
 
-
-
           <div className="flex flex-col bg-black lg:rounded-3xl p-8 space-y-2 justify-center">
             <div className="flex flex-row items-center gap-4">
               <p className="text-4xl lg:text-4xl font-semibold tracking-wide text-white p-3">
@@ -380,21 +382,19 @@ const Workshop = () => {
                 <BiRupee />
               </p>
 
-              {
-                (workshopDetail?.alteredFee && workshopDetail?.actualFee) &&
-                (
-                  <div className="flex flex-col pl-2">
-                    {console.log(earlyBird + "this is the early bird ")}
-                    {earlyBird ? (
-                      <React.Fragment>
-                        <p className="text-lg lg:text-2xl font-semibold tracking-wide text-white">
-                          Rs. {workshopDetail?.alteredFee}*
-                          <span className="line-through text-sm ml-2 font-normal">
-                            Rs. {workshopDetail?.actualFee}
-                          </span>
-                        </p>
-                        <p className="text-xs">* Early bird offer</p>
-                        {/* <p className="text-xs mt-1">
+              {workshopDetail?.alteredFee && workshopDetail?.actualFee && (
+                <div className="flex flex-col pl-2">
+                  {console.log(earlyBird + "this is the early bird ")}
+                  {earlyBird ? (
+                    <React.Fragment>
+                      <p className="text-lg lg:text-2xl font-semibold tracking-wide text-white">
+                        Rs. {workshopDetail?.alteredFee}*
+                        <span className="line-through text-sm ml-2 font-normal">
+                          Rs. {workshopDetail?.actualFee}
+                        </span>
+                      </p>
+                      <p className="text-xs">* Early bird offer</p>
+                      {/* <p className="text-xs mt-1">
                         {" "}
                         <span className="font-bold">
                           {" "}
@@ -407,20 +407,18 @@ const Workshop = () => {
                         </span>{" "}
                         seats left 
                       </p> */}
-                        {console.log()}
-                      </React.Fragment>
-                    ) : (
-                      <React.Fragment>
-                        <p className="text-lg lg:text-2xl font-semibold tracking-wide text-white">
-                          Rs. {workshopDetail.actualFee}
-                        </p>
-                        {/* <p className="text-xs">Early bird offers closed for this workshop. Only few seats left. Hurry Up!</p> */}
-                      </React.Fragment>
-                    )}
-                  </div>
-                )
-              }
-
+                      {console.log()}
+                    </React.Fragment>
+                  ) : (
+                    <React.Fragment>
+                      <p className="text-lg lg:text-2xl font-semibold tracking-wide text-white">
+                        Rs. {workshopDetail.actualFee}
+                      </p>
+                      {/* <p className="text-xs">Early bird offers closed for this workshop. Only few seats left. Hurry Up!</p> */}
+                    </React.Fragment>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 

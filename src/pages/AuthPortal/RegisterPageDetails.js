@@ -121,7 +121,7 @@ const RegisterPageDetails = ({ switchPage }) => {
 
     if (
       !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(
-        formData.phone,
+        formData.phone
       )
     ) {
       toast.error("Please enter a valid phone number");
@@ -143,7 +143,7 @@ const RegisterPageDetails = ({ switchPage }) => {
     toast.promise(
       fetchUpdateUser(
         authEmail && authEmail.length > 0 ? authEmail : formData.email,
-        formData,
+        formData
       ),
       {
         loading: "Updating User",
@@ -182,7 +182,7 @@ const RegisterPageDetails = ({ switchPage }) => {
           console.log(err);
           return "Error updating user";
         },
-      },
+      }
     );
   };
 
@@ -224,7 +224,7 @@ const RegisterPageDetails = ({ switchPage }) => {
         <p className="group-hover:underline">Back</p>
       </button>
       <div className="lg:px-8">
-        <h3 className="text-sm text-gray-500">Register for Yutira 2024</h3>
+        <h3 className="text-sm text-gray-500">Register for Yutira 2025</h3>
         <h1 className="text-2xl font-bold text-[#181818]">
           Enter your personal details
         </h1>

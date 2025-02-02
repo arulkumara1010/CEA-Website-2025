@@ -38,7 +38,6 @@ const Workshop = () => {
             </div>
             <ol className="list-disc pt-2 border-l-black border-l-2 border-dashed ml-3 pl-12 pb-8 space-y-2">
               <li> Overview on Iot technology and its application </li>
-
             </ol>
           </div>
 
@@ -48,8 +47,10 @@ const Workshop = () => {
               <div className="text-xl font-semibold">09:30 - 11:30</div>
             </div>
             <ol className="list-disc pt-2 border-l-black border-l-2 border-dashed ml-3 pl-12 pb-8 space-y-2">
-              <li>Preparing Sensor Node (Things) Embedded C Arduino API Programming</li>
-
+              <li>
+                Preparing Sensor Node (Things) Embedded C Arduino API
+                Programming
+              </li>
             </ol>
           </div>
 
@@ -69,15 +70,21 @@ const Workshop = () => {
               <div className="text-xl font-semibold">02:00 - 05:30</div>
             </div>
             <ol className="list-disc pt-2 border-l-black border-l-2 border-dashed ml-3 pl-12 pb-8 space-y-2">
-
               <li> Python programming implementation in microcontroller</li>
             </ol>
           </div>
         </div>
         <div className="w-full lg:w-1/3 space-y-4 flex flex-col justify-between">
-          <button className="lg:bg-[#ffffff] lg:rounded-3xl p-8 lg:p-12 space-y-4 text-left"
+          <button
+            className="lg:bg-[#ffffff] lg:rounded-3xl p-8 lg:p-12 space-y-4 text-left"
             onClick={() => {
-              isLoggedIn ? (window.confirm("Are you sure you want to register ?") ? (generalPayment ? navigate("/confirmed") : navigate("/payment")) : console.log("Cancelled")) : navigate("/register");
+              isLoggedIn
+                ? window.confirm("Are you sure you want to register ?")
+                  ? generalPayment
+                    ? navigate("/confirmed")
+                    : navigate("/payment")
+                  : console.log("Cancelled")
+                : navigate("/register");
             }}
           >
             <span className="text-3xl lg:text-3xl font-semibold tracking-wide bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#C80067] to-[#7470ff]">
@@ -95,7 +102,7 @@ const Workshop = () => {
                   February
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
-                  2024
+                  2025
                 </p>
               </div>
             </div>
@@ -194,7 +201,6 @@ const Workshop = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };
