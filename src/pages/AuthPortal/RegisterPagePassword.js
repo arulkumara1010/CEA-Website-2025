@@ -73,7 +73,7 @@ const RegisterPagePassword = ({ switchPage }) => {
     <div className="w-full h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6">
       <div className="flex w-full justify-center lg:hidden items-center">
         <img
-          src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
+          src="https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
           alt="yutira black"
           className="lg:hidden h-24 w-auto opacity-70"
         />

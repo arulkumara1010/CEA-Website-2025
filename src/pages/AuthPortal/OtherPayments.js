@@ -11,6 +11,7 @@ import TextInput from "../../components/TextInput";
 import Dropdown from "../../components/Dropdown";
 import colleges from "../CollegeList";
 import { toast } from "react-hot-toast";
+import { QRCodeCanvas } from "qrcode.react";
 
 const PSG_COLLEGE =
   "PSG College of Technology (Autonomous), Peelamedu, Coimbatore District 641004";
@@ -25,7 +26,10 @@ const OtherPayments = ({ switchPage }) => {
   const [userDetails, setUserDetails] = useState(null);
   const [workshopDetails, setWorkshopDetails] = useState(null);
   const [currentCount, setCurrentCount] = useState(null);
-
+  const upiGeneralURL = `upi://pay?pa=1481267367@CBIN0280913.ifsc.npci&pn=Yutira%202025&am=${
+    isPSG ? 100 : 150
+  }&cu=INR&tn=General%20Registration%20Fee`;
+  const upiWorkshopURL = `upi://pay?pa=1481267367@CBIN0280913.ifsc.npci&pn=Yutira%202025&am=${workshopDetails?.actualFee}&cu=INR&tn=Workshop%20Registration`;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -116,7 +120,8 @@ const OtherPayments = ({ switchPage }) => {
       `/portal/workshop/${searchParams.get("eventId")}`
     );
     console.log(transaction);
-    window.open(transaction.url, "_blank");
+    window.open("https://forms.gle/Fxeuz5SPBko2hYWq5");
+    navigate(`/portal/profile`);
   }, [transaction]);
 
   useEffect(() => {
@@ -141,7 +146,7 @@ const OtherPayments = ({ switchPage }) => {
           <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6 ">
             <div className="flex w-full justify-center lg:hidden items-center">
               <img
-                src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
+                src="https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
                 alt="yutira black"
                 className="lg:hidden h-24 w-auto opacity-70"
               />
@@ -196,7 +201,7 @@ const OtherPayments = ({ switchPage }) => {
               <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-8 lg:px-8 shadow-xl bg-white space-y-10 ">
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
-                    src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
+                    src="https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
                     alt="yutira black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
@@ -226,7 +231,7 @@ const OtherPayments = ({ switchPage }) => {
               <div className="relative z-30 w-full lg:w-[30vw] h-screen lg:h-fit py-12 px-6 lg:py-16 lg:px-8 shadow-xl bg-white space-y-6 ">
                 <div className="flex w-full justify-center lg:hidden items-center">
                   <img
-                    src="/https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
+                    src="https://i.ibb.co/VF2bqLh/yutira-rmbg-1.png"
                     alt="yutira black"
                     className="lg:hidden h-24 w-auto opacity-70"
                   />
@@ -250,10 +255,19 @@ const OtherPayments = ({ switchPage }) => {
                   <p className="">
                     The general registration for Yutira 2025 is{" "}
                     <b className="font-semibold">Rs. 100</b> for the students of
-                    PSG College of Technology. You can pay now and register for
-                    the events. You are also availed of the option to pay later.
+                    PSG College of Technology. Scan the QR code below to pay the
+                    registration fee. Fill the form after the payment.
                   </p>
                 )}
+                <div className="flex flex-col items-center space-y-4">
+                  <QRCodeCanvas value={upiGeneralURL} size={150} />
+                  <a
+                    href={upiGeneralURL}
+                    className="text-blue-500 font-semibold"
+                  >
+                    Pay Now (Click here to open UPI link)
+                  </a>
+                </div>
                 <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 lg:space-x-2 w-full">
                   <button
                     onClick={() =>
@@ -267,7 +281,7 @@ const OtherPayments = ({ switchPage }) => {
                     onClick={handlePayNowForGeneral}
                     className="border-2 border-black bg-black hover:bg-gray-700 transition-all duration-500 text-white text-lg rounded-lg py-2 px-4 w-full lg:w-1/2"
                   >
-                    Pay now
+                    Go to Forms
                   </button>
                 </div>
                 <p className="text-sm">

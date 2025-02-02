@@ -5,8 +5,10 @@ import {
   MdEventAvailable,
   MdOutlineCancel,
   MdOutlineEmojiEvents,
+  MdPending,
   MdOutlineModeEditOutline,
 } from "react-icons/md";
+import { BiErrorCircle } from "react-icons/bi";
 import { HiOutlinePresentationChartBar } from "react-icons/hi";
 import { BsCheck2Circle } from "react-icons/bs";
 import {
@@ -55,7 +57,7 @@ const Profile = () => {
       console.log(res.data.data);
       setPaymentDetails(
         res.data.data
-          .filter((i) => i.status !== "INITIATED")
+          .filter((i) => i.status !== "ERROR")
           .sort((a, b) => a.datetime.localeCompare(b.datetime))
           .reverse()
       );
@@ -207,9 +209,8 @@ const Profile = () => {
                     <div className="pr-4">
                       <p className="font-[500]">Unlock the full experience!</p>
                       <p className="font-[500] pb-1">
-                        Pay the general registration fee 
+                        Pay the general registration fee
                       </p>
-                      
                     </div>
                     <IoIosArrowForward
                       className="ml-1 group-hover:ml-2 transition-all"
@@ -222,9 +223,12 @@ const Profile = () => {
                 <div className="flex flex-row items-center space-x-4">
                   {payment.status === "SUCCESS" ? (
                     <BsCheck2Circle className="text-3xl text-green-500" />
+                  ) : payment.status === "INITIATED" ? (
+                    <MdPending className="text-3xl text-amber-500" />
                   ) : (
-                    <MdOutlineCancel className="text-3xl text-red-500" />
+                    <BiErrorCircle className="text-3xl text-red-500" />
                   )}
+
                   <div className="w-full">
                     <div className="flex items-center justify-between text-xs">
                       <p className="">
@@ -247,6 +251,8 @@ const Profile = () => {
                       className={`${
                         payment.status === "SUCCESS"
                           ? "text-green-500"
+                          : payment.status === "INITIATED"
+                          ? "text-amber-500"
                           : "text-red-500"
                       } flex items-center justify-between`}
                     >
@@ -257,6 +263,8 @@ const Profile = () => {
                         registration{" "}
                         {payment.status === "SUCCESS"
                           ? "paid successfully"
+                          : payment.status === "INITIATED"
+                          ? "payment initiated"
                           : "payment unsuccessful"}
                       </p>
                       <p className="lg:text-lg">Rs. {payment.fee}</p>
@@ -275,7 +283,6 @@ const Profile = () => {
                   <p className="font-[500] pb-1">
                     Pay the general registration fee
                   </p>
-                  
                 </div>
                 <IoIosArrowForward
                   className="ml-1 group-hover:ml-2 transition-all"
@@ -283,8 +290,6 @@ const Profile = () => {
                 />
               </Link>
             )}
-
-           
           </div>
 
           <div className="w-full lg:pr-8">
