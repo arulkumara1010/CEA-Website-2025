@@ -4,7 +4,7 @@ import { fetchPayGeneral, fetchUserByEmail } from "../../API/call";
 import TextInput from "../../components/TextInput";
 import Dropdown from "../../components/Dropdown";
 import colleges from "../CollegeList";
-
+import { QRCodeCanvas } from "qrcode.react";
 const PSG_COLLEGE =
   "PSG College of Technology (Autonomous), Peelamedu, Coimbatore District 641004";
 
@@ -15,7 +15,9 @@ const RegisterPagePayment = ({ switchPage }) => {
   const [transaction, setTransaction] = useState(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
-
+  const upiGeneralURL = `upi://pay?pa=1481267367@CBIN0280913.ifsc.npci&pn=Yutira%202025&am=${
+    isPSG ? 100 : 150
+  }&cu=INR&tn=General%20Registration%20Fee`;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -70,7 +72,8 @@ const RegisterPagePayment = ({ switchPage }) => {
 
   useEffect(() => {
     if (!transaction) return;
-    window.open(transaction.url, "_blank");
+    window.open("https://forms.gle/7VWF6eioNpefui4YA");
+    navigate(`/portal/profile`);
   }, [transaction]);
 
   const handlePayLater = () => {
@@ -111,18 +114,24 @@ const RegisterPagePayment = ({ switchPage }) => {
           events. You are also availed of the option to pay later.
         </p>
       )}
+      <div className="flex flex-col items-center space-y-4">
+        <QRCodeCanvas value={upiGeneralURL} size={150} />
+        <a href={upiGeneralURL} className="text-blue-500 font-semibold">
+          Pay Now (Click here to open UPI link)
+        </a>
+      </div>
       <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 lg:space-x-2 w-full">
         <button
           onClick={handlePayLater}
           className="border-2 border-black bg-white hover:bg-gray-100 transition-all duration-500 text-black text-lg rounded-lg py-2 px-4 w-full lg:w-1/2"
         >
-          Later
+          Pay Later
         </button>
         <button
           onClick={handlePayNow}
           className="border-2 border-black bg-black hover:bg-gray-700 transition-all duration-500 text-white text-lg rounded-lg py-2 px-4 w-full lg:w-1/2"
         >
-          Pay now
+          Go to Forms
         </button>
       </div>
       <p className="text-sm">

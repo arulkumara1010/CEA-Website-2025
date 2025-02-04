@@ -188,7 +188,7 @@ const Event = () => {
               </p>
               <div className="flex flex-col">
                 <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
-                  April
+                  {eventDetail.date === 28 ? "February" : "March"}
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-[#3c4043]">
                   2025

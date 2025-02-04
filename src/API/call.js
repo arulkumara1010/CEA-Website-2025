@@ -1,15 +1,15 @@
 import axios from "axios";
 // import EventsList from "../data/eventsList2.json";
-import EventsList from "../data/eventdetails24.json"
+import EventsList from "../data/eventdetails24.json";
 
 // import PapersList from "../data/ppList.json";
-import PapersList from "../data/ppr24.json"
+import PapersList from "../data/ppr24.json";
 
 // import WorkList from "../data/workList.json";
 // import WorkList from '../data/workshopList2.json';
 import WorkList from "../data/workshop24.json";
 
-export const BACKEND_URL = "http://localhost:4300";
+export const BACKEND_URL = "https://yutira25-backend.onrender.com";
 //export const BACKEND_URL = "https://yutiradb.psgtech.ac.in";
 
 const BASE_URL = `${BACKEND_URL}/api`;
@@ -78,31 +78,36 @@ export const fetchEventDetailsByEmail = (email) =>
 export const fetchEventRegister = (formData) =>
   axios.post(`${EVENT_URL}/`, formData, {});
 
-  export const fetchPaperRegister = (formData) =>
-  axios.post(`${PAPER_URL}/`, formData, {})
-    .then(response => {
+export const fetchPaperRegister = (formData) =>
+  axios
+    .post(`${PAPER_URL}/`, formData, {})
+    .then((response) => {
       return response.data; // Return the response data
     })
-    .catch(error => {
+    .catch((error) => {
       // Handle errors here
       if (error.response) {
         // The request was made and the server responded with a status code
-        console.error('Server responded with a status code:', error.response.status);
-        console.error('Response data:', error.response.data);
+        console.error(
+          "Server responded with a status code:",
+          error.response.status
+        );
+        console.error("Response data:", error.response.data);
       } else if (error.request) {
         // The request was made but no response was received
-        console.error('No response received from the server');
+        console.error("No response received from the server");
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.error('Error setting up the request:', error.message);
+        console.error("Error setting up the request:", error.message);
       }
       throw error; // Re-throw the error to handle it elsewhere if needed
-    });;
+    });
 
 export const fetchPaperDetailsByEmail = (email) =>
   axios.get(`${PAPER_URL}/papers-from-user/${email}`, {});
 
-export const fetchWorkshopStats = () => axios.get(`${BASE_URL}/statistics/workshop-stats`, {});
+export const fetchWorkshopStats = () =>
+  axios.get(`${BASE_URL}/statistics/workshop-stats`, {});
 
 // export const fetchEvents = () => axios.get(`${EVENT_URL}/`);
 

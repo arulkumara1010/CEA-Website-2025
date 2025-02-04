@@ -320,7 +320,10 @@ const Profile = () => {
                   <div className="flex items-center justify-between text-xs">
                     <p className="">Event ID: {event.eventId}</p>
                     <p className="">
-                      Feb {events.find((i) => i.id === event.eventId).date}
+                      {events.find((i) => i.id === event.eventId).date === "28"
+                        ? "Feb"
+                        : "March"}{" "}
+                      {events.find((i) => i.id === event.eventId).date}
                     </p>
                   </div>
                   <div className="flex items-center justify-between space-x-4">

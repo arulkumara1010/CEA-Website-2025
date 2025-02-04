@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-import { motion } from 'framer-motion';
-import { fetchEvents } from '../../API/call';
-import EventGrid from '../../components/EventGrid';
-
-
-
+import { motion } from "framer-motion";
+import { fetchEvents } from "../../API/call";
+import EventGrid from "../../components/EventGrid";
 
 const Section3v4 = () => {
   const [events, setEvents] = useState(
@@ -25,10 +22,15 @@ const Section3v4 = () => {
   const navigate = useNavigate();
 
   return (
-
-    <div id='section3' className='flex justify-center flex-col bg-black text-white items-center py-28 '>
-
-      <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-white mb-6"><span className='bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] text-transparent bg-clip-text'>EXCITING EVENTS</span></h1>
+    <div
+      id="section3"
+      className="flex justify-center flex-col bg-black text-white items-center py-28 "
+    >
+      <h1 className="text-4xl font-semibold lg:text-6xl lg:leading-none font-poppins text-center w-full text-white mb-6">
+        <span className="bg-gradient-to-r from-[#FFDC73] to-[#FFDC73] text-transparent bg-clip-text">
+          EXCITING EVENTS
+        </span>
+      </h1>
       {/* <div className='grid grid-cols-1 lg:grid-cols-6 gap-4 px-[15%]'>
 
         <motion.div variants={variant1} initial='initial' whileHover='hover' className='hover:shadow-2xl flex flex-col space-y-4 lg:col-span-3 justify-between bg-1 bg-cover rounded-xl py-8 px-6 '>
@@ -256,14 +258,11 @@ const Section3v4 = () => {
             "/assets/CatLogo/manager.png"
           }
         /> */}
-
-
-
     </div>
-  )
-}
+  );
+};
 
-export default Section3v4
+export default Section3v4;
 
 const EventsGrid = ({
   obj,
@@ -296,28 +295,25 @@ const EventsGrid = ({
   return (
     <div className="flex-wrap flex gap-8 py-12 justify-center">
       {obj.map((i) => {
-        return (
-          i.eventId === 'EVNT0043' ? (
-            <React.Fragment key={i.id}></React.Fragment>
-          ) : (
-            <EventGrid
-              key={i.id}
-              title={toTitleCase(i.name)}
-              description={i.desc}
-              date={i.date}
-              time={i.time}
-              iconImg={iconImg}
-              imgurl={imgurl}
-              arrowCircleStart={arrowCircleStart}
-              arrowCircleEnd={arrowCircleEnd}
-              topCurve={topCurve}
-              rightCurve={rightCurve}
-              to={`/portal/event/${i.id}`}
-            />
-          )
+        return i.eventId === "EVNT0043" ? (
+          <React.Fragment key={i.id}></React.Fragment>
+        ) : (
+          <EventGrid
+            key={i.id}
+            title={toTitleCase(i.name)}
+            description={i.desc}
+            date={i.date}
+            time={i.time}
+            iconImg={iconImg}
+            imgurl={imgurl}
+            arrowCircleStart={arrowCircleStart}
+            arrowCircleEnd={arrowCircleEnd}
+            topCurve={topCurve}
+            rightCurve={rightCurve}
+            to={`/portal/event/${i.id}`}
+          />
         );
       })}
     </div>
   );
 };
-

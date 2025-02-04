@@ -3,7 +3,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 const EventGrid = ({
-  handleClick = () => { },
+  handleClick = () => {},
   title = "",
   description = "",
   className = "",
@@ -21,13 +21,18 @@ const EventGrid = ({
   const navigate = useNavigate();
 
   return (
-    <button className="group relative transition-all hover:z-30 font-poppins w-full lg:w-[21rem] text-left"
+    <button
+      className="group relative transition-all hover:z-30 font-poppins w-full lg:w-[21rem] text-left"
       onClick={() => navigate(to)}
     >
       <div className="hidden lg:block absolute group-hover:shadow-lg opacity-0 -translate-y-20 group-hover:-translate-y-2 group-hover:opacity-100 left-0 top-[100%] w-full group-hover:scale-[110%] bg-gray-200 rounded-b-3xl px-4 pt-2 transition-all ease-in-out">
         <div className="flex flex-row justify-evenly py-4 text-gray-700">
           <div className="pt-2">
-            <p className="font-poppins font-semibold text-center">{date}{date == '23' ? <sup>rd</sup> : <sup>th</sup>} April</p>
+            <p className="font-poppins font-semibold text-center">
+              {date}
+              {date == "28" ? <sup>th</sup> : <sup>st</sup>}{" "}
+              {date == "28" ? "February" : "March"}
+            </p>
             <p className="font-poppins text-center">Date</p>
           </div>
 
@@ -50,9 +55,7 @@ const EventGrid = ({
           onClick={() => navigate(to)}
           className={`hidden lg:block ${arrowColor} rounded-bl-3xl p-2  absolute top-0 right-0 z-20`}
         >
-          <div className={`absolute top-0 -left-4 ${arrowColor}`}>
-
-          </div>
+          <div className={`absolute top-0 -left-4 ${arrowColor}`}></div>
           <button
             onClick={(e) => {
               e.preventDefault();
@@ -62,9 +65,7 @@ const EventGrid = ({
           >
             <FiArrowUpRight className="text-white text-3xl" />
           </button>
-          <div className={`absolute -bottom-4 right-0 ${arrowColor}`}>
-
-          </div>
+          <div className={`absolute -bottom-4 right-0 ${arrowColor}`}></div>
         </button>
 
         <div className="p-6 pb-3 rounded-t-3xl flex flex-row  lg:flex-col items-center lg:items-start">
@@ -77,8 +78,7 @@ const EventGrid = ({
                 backgroundRepeat: "no-repeat",
               }}
               className="w-8 h-8"
-            >
-            </div>
+            ></div>
           </div>
 
           <p className="font-semibold font-poppins text-xl w-[70%] text-gray-200 tracking-wider">
@@ -95,7 +95,11 @@ const EventGrid = ({
         <div className="lg:hidden shadow-lg w-full bg-gray-200 rounded-b-xl px-4 font-poppins">
           <div className="flex flex-row justify-evenly py-2 text-gray-700 text-base">
             <div className="pt-2">
-              <p className="font-poppins font-semibold text-center">{date}{date == '23' ? <sup>rd</sup> : <sup>th</sup>} April</p>
+              <p className="font-poppins font-semibold text-center">
+                {date}
+                {date == "28" ? <sup>th</sup> : <sup>st</sup>}{" "}
+                {date == "28" ? "February" : "March"}
+              </p>
               <p className="font-poppins text-center">Date</p>
             </div>
 

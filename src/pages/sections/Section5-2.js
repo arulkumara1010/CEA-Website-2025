@@ -145,7 +145,7 @@ const Section52 = () => {
 
         <div
           ref={ref}
-          className={`lg:hidden overflow-x-scroll flex flex-row items-center w-full font-poppins p-4 space-x-4`}
+          className={`lg:hidden overflow-x-scroll flex justify-center flex-row items-center w-full font-poppins p-4 space-x-4`}
         >
           {fetchPapers().map((item, index) => (
             <PaperGrid

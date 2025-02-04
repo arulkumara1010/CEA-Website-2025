@@ -120,7 +120,7 @@ const OtherPayments = ({ switchPage }) => {
       `/portal/workshop/${searchParams.get("eventId")}`
     );
     console.log(transaction);
-    window.open("https://forms.gle/Fxeuz5SPBko2hYWq5");
+    window.open("https://forms.gle/7VWF6eioNpefui4YA");
     navigate(`/portal/profile`);
   }, [transaction]);
 
@@ -179,6 +179,12 @@ const OtherPayments = ({ switchPage }) => {
               . You will be redirected to our payment gateway and an email will
               be sent as a confirmation.
             </p>
+            <div className="flex flex-col items-center space-y-4">
+              <QRCodeCanvas value={upiWorkshopURL} size={150} />
+              <a href={upiWorkshopURL} className="text-blue-500 font-semibold">
+                Pay Now (Click here to open UPI link)
+              </a>
+            </div>
             <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 lg:space-x-2 w-full">
               <button
                 onClick={() => navigate(-1)}
@@ -190,7 +196,7 @@ const OtherPayments = ({ switchPage }) => {
                 onClick={handlePayNowForWorkshop}
                 className="border-2 border-black bg-black hover:bg-gray-700 transition-all duration-500 text-white text-lg rounded-lg py-2 px-4 w-full lg:w-1/2"
               >
-                Pay now
+                Go to forms
               </button>
             </div>
           </div>
@@ -247,9 +253,9 @@ const OtherPayments = ({ switchPage }) => {
                 {!isPSG ? (
                   <p className="">
                     The general registration for Yutira 2025 is{" "}
-                    <b className="font-semibold">Rs. 150</b>. You will be
-                    redirected to our payment gateway and an email will be sent
-                    as a confirmation.
+                    <b className="font-semibold">Rs. 150</b>. Scan the QR code
+                    below to pay the registration fee. Fill the form after the
+                    payment.
                   </p>
                 ) : (
                   <p className="">
