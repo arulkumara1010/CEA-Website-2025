@@ -290,13 +290,13 @@ function Section1v2({ scrollByVH }) {
                 ></div>
 
                 <div className=" text-sm lg:text-base w-fit  ">
-                    <p className="uppercase tracking-wider font-poppins text-sm w-fit">
+                    <p className="uppercase text-white tracking-wider font-poppins text-sm w-fit">
                         Presented By
                     </p>
-                    <p className="font-semibold font-poppins  mt-2 w-fit">
+                    <p className="font-semibold text-white font-poppins  mt-2 w-fit">
                         CEA and ICI-Students Chapter
                     </p>
-                    <p className="font-poppins text-xs  w-fit">
+                    <p className="font-poppins text-white text-xs  w-fit">
                         PSG College of Technology
                     </p>
                 </div>
