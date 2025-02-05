@@ -9,7 +9,7 @@ import PapersList from "../data/ppr24.json";
 // import WorkList from '../data/workshopList2.json';
 import WorkList from "../data/workshop24.json";
 
-export const BACKEND_URL = "https://yutira25-backend.onrender.com";
+export const BACKEND_URL = "https://yutira25-backend.vercel.app";
 //export const BACKEND_URL = "https://yutiradb.psgtech.ac.in";
 
 const BASE_URL = `${BACKEND_URL}/api`;
