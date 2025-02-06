@@ -118,7 +118,7 @@ const Paper = () => {
                 <li>
                   Abstracts should be submitted in the Gform:
                   <a
-                    href="https://forms.gle/rp2BNABJDoWDVyYP8"
+                    href="https://forms.gle/XnyKHBkaTVgKVvaF6"
                     className="text-xl text-[#Ffcd73]"
                   >
                     <br></br>Click here
@@ -145,7 +145,7 @@ const Paper = () => {
                   less than or equal to 15% for papers and 20% for review
                   articles)
                 </li>
-                <li>Last Date for Abstract submission is 2nd April 2025</li>
+                <li>Last Date for Abstract submission is 23rd Feb 2025</li>
                 <li>
                   The papers will be reviewed by a panel of experts and the
                   selected papers will be invited for presentation.
@@ -260,7 +260,7 @@ const Paper = () => {
               </p>
               <div className="flex flex-col">
                 <p className="text-lg font-semibold tracking-wide text-white lg:text-white">
-                  April
+                  February
                 </p>
                 <p className="text-lg font-semibold tracking-wide text-white lg:text-white">
                   2025
@@ -319,7 +319,7 @@ const Paper = () => {
             </p>
             <div className="flex flex-col">
               <p className="text-lg font-semibold tracking-wide text-white">
-                April
+                February
               </p>
               <p className="text-lg font-semibold tracking-wide text-white">
                 2025

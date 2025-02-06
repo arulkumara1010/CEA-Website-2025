@@ -4,7 +4,7 @@ import Section1 from "./sections/Section1";
 import Section2 from "./sections/Section2";
 import Section3 from "./sections/Section3";
 import Section4 from "./sections/Section4";
-import Section5 from "./sections/Section5";
+//import Section5 from "./sections/Section5";
 import Section6 from "./sections/Section6";
 import Section7 from "./sections/Section7";
 import Section8 from "./sections/Section8";
@@ -80,7 +80,6 @@ const Landing = () => {
 
   return (
     <React.Fragment>
-
       {/* <div className="bg-white p-4 hiddn rounded-lg fixed top-10 left-10 z-50">
         {consolee}
       </div> */}
@@ -95,11 +94,13 @@ const Landing = () => {
 
             flexBasis: "50%",
             overflowY: "scroll",
-            transition: 'background 0.3 ease'
+            transition: "background 0.3 ease",
           }}
         >
           {!paid && popup && (
-            <div className={`fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-\[100\] hidden items-center justify-center`}>
+            <div
+              className={`fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-\[100\] hidden items-center justify-center`}
+            >
               <div className="bg-gradient-to-l from-[#eccdde] to-[#cfbaea] w-[20rem] lg:w-[36rem] h-[24rem] p-8 rounded-2xl flex items-center justify-center relative">
                 <button
                   className="absolute right-4 top-4 text-2xl text-black"
@@ -110,16 +111,22 @@ const Landing = () => {
                   <IoMdClose />
                 </button>
                 <div className="flex flex-col items-center justify-center space-y-6 lg:space-y-8 w-full lg:w-[60%] z-10 ml-20 ">
-                  <h1 className={`text-3xl lg:text-4xl font-semibold font-poppins text-center lg:text-center`}>
+                  <h1
+                    className={`text-3xl lg:text-4xl font-semibold font-poppins text-center lg:text-center`}
+                  >
                     Unlock the full{" "}
                     <span className="bg-clip-text [-webkit-text-fill-color:transparent] bg-gradient-to-r from-[#C80067] to-[#5451B6]">
                       experience.
                     </span>
                   </h1>
                   <p className="text-lg font-poppins text-center lg:text-center">
-                    Pay the general registration fee and gain access to the <b className="font-[500]">pro show</b> plus the chance to participate in <b className="font-[500]">all the exciting events</b>!
+                    Pay the general registration fee and gain access to the{" "}
+                    <b className="font-[500]">pro show</b> plus the chance to
+                    participate in{" "}
+                    <b className="font-[500]">all the exciting events</b>!
                   </p>
-                  <button className="bg-[#5451B6] text-white font-poppins font-semibold text-lg px-4 py-2 rounded-lg shadow-lg hover:scale-105 transition-all"
+                  <button
+                    className="bg-[#5451B6] text-white font-poppins font-semibold text-lg px-4 py-2 rounded-lg shadow-lg hover:scale-105 transition-all"
                     onClick={() => {
                       navigate("/auth/payment?type=GENERAL");
                     }}
@@ -134,18 +141,14 @@ const Landing = () => {
           <Section1v2 scrollYByVH={consolee} />
 
           {/* <Section2 scrollYByVH={consolee} /> */}
-          <Section11 scrollYByVH={consolee}/>
+          <Section11 scrollYByVH={consolee} />
 
           <Section3v4 scrollYByVH={consolee} />
-          
+
           <Section4 scrollYByVH={consolee} />
-          
-          
 
-
-          <Section5 scrollYByVH={consolee} />
+          {/* <Section5 scrollYByVH={consolee} /> */}
           <Section52 scrollYByVH={consolee} />
-          
 
           <Section6 scrollYByVH={consolee} />
           <Section7 scrollYByVH={consolee} />
@@ -166,8 +169,9 @@ const NavBar = ({ consolee }) => {
 
   return (
     <nav
-      className={`${consolee >= 0.97 ? "fixed lg:flex" : "lg:hidden"
-        } hidden top-0 w-full left-0 right-0 px-3 items-center justify-between lg:justify-evenly space-x-4 lg:space-x-8 z-[100] h-14 lg:h-12 shadow-md
+      className={`${
+        consolee >= 0.97 ? "fixed lg:flex" : "lg:hidden"
+      } hidden top-0 w-full left-0 right-0 px-3 items-center justify-between lg:justify-evenly space-x-4 lg:space-x-8 z-[100] h-14 lg:h-12 shadow-md
       ${condition ? "bg-[#121212]" : "bg-black"} `}
     >
       <button
@@ -175,9 +179,11 @@ const NavBar = ({ consolee }) => {
           const element = document.getElementById("section3");
           element.scrollIntoView({ behavior: "smooth" });
         }}
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-          } transition-all`}
+        className={`hidden lg:block text-xs w-1/12 ${
+          condition ? "text-white" : "text-white"
+        } leading-5 font-poppins ${
+          condition ? "hover:text-white" : "hover:text-white"
+        } transition-all`}
       >
         Events
       </button>
@@ -186,16 +192,20 @@ const NavBar = ({ consolee }) => {
           const element = document.getElementById("section52");
           element.scrollIntoView({ behavior: "smooth" });
         }}
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-          } transition-all`}
+        className={`hidden lg:block text-xs w-1/12 ${
+          condition ? "text-white" : "text-white"
+        } leading-5 font-poppins ${
+          condition ? "hover:text-white" : "hover:text-white"
+        } transition-all`}
       >
         Paper Presentations
       </button>
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-          } transition-all`}
+        className={`hidden lg:block text-xs w-1/12 ${
+          condition ? "text-white" : "text-white"
+        } leading-5 font-poppins ${
+          condition ? "hover:text-white" : "hover:text-white"
+        } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section5");
           element.scrollIntoView({ behavior: "smooth" });
@@ -205,9 +215,11 @@ const NavBar = ({ consolee }) => {
       </button>
 
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-          } transition-all`}
+        className={`hidden lg:block text-xs w-1/12 ${
+          condition ? "text-white" : "text-white"
+        } leading-5 font-poppins ${
+          condition ? "hover:text-white" : "hover:text-white"
+        } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section6");
           element.scrollIntoView({ behavior: "smooth" });
@@ -216,12 +228,12 @@ const NavBar = ({ consolee }) => {
         Sponsors
       </button>
 
-
-
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-          } transition-all`}
+        className={`hidden lg:block text-xs w-1/12 ${
+          condition ? "text-white" : "text-white"
+        } leading-5 font-poppins ${
+          condition ? "hover:text-white" : "hover:text-white"
+        } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section8");
           element.scrollIntoView({ behavior: "smooth" });
@@ -230,9 +242,11 @@ const NavBar = ({ consolee }) => {
         FAQs
       </button>
       <button
-        className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-          } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-          } transition-all`}
+        className={`hidden lg:block text-xs w-1/12 ${
+          condition ? "text-white" : "text-white"
+        } leading-5 font-poppins ${
+          condition ? "hover:text-white" : "hover:text-white"
+        } transition-all`}
         onClick={(e) => {
           const element = document.getElementById("section9");
           element.scrollIntoView({ behavior: "smooth" });
@@ -242,9 +256,11 @@ const NavBar = ({ consolee }) => {
       </button>
       {localStorage.getItem("token") ? (
         <button
-          className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-            } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-            } transition-all`}
+          className={`hidden lg:block text-xs w-1/12 ${
+            condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${
+            condition ? "hover:text-white" : "hover:text-white"
+          } transition-all`}
           onClick={(e) => {
             navigate("/portal/profile");
           }}
@@ -253,9 +269,11 @@ const NavBar = ({ consolee }) => {
         </button>
       ) : (
         <button
-          className={`hidden lg:block text-xs w-1/12 ${condition ? "text-white" : "text-white"
-            } leading-5 font-poppins ${condition ? "hover:text-white" : "hover:text-white"
-            } transition-all`}
+          className={`hidden lg:block text-xs w-1/12 ${
+            condition ? "text-white" : "text-white"
+          } leading-5 font-poppins ${
+            condition ? "hover:text-white" : "hover:text-white"
+          } transition-all`}
           onClick={(e) => {
             navigate("/auth?type=signup");
           }}
@@ -301,9 +319,11 @@ const NavBarForMobile = ({ consolee }) => {
 
   return (
     <nav
-      className={`${consolee >= 0.25 ? "block" : "hidden"
-        }  lg:hidden z-50 w-screen lg:w-1/4 ${!condition ? "bg-black" : "bg-black"
-        } fixed lg:relative top-0 max-h-screen lg:h-screen overflow-y-scroll px-4 font-poppins shadow-md`}
+      className={`${
+        consolee >= 0.25 ? "block" : "hidden"
+      }  lg:hidden z-50 w-screen lg:w-1/4 ${
+        !condition ? "bg-black" : "bg-black"
+      } fixed lg:relative top-0 max-h-screen lg:h-screen overflow-y-scroll px-4 font-poppins shadow-md`}
     >
       <div className="flex w-full justify-between items-center sticky top-0 h-[3.25rem]">
         <MenuToggle isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -334,28 +354,32 @@ const NavBarForMobile = ({ consolee }) => {
             ></Link>
           ) : (
             <Link to={"/auth?type=login"}>
-              <FaRegUserCircle className={`text-3xl opacity-80 ${condition ? "text-white" : "text-black"}`} />
+              <FaRegUserCircle
+                className={`text-3xl opacity-80 ${
+                  condition ? "text-white" : "text-black"
+                }`}
+              />
             </Link>
           )}
         </div>
       </div>
 
       <div
-        className={`divide-y divide-gray-600 ${isOpen ? "h-fit" : "h-0 overflow-hidden"
-          } transition-all w-5/6 ease-in-out duration-300`}
+        className={`divide-y divide-gray-600 ${
+          isOpen ? "h-fit" : "h-0 overflow-hidden"
+        } transition-all w-5/6 ease-in-out duration-300`}
         id="landingNavOpen"
       >
-        <div className="py-8 pl-4 w-full flex flex-col"
-          id="landingNavElements"
-        >
+        <div className="py-8 pl-4 w-full flex flex-col" id="landingNavElements">
           <button
             onClick={() => {
               setIsOpen(!isOpen);
               const element = document.getElementById("section3");
               element.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-              } text-left text-base py-2`}
+            className={`w-full ${
+              condition ? "text-gray-200" : "text-gray-600"
+            } text-left text-base py-2`}
             id="landingNavElements"
           >
             Events
@@ -366,8 +390,9 @@ const NavBarForMobile = ({ consolee }) => {
               const element = document.getElementById("section5");
               element.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-              } text-left text-base py-2`}
+            className={`w-full ${
+              condition ? "text-gray-200" : "text-gray-600"
+            } text-left text-base py-2`}
             id="landingNavElements"
           >
             Paper Presentations
@@ -378,8 +403,9 @@ const NavBarForMobile = ({ consolee }) => {
               const element = document.getElementById("section5");
               element.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-              } text-left text-base py-2`}
+            className={`w-full ${
+              condition ? "text-gray-200" : "text-gray-600"
+            } text-left text-base py-2`}
             id="landingNavElements"
           >
             Workshops
@@ -390,8 +416,9 @@ const NavBarForMobile = ({ consolee }) => {
               const element = document.getElementById("section6");
               element.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-              } text-left text-base py-2`}
+            className={`w-full ${
+              condition ? "text-gray-200" : "text-gray-600"
+            } text-left text-base py-2`}
             id="landingNavElements"
           >
             Sponsors
@@ -403,8 +430,9 @@ const NavBarForMobile = ({ consolee }) => {
               const element = document.getElementById("section8");
               element.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-              } text-left text-base py-2`}
+            className={`w-full ${
+              condition ? "text-gray-200" : "text-gray-600"
+            } text-left text-base py-2`}
             id="landingNavElements"
           >
             FAQs
@@ -415,8 +443,9 @@ const NavBarForMobile = ({ consolee }) => {
               const element = document.getElementById("section9");
               element.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-              } text-left text-base py-2`}
+            className={`w-full ${
+              condition ? "text-gray-200" : "text-gray-600"
+            } text-left text-base py-2`}
             id="landingNavElements"
           >
             Contact Us
@@ -428,8 +457,9 @@ const NavBarForMobile = ({ consolee }) => {
                   setIsOpen(!isOpen);
                   navigate("/portal/profile");
                 }}
-                className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-                  } text-left text-base py-2`}
+                className={`w-full ${
+                  condition ? "text-gray-200" : "text-gray-600"
+                } text-left text-base py-2`}
               >
                 Dashboard
               </button>
@@ -439,8 +469,9 @@ const NavBarForMobile = ({ consolee }) => {
                   localStorage.clear();
                   window.location.reload();
                 }}
-                className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-                  } text-left text-base py-2`}
+                className={`w-full ${
+                  condition ? "text-gray-200" : "text-gray-600"
+                } text-left text-base py-2`}
               >
                 Logout
               </button>
@@ -451,33 +482,43 @@ const NavBarForMobile = ({ consolee }) => {
                 setIsOpen(!isOpen);
                 navigate("/auth?type=signup");
               }}
-              className={`w-full ${condition ? "text-gray-200" : "text-gray-600"
-                } text-left text-base py-2`}
+              className={`w-full ${
+                condition ? "text-gray-200" : "text-gray-600"
+              } text-left text-base py-2`}
             >
               Register / Login
             </button>
           )}
           <div className="flex flex-row space-x-8 pt-14">
-
             <button
               className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
               onClick={() =>
-                window.open("https://www.instagram.com/cea_ici_psgtech/", "_blank")
+                window.open(
+                  "https://www.instagram.com/cea_ici_psgtech/",
+                  "_blank"
+                )
               }
             >
               <BsInstagram
                 size={24}
-                className={`${condition ? "text-gray-400" : "text-gray-500"} hover:text-black`}
+                className={`${
+                  condition ? "text-gray-400" : "text-gray-500"
+                } hover:text-black`}
               />
             </button>
             <button
               className="hover:-translate-y-2 transition-all duration-500 ease-in-out"
-              onClick={() => window.open("mailto:cea.civil@psgtech.ac.in", "_blank")}
+              onClick={() =>
+                window.open("mailto:cea.civil@psgtech.ac.in", "_blank")
+              }
             >
-              <SiGmail size={24} className={`${condition ? "text-gray-400" : "text-gray-500"} hover:text-black`} />
+              <SiGmail
+                size={24}
+                className={`${
+                  condition ? "text-gray-400" : "text-gray-500"
+                } hover:text-black`}
+              />
             </button>
-
-
           </div>
         </div>
       </div>
@@ -489,15 +530,14 @@ const MenuToggle = ({ isOpen, setIsOpen }) => {
   return (
     <button
       className="hidden"
-    //   onClick={() => setIsOpen(!isOpen)}
-     >
+      //   onClick={() => setIsOpen(!isOpen)}
+    >
       {isOpen ? (
         <svg
           className="w-6 h-6"
           fill="none"
           stroke=""
           viewBox="0 0 24 24"
-
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

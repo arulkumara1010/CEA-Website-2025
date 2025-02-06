@@ -3,17 +3,16 @@
     "ppid": "PRPN0003",
     "image": "https://res.cloudinary.com/dvxgjje9e/image/upload/f_auto,q_auto/prezenta",
     "eventName": "Paper presentation",
-    "contact1": ["Arunaa", 8825851781],
-    "contact2": ["Akshaya ",9360286296 ],
+    "contact1": ["Aiswaryaa K", 6385300570],
+    "contact2": ["Kasilingam ", 9677392272],
     "eventMail": ["cea.civil@psgtech.ac.in"],
-    "theme":"",
-    "topic": "Design of Resilient Structures\nSolid Waste Management Techniques\nStructural Health Monitoring\nStructural Rehabilitation and Strengthening Techniques for Aging Infrastructure\nBuilding Green: Sustainable Materials for Eco-Friendly Construction\nFuture of Smart Cities and Transportation\nWaterproofing of Buildings - Requirements, Trends and Guidelines\nAdvancement in Concrete Technology\nIntroduction to the Analysis and Design of Offshore Structures\nAdvanced Construction Materials and Techniques",
+    "theme": "",
+    "topic": "Structural Engineering \nConstruction materials \nGeotechnical and Pavement Engineering \nEnvironmental Engineering",
     "rules": "Participants can form teams of 2 from the same college \nThe Participants must select a problem statement from the provided topics \nParticipants must not indulge in any plagiarism \nThe Shortlisted teams will present their paper on Campus",
-    "date": "06",
-    "time": "9:00 AM - 1.30 PM",
-    "deadline": "02",
+    "date": "28",
+    "time": "1:00 PM - 04.30 PM",
+    "deadline": "23",
     "teamSize": "2",
-    "hall": "Civil Department Seminar Hall, K-Block 1st Floor"
+    "hall": "Civil Department Seminar Hall, K-Block 1st Floor"
   }
- 
 ]

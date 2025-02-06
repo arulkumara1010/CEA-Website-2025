@@ -54,25 +54,37 @@ const Section9 = () => {
             <div className="w-full lg:w-56">
               <h5 className="text-xs tracking-widest">Secretaries</h5>
               <ContactItem
-                name="Ellakiyaa A"
-                phone="+91 7598436113 "
+                name="Arunaa S"
+                phone="+91 8825851781"
                 isPresent={true}
               />
               <ContactItem
-                name="Kaveiya Priya S"
-                phone="+91 9345773847"
+                name="Sudhakkaran L"
+                phone="+91 7708821174"
+                isPresent={true}
+              />
+            </div>
+            <div className="w-full lg:w-56">
+              <h5 className="text-xs tracking-widest">Tech Support</h5>
+              <ContactItem
+                name="Nakulan A"
+                phone="+91 9488964540"
+                isPresent={true}
+              />
+              <ContactItem
+                name="Arulkumara B R"
+                phone="+91 8610202823"
                 isPresent={true}
               />
             </div>
             <div className="w-full lg:w-56 whitespace-nowrap">
               <h5 className="text-xs tracking-widest">Developers</h5>
-              <ContactItem name="TG AshwinKumar" />
-              <ContactItem name="Jeyam Palaniyappanr" />
-              <ContactItem name="Kavvya Subramani" />
-              <ContactItem name="Elamathi M" />
               <ContactItem name="Mithilesh EN" />
               <ContactItem name="Navaneetha Krishnan K S" />
+              <ContactItem name="Kavvya Subramani" />
+              <ContactItem name="Elamathi M" />
               <ContactItem name="Kishoreadhith" />
+              <ContactItem name="Arulkumara B R" />
             </div>
           </div>
         </div>
