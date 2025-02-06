@@ -276,16 +276,16 @@ const Paper = () => {
                 <ul className="text-md  list-disc   text-white lg:text-white py-4 space-y-2">
                   Winner<br></br>
                   <div className="text-md">
-                    4000<br></br>
+                    5000<br></br>
                     <br></br>
                   </div>
                   First Runner<br></br>
                   <div className="text-md">
-                    3000<br></br>
+                    4000<br></br>
                     <br></br>
                   </div>
                   Second Runner<br></br>
-                  <div className="text-md">2000</div>
+                  <div className="text-md">3000</div>
                 </ul>
               </div>
             }

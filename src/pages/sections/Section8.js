@@ -78,7 +78,7 @@ const FAQContent = [
   {
     question: "What is Yutira ?",
     answer:
-      "Yutira 2025 is a National level Technical Symposium conducted by the Department of Civil Engineering, PSG College of Technology. It encompasses 2 events, a workshop and a paper presentation.",
+      "Yutira 2025 is a National level Technical Symposium conducted by the Department of Civil Engineering, PSG College of Technology. It encompasses 4 events, a workshop and a paper presentation.",
   },
   {
     question: "Who can participate in Yutira?",

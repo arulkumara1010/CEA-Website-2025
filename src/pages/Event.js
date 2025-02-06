@@ -286,16 +286,20 @@ const Event = () => {
                 <ul className="list-disc text-md text-white pl-4 space-y-2">
                   WINNER<br></br>
                   <div className="text-md">
-                    3000<br></br>
+                    {eventDetail.prizes.winner}
+                    <br></br>
                     <br></br>
                   </div>
                   FIRST RUNNER-UP<br></br>
                   <div className="text-md">
-                    2000<br></br>
+                    {eventDetail.prizes.first_runner_up}
+                    <br></br>
                     <br></br>
                   </div>
                   SECOND RUNNER-UP<br></br>
-                  <div className="text-md">1000</div>
+                  <div className="text-md">
+                    {eventDetail.prizes.second_runner_up}
+                  </div>
                 </ul>
               </div>
             )}

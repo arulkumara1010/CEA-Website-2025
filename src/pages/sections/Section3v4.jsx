@@ -7,16 +7,14 @@ import EventGrid from "../../components/EventGrid";
 
 const Section3v4 = () => {
   const [events, setEvents] = useState(
-    fetchEvents()
-      .map((event) => ({
-        name: event.eventName,
-        id: event.eventId,
-        date: event.date,
-        desc: event.one_line_desc ? event.one_line_desc : event.description,
-        category: event.category,
-        time: event.timing.split("-")[0],
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name))
+    fetchEvents().map((event) => ({
+      name: event.eventName,
+      id: event.eventId,
+      date: event.date,
+      desc: event.one_line_desc ? event.one_line_desc : event.description,
+      category: event.category,
+      time: event.timing.split("-")[0],
+    }))
   );
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();

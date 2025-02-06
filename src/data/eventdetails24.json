@@ -2,7 +2,7 @@
   {
     "eventName": "Survey Smarts",
     "category": "Gold",
-    "one_line_desc": "Survey Smarts",
+    "one_line_desc": "Measure with Precision, Build with Vision!",
     "description": "Survey Smarts is a hands-on technical event designed to test participants' surveying accuracy, problem-solving skills, and teamwork. In teams of 2-3, participants will engage in two rounds that challenge their ability to measure and compute with precision.",
     "round_title_1": "Calculation task",
     "round_desc_1": "This round puts participants' analytical skills to the test, as they use their recorded data to compute the plot’s area using mathematical techniques such as triangulation or polygonal formulas. Teams are evaluated on how closely their calculated area matches the actual pre-measured area. With strict time limits, equipment handling rules, and a strong emphasis on fair play, this event promises an exciting and intellectually stimulating experience for all civil engineering enthusiasts.",
@@ -17,12 +17,17 @@
     "eventRules": "Teamwork: All team members must contribute equally.\nEquipment Provided: One theodolite and one measuring tape per team.\nTime Limits: Strictly follow time allocations—late submissions incur a 5% penalty per minute.\nNo External Tools: Only calculators are allowed; mobile phones and software are prohibited.\nFair Play: Any malpractice results in immediate disqualification.",
     "teamSize": "2-3",
     "date": "28",
-    "timing": "10.00 AM - 12.00 PM"
+    "timing": "10.00 AM - 12.00 PM",
+    "prizes": {
+      "winner": 3000,
+      "first_runner_up": 1500,
+      "second_runner_up": 1000
+    }
   },
   {
     "eventName": "Build Bound Challenge - Elevate Expectations",
     "category": "Gold",
-    "one_line_desc": "Build Bound Challenge - Elevate Expectations",
+    "one_line_desc": "Design Smart, Bid Sharp!",
     "description": "Get ready for an electrifying competition that will put your design and construction skills to the test in two thrilling rounds! Students will embark on an exhilarating journey through the dynamic world of civil engineering, where innovation meets real-world challenges.",
     "round_title_1": "Blueprint Blitz",
     "round_desc_1": "Prepare to unleash your creativity and engineering prowess! Teams will be tasked with tackling unique plot areas, each presenting its own set of complexities. Within the allocated time, participants must craft compelling approval plans, showcasing:\n• Innovative 2D plans and elevations\n• Effective space allocation for optimal functionality\n• Sustainable design solutions\n• Compliance with regulations with creative twists",
@@ -34,15 +39,20 @@
     "contact_name_2": "Yogheswar S V",
     "contact_mobile_2": "7667838383",
     "hall": "Civil UG Computer Lab",
-    "eventRules": "Usage of blocks and importing drawings is strictly prohibited. Participants can bring their own laptop and charger.\nFor team events,every member of the team is required to register for the event and pay the general registration fee. ",
+    "eventRules": "Usage of blocks and importing drawings is strictly prohibited.Participants can bring their own laptop and charger.\nFor team events,every member of the team is required to register for the event and pay the general registration fee.",
     "teamSize": "2-3",
     "date": 28,
-    "timing": "12:00 PM - 04:00 PM"
+    "timing": "12:00 PM - 04:00 PM",
+    "prizes": {
+      "winner": 4000,
+      "first_runner_up": 3000,
+      "second_runner_up": 1500
+    }
   },
   {
     "eventName": "Cipher Craft: Unlocking IS 456:2000",
     "category": "Gold",
-    "one_line_desc": "Cipher Craft: Unlocking IS 456:2000",
+    "one_line_desc": "Decode the Code, Engineer the Future!",
     "description": "\"Cipher Craft\" is a dynamic and engaging event designed for civil engineering students to put their analytical and problem-solving skills to the test. The event's focus is to decode and crack the IS 456 code, which pertains to the design and construction of reinforced concrete structures. Participants will face a series of challenges, puzzles, and tasks related to IS 456, requiring them to unravel complex codes and gain a deeper understanding of the code's intricacies.",
     "round_title_1": "Bidding Blitz",
     "round_desc_1": "During this phase, a set of 50 questions will be presented one by one to the participants, who will then engage in a bidding process. Participants are required to bid their points in order to answer each question. Each team will commence with a designated amount of points for bidding. The team that places the highest bid will earn the opportunity to respond. Following the bidding, the top 10 teams with the highest points will advance to the subsequent round.",
@@ -57,12 +67,17 @@
     "eventRules": "ROUND 1:\n->Each team will be allocated 200 points.\n->Bidding time for each question will be 30 seconds.\n->Teams will begin bidding with a base amount of 10 points, with a bidding increment of 5 points.\n->Bidding ceases after 30 seconds, and the highest bid at the end of this period will be accepted.\n->Teams must answer each question within 20 seconds after bidding concludes.\n->For the first 25 questions, bidding occurs after the question is displayed. Correct answers earn 20 points, while incorrect answers incur a deduction of 20 points.\n->For questions 26 - 40 keywords related to the question will be displayed first, followed by bidding. Correct answers yield 25 points, with an incorrect answer resulting in a deduction of 15 points.\n->Questions 41 - 50 will have bidding completed prior to displaying the questions. Correct answers result in a gain of 30 points, while incorrect answers lead to a deduction of 10 points.\n->The top 10 teams with the highest points at the end of the round will progress to the next stage.",
     "teamSize": "2-3",
     "date": 1,
-    "timing": "09:00 AM - 12:00 PM"
+    "timing": "09:00 AM - 12:00 PM",
+    "prizes": {
+      "winner": 4000,
+      "first_runner_up": 3000,
+      "second_runner_up": 1500
+    }
   },
   {
     "eventName": "Build Battle",
     "category": "Gold",
-    "one_line_desc": "Build Battle",
+    "one_line_desc": "Craft, Construct, Conquer!",
     "description": "Get ready for a fast-paced, action-packed competition where speed, knowledge, and strategy collide in the Build Battle! This event challenges participants to demonstrate their quick-thinking abilities and civil engineering expertise in two thrilling rounds. From hands-on construction tasks to strategic material mastery, teams will compete in a race against time to secure their spot in the next round. Only the fastest and most knowledgeable teams will rise to the top!",
     "round_title_1": "Quick build and Brainy Bytes",
     "round_desc_1": "In Round 1, teams will face a dual challenge: a practical construction task combined with a civil engineering quiz. Teams will randomly pick a chit containing a QR code, which opens a Google Form with two components: Task: A simple hands-on construction-related activity that must be completed within the time frame. Quiz: A set of 10 basic civil engineering questions that test general knowledge in the field. Teams must complete the task and answer the quiz within 30 minutes.",
@@ -75,9 +90,15 @@
     "contact_name_2": "Aravind Babu ",
     "contact_mobile_2": 6385218113,
     "hall": "J-313,J-314",
-    "eventRules": "Each team will receive a proportional number of ice cream sticks and glue based on the points they scored in Round 1 and Round 2.  The truss must be designed to fit the specified span.  Teams are free to use any truss design (e.g., Pratt, Warren, etc.), but it must be constructed solely with the provided materials. Teams have 45 minutes for design and construction. The remaining time will be used for load testing and evaluation. Teams may not reinforce their truss with any external material. The truss must be built solely with the ice cream sticks and glue provided. The truss will be subjected to increasing loads in increments, and the failure point will determine the maximum load-bearing capacity. The testing will stop when the truss fails (or when it holds the 10+ kg load). The judges will evaluate the design based on its load-bearing capacity, creativity, stability, and overall functionality. Durability will also be tested under the incremental load.",
+    "round_desc_3": "Each team will receive a proportional number of ice cream sticks and glue based on the points they scored in Round 1 and Round 2. The truss must be designed to fit the specified span. Teams are free to use any truss design (e.g., Pratt, Warren, etc.), but it must be constructed solely with the provided materials. Teams have 45 minutes for design and construction. The remaining time will be used for load testing and evaluation. Teams may not reinforce their truss with any external material. The truss must be built solely with the ice cream sticks and glue provided. The truss will be subjected to increasing loads in increments, and the failure point will determine the maximum load-bearing capacity. The testing will stop when the truss fails (or when it holds the 10+ kg load). The judges will evaluate the design based on its load-bearing capacity, creativity, stability, and overall functionality. Durability will also be tested under the incremental load.",
     "teamSize": 2,
     "date": 1,
-    "timing": "1.00 PM - 3.00 PM"
+    "eventRules": "Each team must consist of 2 members.For team events,every member of the team is required to register for the event and pay the general registration fee.Use of mobile phones is strictly prohibited after scanning the QR code in Round 1 unless permitted by the organizers. Any misconduct, unfair means, or rule violations will result in immediate disqualification. The decision of the judges and organizers is final in all matters related to the event.",
+    "timing": "1.00 PM - 3.00 PM",
+    "prizes": {
+      "winner": 3000,
+      "first_runner_up": 1500,
+      "second_runner_up": 1000
+    }
   }
 ]
