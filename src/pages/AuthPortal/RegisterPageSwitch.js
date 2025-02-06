@@ -40,7 +40,7 @@ const RegisterPageSwitch = ({ switchPage }) => {
         Register for Yutira 2025
       </h1>
       <p className="text-white">Choose the method of Registration</p>
-      <a
+      {/* <a
         href={`${BACKEND_URL}/api/auth/google`}
         className="bg-white shadow-lg px-4 py-3 w-full hover:bg-gray-300 transition-all border-gray-300 border-2 rounded-lg flex items-center justify-center space-x-6"
       >
@@ -50,7 +50,7 @@ const RegisterPageSwitch = ({ switchPage }) => {
           alt="Google Icon"
         />
         <p className="text-black">Register with Google</p>
-      </a>
+      </a> */}
       <button
         className="bg-white hover:bg-gray-700 transition-all duration-500 w-full text-black rounded-lg py-3 px-4"
         onClick={(e) => handleRegisterWithEmail()}

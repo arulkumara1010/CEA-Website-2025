@@ -387,7 +387,7 @@ const NavBarForMobile = ({ consolee }) => {
           <button
             onClick={() => {
               setIsOpen(!isOpen);
-              const element = document.getElementById("section5");
+              const element = document.getElementById("section52");
               element.scrollIntoView({ behavior: "smooth" });
             }}
             className={`w-full ${

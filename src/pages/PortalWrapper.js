@@ -115,15 +115,15 @@ const NavBarForDesktop = () => {
             <MdOutlineEmojiEvents className="text-2xl" />
             <p className="">Events</p>
           </Link>
-          <Link
+          {/* <Link
             to="/../?sn=section5"
             className="group w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
             <AiFillLayout className="text-2xl" />
             <p className="">Workshops</p>
-          </Link>
+          </Link> */}
           <Link
-            to="/../?sn=section5"
+            to="/../?sn=section52"
             className="w-full text-white text-left hover:text-white text-base py-2 flex items-center space-x-4"
           >
             <HiOutlinePresentationChartBar className="text-2xl" />
@@ -146,10 +146,10 @@ const NavBarForDesktop = () => {
               <p className="text-white text-xs font-poppins">✨ Early Bird Offer ✨</p>
             </div>
           </div> */}
-          <h3 className="text-base text-white  font-semibold py-3">
+          {/* <h3 className="text-base text-white  font-semibold py-3">
             Workshops
           </h3>
-          <WorkNav noMargin workshops={workshops} />
+          <WorkNav noMargin workshops={workshops} /> */}
           <h3 className="text-base text-white font-semibold py-3">Events</h3>
           {/* <EventNav category="Kriyative" noMargin events={events} />
           <EventNav category="Brainiac" events={events} />
@@ -542,7 +542,7 @@ const EventNav = ({
               >
                 {toTitleCase(e.name)}
               </Link>
-            ),
+            )
           )}
       </div>
     </React.Fragment>
@@ -600,7 +600,7 @@ const GoldNav = ({
             >
               {toTitleCase(e.name)}
             </Link>
-          ),
+          )
         )}
       </div>
     </React.Fragment>
@@ -651,7 +651,7 @@ const WorkNav = ({
               >
                 {e.name}
               </Link>
-            ),
+            )
           )}
       </div>
       <button
@@ -688,7 +688,7 @@ const WorkNav = ({
               >
                 {e.name}
               </Link>
-            ),
+            )
           )}
       </div>
     </React.Fragment>
@@ -746,7 +746,7 @@ const PaperNav = ({
             >
               {toTitleCase(e.name)}
             </Link>
-          ),
+          )
         )}
       </div>
     </React.Fragment>

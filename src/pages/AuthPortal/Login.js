@@ -72,7 +72,7 @@ const Login = ({ switchPage }) => {
         Login with Email
       </button>
 
-      <div className="w-full space-y-4 py-6 border-t border-t-gray-400">
+      {/* <div className="w-full space-y-4 py-6 border-t border-t-gray-400">
         <a
           href={`${BACKEND_URL}/api/auth/google`}
           className="bg-white shadow-lg px-4 py-3 w-full hover:bg-gray-300 transition-all border-gray-300 border-2 rounded-lg flex items-center justify-center space-x-6"
@@ -84,7 +84,7 @@ const Login = ({ switchPage }) => {
           />
           <p className="">Login with Google</p>
         </a>
-      </div>
+      </div> */}
 
       <button
         onClick={(e) => switchPage("register")}
